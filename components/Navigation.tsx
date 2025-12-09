@@ -33,28 +33,30 @@ export default function Navigation() {
 
     ]
     return (
-        <header className="bg-[url(/header/background.jpg)] p-6">
+        <header className="relative bg-[url(/header/background.jpg)] p-6">
 
             <nav className="text-white flex items-center justify-between">
 
                 {/* BLOC LOGO */}
+
                 <div className="flex items-center gap-6">
                     <Image
                         src={blocLogo.icon}
                         alt="logo du portfolio de Mathieu Bourasseau"
-                        width={65}
+                        width={45}
                         height={36}
-                        className=""
+                        className="lg:w-[65px]"
                     />
                     <a 
                         href="#"
-                        className="font-bold text-xl"
+                        className="text-md font-bold lg:text-2xl"
                     >Mathieu Bourasseau
                     </a>
                 </div>
 
-                {/* BLOC Navigation */}
-                <div className="flex justify-between gap-4 text-md font-bold max-w-[40%] uppercase">
+                {/* BLOC NAVIGATION MOBILE */}
+
+                <div className="flex flex-col items-center w-full absolute left-0 p-2 opacity-[50%] bottom-[-160px] bg-black justify-between gap-4 text-md font-bold w-[40%] uppercase">
                     {navLinks.map((link, index) => (
                         <Link
                             key={index}
@@ -64,6 +66,27 @@ export default function Navigation() {
                         </Link>
                     ))}
                 </div>
+
+                {/* BLOC NAVIGATION DESKTOP */}
+
+                <div className="hidden flex justify-between gap-4 text-md font-bold w-[40%] uppercase">
+                    {navLinks.map((link, index) => (
+                        <Link
+                            key={index}
+                            href={link.link}
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
+                </div>
+
+                  {/* BLOC BURGER */}
+                <Image
+                    src={`/header/icon-burger.svg`}
+                    width={35}
+                    height={35}
+                    className="lg:hidden"
+                />
             </nav>
 
         </header>
