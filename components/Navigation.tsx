@@ -9,7 +9,7 @@ interface blocLogo {
 export default function Navigation() {
 
     const blocLogo = {
-        icon: "/header-navigation/logo.png",
+        icon: "/header/logo.png",
         title: "Mathieu Bourasseau"
     }
 
@@ -33,24 +33,28 @@ export default function Navigation() {
 
     ]
     return (
-        <header className="">
+        <header className="bg-[url(/header/background.jpg)] p-6">
 
-            <nav>
+            <nav className="text-white flex items-center justify-between">
 
                 {/* BLOC LOGO */}
-                <div>
+                <div className="flex items-center gap-6">
                     <Image
                         src={blocLogo.icon}
                         alt="logo du portfolio de Mathieu Bourasseau"
-                        width={36}
+                        width={65}
                         height={36}
                         className=""
                     />
-                    <a href="#">Mathieu Bourasseau</a>
+                    <a 
+                        href="#"
+                        className="font-bold text-xl"
+                    >Mathieu Bourasseau
+                    </a>
                 </div>
 
                 {/* BLOC Navigation */}
-                <div>
+                <div className="flex justify-between gap-4 text-md font-bold max-w-[40%] uppercase">
                     {navLinks.map((link, index) => (
                         <Link
                             key={index}
