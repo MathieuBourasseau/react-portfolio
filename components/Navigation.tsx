@@ -93,8 +93,8 @@ export default function Navigation() {
 
                 {/* BLOC BURGER ICONS */}
 
-                <GiHamburgerMenu onClick={handleBurgerNav} className={isOpen ? "hidden" : "text-[30px] lg:hidden"} />
-                <RxCross2 className={isOpen ? "text-[30px] lg:hidden" : "hidden"}/>
+                <GiHamburgerMenu onClick={handleBurgerNav} className={isOpen ? "hidden" : "cursor-pointer text-[30px] lg:hidden"} />
+                <RxCross2 onClick={handleBurgerNav} className={isOpen ? "cursor-pointer text-[30px] lg:hidden" : "hidden"}/>
             </nav>
 
         </header>
