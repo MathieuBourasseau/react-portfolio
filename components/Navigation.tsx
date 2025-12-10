@@ -1,5 +1,8 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 
@@ -9,6 +12,13 @@ interface blocLogo {
 }
 
 export default function Navigation() {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleBurgerNav = () => {
+        setIsOpen(!isOpen);
+        console.log(`Le menu est : ${isOpen}`)
+    }
 
     const blocLogo = {
         icon: "/header/logo.png",
@@ -84,7 +94,7 @@ export default function Navigation() {
 
                 {/* BLOC BURGER ICONS */}
 
-                <GiHamburgerMenu className="text-[30px] lg:hidden" />
+                <GiHamburgerMenu onClick={handleBurgerNav} className="text-[30px] lg:hidden" />
                 <RxCross2 className="text-[30px] lg:hidden"/>
             </nav>
 
