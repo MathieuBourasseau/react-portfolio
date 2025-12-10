@@ -17,7 +17,6 @@ export default function Navigation() {
 
     const handleBurgerNav = () => {
         setIsOpen(!isOpen);
-        console.log(`Le menu est : ${isOpen}`)
     }
 
     const blocLogo = {
@@ -95,7 +94,7 @@ export default function Navigation() {
                 {/* BLOC BURGER ICONS */}
 
                 <GiHamburgerMenu onClick={handleBurgerNav} className="text-[30px] lg:hidden" />
-                <RxCross2 className="text-[30px] lg:hidden"/>
+                <RxCross2 className={isOpen ? "text-[30px] lg:hidden" : "hidden"}/>
             </nav>
 
         </header>
