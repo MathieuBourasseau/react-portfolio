@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
 
 interface blocLogo {
     icon: string;
@@ -81,8 +82,10 @@ export default function Navigation() {
                     ))}
                 </div>
 
-                {/* BLOC BURGER */}
+                {/* BLOC BURGER ICONS */}
+
                 <GiHamburgerMenu className="text-[30px] lg:hidden" />
+                <RxCross2 className="text-[30px] lg:hidden"/>
             </nav>
 
         </header>
