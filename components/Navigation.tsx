@@ -58,7 +58,7 @@ export default function Navigation() {
                         height={36}
                         className="lg:w-[65px]"
                     />
-                    <a 
+                    <a
                         href="#"
                         className="text-md font-bold lg:text-2xl"
                     >Mathieu Bourasseau
@@ -93,8 +93,18 @@ export default function Navigation() {
 
                 {/* BLOC BURGER ICONS */}
 
-                <GiHamburgerMenu onClick={handleBurgerNav} className={isOpen ? "hidden" : "cursor-pointer text-[30px] lg:hidden"} />
-                <RxCross2 onClick={handleBurgerNav} className={isOpen ? "cursor-pointer text-[30px] lg:hidden" : "hidden"}/>
+                <GiHamburgerMenu
+                    onClick={handleBurgerNav}
+                    className={
+                        isOpen ? "hidden"
+                        : "cursor-pointer transition-transform duration-270 hover:scale-115 text-[30px] lg:hidden"}
+                />
+                <RxCross2 
+                    onClick={handleBurgerNav} 
+                    className={
+                        isOpen ? "transition-transform duration-270 hover:scale-115 cursor-pointer text-[30px] lg:hidden" 
+                        : "hidden"} 
+                />
             </nav>
 
         </header>
