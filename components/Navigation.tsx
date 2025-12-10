@@ -67,7 +67,16 @@ export default function Navigation() {
 
                 {/* BLOC NAVIGATION MOBILE */}
 
-                <div className="flex flex-col items-center w-full absolute left-0 p-2 opacity-[50%] bottom-[-160px] bg-black justify-between gap-4 text-md font-bold w-[40%] uppercase">
+                <div 
+                    className={
+                        `flex flex-col items-center w-full absolute left-0 p-2 top-full bg-black justify-between gap-4 text-md font-bold w-[40%] uppercase transition-all duration-500 ease-in-out
+                        ${isOpen 
+                            ? "top-full opacity-90 translate-y-0"
+                            : "top-full opacity-0 translate-y-[-40px]"
+                        }
+                             
+                        `
+                    }>
                     {navLinks.map((link, index) => (
                         <Link
                             key={index}
@@ -96,8 +105,9 @@ export default function Navigation() {
                 <GiHamburgerMenu
                     onClick={handleBurgerNav}
                     className={
-                        isOpen ? "hidden"
-                        : "cursor-pointer transition-transform duration-270 hover:scale-115 text-[30px] lg:hidden"}
+                        isOpen 
+                            ? "hidden"
+                            : "cursor-pointer transition-transform duration-270 hover:scale-115 text-[30px] lg:hidden"}
                 />
                 <RxCross2 
                     onClick={handleBurgerNav} 
