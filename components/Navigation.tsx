@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 interface blocLogo {
     icon: string;
@@ -80,13 +81,8 @@ export default function Navigation() {
                     ))}
                 </div>
 
-                  {/* BLOC BURGER */}
-                <Image
-                    src={`/header/icon-burger.svg`}
-                    width={35}
-                    height={35}
-                    className="lg:hidden"
-                />
+                {/* BLOC BURGER */}
+                <GiHamburgerMenu className="text-[30px] lg:hidden" />
             </nav>
 
         </header>
