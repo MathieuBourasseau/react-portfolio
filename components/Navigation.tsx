@@ -5,6 +5,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { FaComputer } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
+import { FaPlane } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
+
 
 interface blocLogo {
     icon: string;
@@ -27,19 +32,23 @@ export default function Navigation() {
     const navLinks = [
         {
             label: "projets",
-            link: "projects"
+            link: "projects",
+            icon: <FaComputer />
         },
         {
             label: "compétences",
-            link: "skills"
+            link: "skills",
+            icon: <MdWork />
         },
         {
             label: "parcours",
-            link: "background"
+            link: "background",
+            icon:<FaPlane />
         },
         {
             label: "contact",
-            link: "contact"
+            link: "contact",
+            icon: <IoIosMail />
         }
 
     ]
@@ -83,9 +92,9 @@ export default function Navigation() {
                             href={link.link}
                             className="w-full flex justify-center items-center border-b-2 py-2 hover:bg-[#f74518] transition-transform duration-300 hover:scale-115"
                         >
-                            <div>
-                                
-                                {link.label}
+                            <div className="flex items-center justify-center gap-2">
+                                <span className="text-[20px]">{link.icon}</span>
+                                <p>{link.label}</p>
                             </div>
                         </Link>
                     ))}
