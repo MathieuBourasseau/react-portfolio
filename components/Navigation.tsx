@@ -69,7 +69,7 @@ export default function Navigation() {
 
                 <div 
                     className={
-                        `flex flex-col items-center w-full absolute left-0 p-2 top-full bg-black justify-between gap-4 text-md font-bold w-[40%] uppercase transition-all duration-500 ease-in-out
+                        `flex flex-col items-center w-full absolute left-0  top-full bg-black justify-between text-sm font-bold uppercase bg-[url(/header/background.jpg)] transition-all duration-500 ease-in-out
                         ${isOpen 
                             ? "top-full opacity-90 translate-y-0"
                             : "top-full opacity-0 translate-y-[-40px]"
@@ -81,8 +81,12 @@ export default function Navigation() {
                         <Link
                             key={index}
                             href={link.link}
+                            className="w-full flex justify-center items-center border-b-2 py-2 hover:bg-[#f74518] transition-transform duration-300 hover:scale-115"
                         >
-                            {link.label}
+                            <div>
+                                
+                                {link.label}
+                            </div>
                         </Link>
                     ))}
                 </div>
