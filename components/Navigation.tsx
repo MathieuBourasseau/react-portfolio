@@ -78,6 +78,33 @@ export default function Navigation() {
 
                 <div 
                     className={
+                        `flex flex-col items-center w-full absolute left-0  top-full bg-black justify-between text-sm font-bold uppercase bg-[url(/header/background.jpg)] transition-all duration-500 ease-in-out 
+                        ${isOpen 
+                            ? "top-full opacity-90 translate-y-0 "
+                            : "top-full opacity-0 translate-y-[-40px]"
+                        }
+
+                        lg:hidden
+                        `
+                    }>
+                    {navLinks.map((link, index) => (
+                        <Link
+                            key={index}
+                            href={link.link}
+                            className="w-full flex justify-center items-center border-b-2 py-2 hover:bg-[#f74518] transition-transform duration-300 hover:scale-115 "
+                        >
+                            <div className="flex items-center justify-center gap-2">
+                                <span className="text-[20px]">{link.icon}</span>
+                                <p>{link.label}</p>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+
+                {/* BLOC NAVIGATION DESKTOP */}
+
+                {/* <div 
+                    className={
                         `flex flex-col items-center w-full absolute left-0  top-full bg-black justify-between text-sm font-bold uppercase bg-[url(/header/background.jpg)] transition-all duration-500 ease-in-out
                         ${isOpen 
                             ? "top-full opacity-90 translate-y-0"
@@ -90,7 +117,7 @@ export default function Navigation() {
                         <Link
                             key={index}
                             href={link.link}
-                            className="w-full flex justify-center items-center border-b-2 py-2 hover:bg-[#f74518] transition-transform duration-300 hover:scale-115"
+                            className="w-full flex justify-center items-center border-b-2 py-2 hover:bg-[#f74518] transition-transform duration-300 hover:scale-115 "
                         >
                             <div className="flex items-center justify-center gap-2">
                                 <span className="text-[20px]">{link.icon}</span>
@@ -98,20 +125,7 @@ export default function Navigation() {
                             </div>
                         </Link>
                     ))}
-                </div>
-
-                {/* BLOC NAVIGATION DESKTOP */}
-
-                <div className="hidden flex justify-between gap-4 text-md font-bold w-[40%] uppercase">
-                    {navLinks.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.link}
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
-                </div>
+                </div> */}
 
                 {/* BLOC BURGER ICONS */}
 
