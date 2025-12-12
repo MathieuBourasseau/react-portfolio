@@ -103,29 +103,19 @@ export default function Navigation() {
 
                 {/* BLOC NAVIGATION DESKTOP */}
 
-                {/* <div 
-                    className={
-                        `flex flex-col items-center w-full absolute left-0  top-full bg-black justify-between text-sm font-bold uppercase bg-[url(/header/background.jpg)] transition-all duration-500 ease-in-out
-                        ${isOpen 
-                            ? "top-full opacity-90 translate-y-0"
-                            : "top-full opacity-0 translate-y-[-40px]"
-                        }
-                             
-                        `
-                    }>
+                <div className="hidden lg:block lg:flex gap-8 items-center justify-between text-sm font-bold uppercase bg- transition-all duration-500 ease-in-out max-w-2/3">
                     {navLinks.map((link, index) => (
                         <Link
                             key={index}
                             href={link.link}
-                            className="w-full flex justify-center items-center border-b-2 py-2 hover:bg-[#f74518] transition-transform duration-300 hover:scale-115 "
+                            className="w-full flex justify-center items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300 hover:scale-115 "
                         >
                             <div className="flex items-center justify-center gap-2">
-                                <span className="text-[20px]">{link.icon}</span>
                                 <p>{link.label}</p>
                             </div>
                         </Link>
                     ))}
-                </div> */}
+                </div>
 
                 {/* BLOC BURGER ICONS */}
 
