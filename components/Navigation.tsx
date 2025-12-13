@@ -98,7 +98,7 @@ export default function Navigation() {
                                 <div className="w-full relative flex items-center justify-center border-b-2 py-2 hover:bg-[#f74518] hover:scale-115 transition-transform duration-300">
                                     <select
                                         defaultValue=""
-                                        className="text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none z-10"
+                                        className="absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none z-10 inset-0 opacity-0 z-10"
                                     >
                                         <option value="" disabled hidden>{link.label}</option>
                                         {link.options.map((option, i) => (
@@ -107,7 +107,10 @@ export default function Navigation() {
                                             </option>
                                         ))}
                                     </select>
-                                    <IoMdArrowDropdown className="absolute right-[380px] text-[32px] pointer-events-none" />
+                                    <div className="flex items-center justify-center gap-2 pointer-events-none">
+                                        <span className="text-base uppercase text-white font-bold">{link.label}</span>
+                                        <IoMdArrowDropdown className="text-[32px] text-white" />
+                                    </div>
                                 </div>
                             ) : (
                                 <Link
@@ -116,6 +119,7 @@ export default function Navigation() {
                                 >
                                     <div className="flex items-center justify-center gap-2">
                                         <p>{link.label}</p>
+                                        <span className="text-[20px]">{link.icon}</span>
                                     </div>
                                 </Link>
                             )}
