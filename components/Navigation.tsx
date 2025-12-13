@@ -93,16 +93,33 @@ export default function Navigation() {
                         `
                     }>
                     {navLinks.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.link}
-                            className="w-full flex justify-center items-center border-b-2 py-2 hover:bg-[#f74518] transition-transform duration-300 hover:scale-115 "
-                        >
-                            <div className="flex items-center justify-center gap-2">
-                                <span className="text-[20px]">{link.icon}</span>
-                                <p>{link.label}</p>
-                            </div>
-                        </Link>
+                        <div className="flex w-full justify-center" key={index}>
+                            {link.options ? (
+                                <div className="w-full relative flex items-center justify-center border-b-2 py-2 hover:bg-[#f74518] hover:scale-115 transition-transform duration-300">
+                                    <select
+                                        defaultValue=""
+                                        className="text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none z-10"
+                                    >
+                                        <option value="" disabled hidden>{link.label}</option>
+                                        {link.options.map((option, i) => (
+                                            <option key={i} value={option.label} className="bg-[#f74518]">
+                                                {option.label}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <IoMdArrowDropdown className="absolute right-[380px] text-[32px] pointer-events-none" />
+                                </div>
+                            ) : (
+                                <Link
+                                    href={link.link}
+                                    className="w-full flex justify-center items-center border-b-2 text-base py-2 hover:bg-[#f74518] hover:scale-115 transition-transform duration-300"
+                                >
+                                    <div className="flex items-center justify-center gap-2">
+                                        <p>{link.label}</p>
+                                    </div>
+                                </Link>
+                            )}
+                        </div>
                     ))}
                 </div>
 
@@ -123,7 +140,7 @@ export default function Navigation() {
                                             <option value={option.label} className="bg-[#f74518]" >{option.label}</option>
                                         ))}
                                     </select>
-                                    <IoMdArrowDropdown className="absolute right-0 text-[32px] pointer-events-none"/>
+                                    <IoMdArrowDropdown className="absolute right-0 text-[32px] pointer-events-none" />
                                 </div>
                             ) : (
                                 <Link
