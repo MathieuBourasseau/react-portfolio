@@ -1,4 +1,7 @@
 import React from 'react'
+import { FaGithub } from "react-icons/fa"
+import { IoIosMail } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
