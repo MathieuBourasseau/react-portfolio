@@ -3,6 +3,12 @@ import { FaGithub } from "react-icons/fa"
 import { IoIosMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 
+const socialsIcons = [
+  { label: "Github", icon: <FaGithub /> },
+  { label: "LinkedIn", icon: <FaLinkedin /> },
+  { label: "Contact", icon: <IoIosMail />}
+]
+
 export default function Footer() {
   return (
     <footer className=" flex flex-col gap-4 bg-[url(/header/background.jpg)] p-6 text-white">
