@@ -43,7 +43,11 @@ export default function Navigation() {
         {
             label: "parcours",
             link: "background",
-            icon:<FaPlane />
+            icon: <FaPlane />,
+            options: [
+                { label: "professionnel" },
+                { label: "académique" },
+            ]
         },
         {
             label: "contact",
@@ -76,10 +80,10 @@ export default function Navigation() {
 
                 {/* BLOC NAVIGATION MOBILE */}
 
-                <div 
+                <div
                     className={
                         `flex flex-col items-center w-full absolute left-0  top-full bg-black justify-between text-sm font-bold uppercase bg-[url(/header/background.jpg)] transition-all duration-500 ease-in-out 
-                        ${isOpen 
+                        ${isOpen
                             ? "top-full opacity-90 translate-y-0 "
                             : "top-full opacity-0 translate-y-[-40px]"
                         }
@@ -105,15 +109,29 @@ export default function Navigation() {
 
                 <div className="hidden lg:block lg:flex gap-8 items-center justify-between text-sm font-bold uppercase bg- transition-all duration-500 ease-in-out max-w-2/3">
                     {navLinks.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.link}
-                            className="w-full flex justify-center items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300"
-                        >
-                            <div className="flex items-center justify-center gap-2">
-                                <p>{link.label}</p>
-                            </div>
-                        </Link>
+                        <div className="flex">
+
+                            {link.options ? (
+                                <select 
+                                    defaultValue="" 
+                                >
+                                    <option value="" disabled hidden >{link.label}</option>
+                                    {link.options.map((option, i) => (
+                                        <option value={option.label} >{option.label}</option>
+                                    ))}
+                                </select>
+                            ) : (
+                                <Link
+                                    key={index}
+                                    href={link.link}
+                                    className="w-full flex justify-center items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300"
+                                >
+                                    <div className="flex items-center justify-center gap-2">
+                                        <p>{link.label}</p>
+                                    </div>
+                                </Link>
+                            )}
+                        </div>
                     ))}
                 </div>
 
@@ -122,15 +140,15 @@ export default function Navigation() {
                 <GiHamburgerMenu
                     onClick={handleBurgerNav}
                     className={
-                        isOpen 
+                        isOpen
                             ? "hidden"
                             : "cursor-pointer transition-transform duration-270 hover:scale-115 text-[30px] lg:hidden"}
                 />
-                <RxCross2 
-                    onClick={handleBurgerNav} 
+                <RxCross2
+                    onClick={handleBurgerNav}
                     className={
-                        isOpen ? "transition-transform duration-270 hover:scale-115 cursor-pointer text-[30px] lg:hidden" 
-                        : "hidden"} 
+                        isOpen ? "transition-transform duration-270 hover:scale-115 cursor-pointer text-[30px] lg:hidden"
+                            : "hidden"}
                 />
             </nav>
 
