@@ -1,8 +1,18 @@
 import Image from "next/image"
 import React from 'react'
 
+type itemsConfig = {
+    icon: string;
+    label: string;
+}
+
+type cardConfig = {
+    list: itemsConfig[];
+}
+
 export default function HomePage() {
 
+    
     return (
         <section>
 
