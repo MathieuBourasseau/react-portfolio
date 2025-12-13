@@ -1,9 +1,15 @@
 import Image from "next/image"
 import React from 'react'
+import { FaComputer } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
+import { FaPlane } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
 
 type itemsConfig = {
     icon: string;
     label: string;
+    url: string;
+    options?: string[];
 }
 
 type cardConfig = {
@@ -12,7 +18,30 @@ type cardConfig = {
 
 export default function HomePage() {
 
-    
+    const cardLinks = [
+        {
+            icon: <FaComputer />,
+            label: "projets",
+            url: "#"
+        },
+        {
+            icon: <MdWork />,
+            label: "compétences",
+            url: "#"
+        },
+        {
+            icon: <FaPlane />,
+            label: "parcours",
+            url: "#",
+            options: ["professionnel", "académique"]
+        },
+        {
+            icon: <IoIosMail />,
+            label: "contact",
+            url: "#"
+        },
+    ]
+
     return (
         <section>
 
