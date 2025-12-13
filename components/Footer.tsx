@@ -18,7 +18,7 @@ export default function Footer() {
                     <p className="text-sm text-center md:text-base lg:text-xl">© 2025 Mathieu Bourasseau – Tous droits réservés</p>
                 </div>
                 <div className="flex gap-4 items-center">
-                    <p className="text-sm md:text-base lg:text-xl">Contact</p>
+                    <p className="text-sm md:text-base lg:text-xl">Contact :</p>
                     {socialsIcons.map((social, i) => (
                         <Link
                             key={i}
