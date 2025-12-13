@@ -21,10 +21,10 @@ export default function HomePage() {
                 </div>
                 <div>
                     <Image
-                        src={ }
-                        width={ }
-                        height={ }
-                        className=""
+                        src={`/intro/logo-avatar-mathieu.png`}
+                        width={35}
+                        height={35}
+                        alt="Avatar de Mathieu Bourasseau"
                     />
 
                     <div>
@@ -35,15 +35,14 @@ export default function HomePage() {
 
                     {/* LIST OF LINKS */}
                     <ul>
-                        <Link
-                            href={ }
-                            className=""
+                        {/* <Link
+                            href={#}
                         >
                             <div className="">
                                 <p></p>
                                 <span className=""></span>
                             </div>
-                        </Link>
+                        </Link> */}
                     </ul>
                 </div>
             </div>
