@@ -114,6 +114,7 @@ export default function Navigation() {
                             {link.options ? (
                                 <select 
                                     defaultValue="" 
+                                    className="text-base uppercase"
                                 >
                                     <option value="" disabled hidden >{link.label}</option>
                                     {link.options.map((option, i) => (
