@@ -3,6 +3,11 @@ import Navigation from "@/components/Navigation";
 
 export default function Home() {
   return (
-    <Navigation />
+    <>
+      <Navigation />
+      <main className="flex-1">
+
+      </main>   
+    </>
   );
 }

@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className=" flex flex-col gap-4 bg-[url(/header/background.jpg)] p-6 text-white">
       <div>
-        <p>© 2025 Mathieu Bourasseau – Tous droits réservés</p>
+        <p className="text-sm">© 2025 Mathieu Bourasseau – Tous droits réservés</p>
       </div>
-      <div>
-        <p>Contact</p>
+      <div className="flex gap-4">
+        <p className="text-sm">Contact</p>
         <span>1</span>
       </div>
 
