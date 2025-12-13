@@ -9,6 +9,7 @@ import { FaComputer } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { FaPlane } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 
 interface blocLogo {
@@ -112,15 +113,18 @@ export default function Navigation() {
                         <div className="flex">
 
                             {link.options ? (
-                                <select 
-                                    defaultValue="" 
-                                    className="text-base uppercase"
-                                >
-                                    <option value="" disabled hidden >{link.label}</option>
-                                    {link.options.map((option, i) => (
-                                        <option value={option.label} >{option.label}</option>
-                                    ))}
-                                </select>
+                                <div className="relative flex items-center justify-between bg-[#f74518] rounded-full">
+                                    <select
+                                        defaultValue=""
+                                        className="text-base uppercase appearance-none w-full py-3 pl-5 pr-10 cursor-pointer focus:outline-none"
+                                    >
+                                        <option value="" disabled hidden >{link.label}</option>
+                                        {link.options.map((option, i) => (
+                                            <option value={option.label} className="bg-[#f74518]" >{option.label}</option>
+                                        ))}
+                                    </select>
+                                    <IoMdArrowDropdown className="absolute right-0 text-[32px] pointer-events-none"/>
+                                </div>
                             ) : (
                                 <Link
                                     key={index}
