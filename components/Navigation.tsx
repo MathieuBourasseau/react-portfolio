@@ -108,7 +108,7 @@ export default function Navigation() {
                         <Link
                             key={index}
                             href={link.link}
-                            className="w-full flex justify-center items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300 hover:scale-115 "
+                            className="w-full flex justify-center items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300"
                         >
                             <div className="flex items-center justify-center gap-2">
                                 <p>{link.label}</p>
