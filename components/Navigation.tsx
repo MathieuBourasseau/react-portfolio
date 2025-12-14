@@ -64,7 +64,9 @@ export default function Navigation({activePage, onActivePage}) {
 
                 {/* BLOC LOGO */}
 
-                <div className="flex items-center gap-6">
+                <div 
+                    onClick={() => onActivePage('home')}
+                    className="flex items-center gap-6 cursor-pointer">
                     <Image
                         src={blocLogo.icon}
                         alt="logo du portfolio de Mathieu Bourasseau"
@@ -72,11 +74,10 @@ export default function Navigation({activePage, onActivePage}) {
                         height={36}
                         className="lg:w-[65px]"
                     />
-                    <a
-                        href="#"
-                        className="text-md font-bold lg:text-2xl"
+                    <span
+                        className="text-md font-bold hover:text-[#f74518] lg:text-2xl"
                     >Mathieu Bourasseau
-                    </a>
+                    </span>
                 </div>
 
                 {/* BLOC NAVIGATION MOBILE */}
