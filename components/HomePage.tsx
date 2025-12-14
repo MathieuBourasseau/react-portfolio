@@ -87,11 +87,11 @@ export default function HomePage() {
                                         <div className="w-full relative flex items-center justify-center rounded-lg bg-white py-2 hover:bg-[#f74518] transition-transform duration-300">
                                             <select
                                                 defaultValue=""
-                                                className="absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none inset-0 opacity-0 z-10"
+                                                className="absolute text-base uppercase appearance-none  w-full bg-transparent text-center cursor-pointer focus:outline-none inset-0 opacity-0 z-10"
                                             >
                                                 <option value="" disabled hidden>{link.label}</option>
                                                 {link.options.map((option, i) => (
-                                                    <option key={i} value={option} className="text-black bg-white">
+                                                    <option key={i} value={option} className="text-black bg-white ">
                                                         {option}
                                                     </option>
                                                 ))}
@@ -104,11 +104,11 @@ export default function HomePage() {
                                     ) : (
                                         <Link
                                             href={link.url}
-                                            className="w-full flex justify-center items-center rounded-lg bg-white text-base py-2 hover:bg-[#f74518] transition-transform duration-300"
+                                            className="w-full flex justify-center items-center text-[#003C57] rounded-lg bg-white text-base py-2 hover:bg-[#f74518] transition-transform duration-300  hover:text-white"
                                         >
-                                            <div className="flex items-center justify-center gap-2">
-                                                <p className="uppercase font-bold text-[#003C57]">{link.label}</p>
-                                                <span className="text-[20px] text-[#003C57]">{link.icon}</span>
+                                            <div className="flex items-center justify-center gap-2 ">
+                                                <p className="uppercase font-bold">{link.label}</p>
+                                                <span className="text-[20px]">{link.icon}</span>
                                             </div>
                                         </Link>
                                     )}
