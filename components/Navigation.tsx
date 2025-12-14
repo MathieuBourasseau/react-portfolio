@@ -17,7 +17,7 @@ interface blocLogo {
     title: string;
 }
 
-export default function Navigation({activePage, onActivePage}) {
+export default function Navigation({ activePage, onActivePage }) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -58,13 +58,13 @@ export default function Navigation({activePage, onActivePage}) {
 
     ]
     return (
-        <header className="relative bg-black p-6 border-b-2 border-[#F74518]">
+        <header className="relative z-20 bg-black p-6 border-b-2 border-[#F74518]">
 
             <nav className="text-white flex items-center justify-between">
 
                 {/* BLOC LOGO */}
 
-                <div 
+                <div
                     onClick={() => onActivePage('home')}
                     className="flex items-center gap-6 cursor-pointer">
                     <Image
@@ -114,15 +114,16 @@ export default function Navigation({activePage, onActivePage}) {
                                     </div>
                                 </div>
                             ) : (
-                                <Link
-                                    href={link.label}
-                                    className="w-full flex justify-center items-center border-b-2 text-base py-2 hover:bg-[#f74518] hover:scale-115 transition-transform duration-300"
+                                <button
+                                    key={index}
+                                    onClick={() => onActivePage(link.link)}
+                                    className="cursor-pointer w-full flex justify-center items-center border-b-2 text-base py-2 hover:bg-[#f74518] hover:scale-115 transition-transform duration-300"
                                 >
                                     <div className="flex items-center justify-center gap-2">
                                         <p>{link.label}</p>
                                         <span className="text-[20px]">{link.icon}</span>
                                     </div>
-                                </Link>
+                                </button>
                             )}
                         </div>
                     ))}
