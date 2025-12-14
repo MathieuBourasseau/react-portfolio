@@ -45,13 +45,13 @@ export default function HomePage() {
     ]
 
     return (
-        <section className="flex flex-col gap-4 py-[5%] px-[5%] md:gap-8">
+        <section className="flex flex-col gap-4 py-[5%] px-[10%] md:gap-12">
 
             {/* LEFT SIDE CONTENT */}
 
-            <h1 className="text-lg font-bold text-[#003C57] md:text-2xl md:text-center">Bienvenue sur le portfolio d'un développeur passionné ! </h1>
-            <div className="flex flex-col gap-8 md:flex-row">
-                <div className="flex flex-col gap-4 text-sm">
+            <h1 className="text-lg font-bold text-[#003C57] md:text-2xl md:text-center lg:text-3xl lg:mb-8">Bienvenue sur le portfolio d'un développeur passionné ! </h1>
+            <div className="flex flex-col text-justify gap-8 md:flex-row md:justify-center md:gap-12 lg:max-w-2/3 lg:mx-auto ">
+                <div className="flex flex-col gap-4 text-sm w-full md:text-base lg:text-lg">
                     <p>Je m’appelle Mathieu Bourasseau.</p>
                     <p>
                         Je suis actuellement en formation de concepteur et développeur d'application pour devenir développeur full stack et en recherche {""}
@@ -71,10 +71,10 @@ export default function HomePage() {
                         alt="Avatar de Mathieu Bourasseau"
                     />
 
-                    <div className="flex flex-col gap-2 text-center">
-                        <p className="text-sm text-white font-bold ">Mathieu Bourasseau</p>
-                        <span className="text-sm font-bold text-[#F74518] ">Recherche une alternance de concepteur et développeur d'application</span>
-                        <p className="text-sm text-white">"Test, fail, learn and repeat !"</p>
+                    <div className="flex flex-col gap-2 text-center text-white text-sm md:text-base lg:text-lg">
+                        <p className="font-bold ">Mathieu Bourasseau</p>
+                        <span className=" font-bold text-[#F74518] ">Recherche une alternance de concepteur et développeur d'application</span>
+                        <p>"Test, fail, learn and repeat !"</p>
                     </div>
 
                     {/* LIST OF LINKS */}
