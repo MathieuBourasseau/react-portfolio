@@ -19,6 +19,11 @@ type HardSkillsConfig = {
     items: ItemsConfig[];
 }
 
+type SoftSkillsConfig = {
+    label: string;
+    icon: React.ReactNode;
+}
+
 export default function Skills() {
 
     const skills : HardSkillsConfig[] = [
@@ -57,7 +62,7 @@ export default function Skills() {
         }
     ];
 
-    const softSkills = [
+    const softSkills : SoftSkillsConfig[] = [
         { label: "Esprit d'équipe", icon: <RiTeamFill />  },
         { label: "Goût de l'apprentissage", icon: <FaGraduationCap /> },
         { label: "Curiosité", icon: <BsFillPatchQuestionFill /> },
