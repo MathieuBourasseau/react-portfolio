@@ -52,13 +52,13 @@ export default function Skills() {
 
     return (
         <div className="text-center flex flex-col gap-6 py-[5%] px-[10%]">
-            <h1 className="text-xl text-white font-bold">Mes compétences</h1>
+            <h1 className="text-2xl text-white font-bold">Mes compétences</h1>
 
             {/* FRONT SECTION */}
 
             <section className="text-white">
                 <div className="flex flex-col gap-6">
-                    <h2 className="flex justify-center items-center p-4 rounded-lg gap-6 font-bold bg-[#F74518]">
+                    <h2 className="text-xl flex justify-center items-center p-4 rounded-lg gap-6 font-bold bg-[#F74518]">
                         <IoMdFlame className="text-[25px]"  />
                         HARD SKILLS
                         <IoMdFlame className="text-[25px]" />
@@ -67,8 +67,9 @@ export default function Skills() {
                     {skills.map((skill, i) => (
                         <article
                             key={i}
+                            className="flex flex-col gap-4"
                         >
-                            <h3 className="text-center ">{skill.category}</h3>
+                            <h3 className="text-lg font-bold text-text-center ">{skill.category}</h3>
                             <div className="grid grid-cols-2 gap-4">
                                 {skill.items.map((icon, i) => (
                                     <div 
