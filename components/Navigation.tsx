@@ -150,7 +150,6 @@ export default function Navigation({activePage, onActivePage}) {
                             ) : (
                                 <button
                                     key={index}
-                                    href={link.label}
                                     onClick={() => onActivePage(link.link)}
                                     className="w-full cursor-pointer flex justify-center uppercase items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300"
                                 >

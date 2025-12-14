@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import HomePage from "@/components/HomePage";
 import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 import { useState } from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 
@@ -17,6 +18,7 @@ export default function Home() {
             <main className="relative bg-neutral-950 z-10 flex flex-col flex-1">
                 {activePage === 'home' && <HomePage />}
                 {activePage === 'projects' && <Projects />}
+                {activePage === 'skills' && <Skills /> }
                 <BackgroundBeams />
             </main>
         </>
