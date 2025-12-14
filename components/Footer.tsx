@@ -12,7 +12,7 @@ const socialsIcons = [
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col items-center bg-[#2C3E50] p-6 text-white">
+        <footer className="flex flex-col items-center bg-black border-t-2 border-[#F74518] p-6 text-white">
             <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between lg:max-w-[1000px] lg:mx-auto lg:w-full">
                 <div>
                     <p className="text-sm text-center md:text-base lg:text-xl">© 2025 Mathieu Bourasseau – Tous droits réservés</p>
