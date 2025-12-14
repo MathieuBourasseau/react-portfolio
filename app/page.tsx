@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import HomePage from "@/components/HomePage";
