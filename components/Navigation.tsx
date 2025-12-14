@@ -115,7 +115,7 @@ export default function Navigation({activePage, onActivePage}) {
                                 </div>
                             ) : (
                                 <Link
-                                    href={link.link}
+                                    href={link.label}
                                     className="w-full flex justify-center items-center border-b-2 text-base py-2 hover:bg-[#f74518] hover:scale-115 transition-transform duration-300"
                                 >
                                     <div className="flex items-center justify-center gap-2">
@@ -148,15 +148,16 @@ export default function Navigation({activePage, onActivePage}) {
                                     <IoMdArrowDropdown className="absolute right-0 text-[32px] pointer-events-none" />
                                 </div>
                             ) : (
-                                <Link
+                                <button
                                     key={index}
-                                    href={link.link}
-                                    className="w-full flex justify-center items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300"
+                                    href={link.label}
+                                    onClick={() => onActivePage(link.link)}
+                                    className="w-full cursor-pointer flex justify-center uppercase items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300"
                                 >
                                     <div className="flex items-center justify-center gap-2">
                                         <p>{link.label}</p>
                                     </div>
-                                </Link>
+                                </button>
                             )}
                         </div>
                     ))}
