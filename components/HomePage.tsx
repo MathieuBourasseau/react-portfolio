@@ -54,7 +54,7 @@ export default function HomePage() {
                 <div className="flex flex-col gap-4">
                     <p className="text-sm">Je m’appelle Mathieu Bourasseau.</p>
                     <p className="text-sm">
-                        Je suis actuellement en formation de concepteur et développeur d'application pour devenir développeur full stack et en recherche
+                        Je suis actuellement en formation de concepteur et développeur d'application pour devenir développeur full stack et en recherche {""}
                         <span className="text-sm font-bold text-[#F74518]">d'une alternance pour l'année 2026.</span>
                     </p>
                     <p className="text-sm">Ce site web a pour objectif de vous présenter mon parcours, mes compétences, ainsi que les projets que j’ai pu réalisés.</p>
@@ -71,10 +71,10 @@ export default function HomePage() {
                         alt="Avatar de Mathieu Bourasseau"
                     />
 
-                    <div className="">
-                        <p className="text-sm text-white font-bold text-center">Mathieu Bourasseau</p>
-                        <span className="text-sm font-bold text-[#F74518] text-center">Recherche une alternance de concepteur et développeur d'application</span>
-                        <p className="text-sm text-center text-white">"Test, fail, learn and repeat !"</p>
+                    <div className="flex flex-col gap-2 text-center">
+                        <p className="text-sm text-white font-bold ">Mathieu Bourasseau</p>
+                        <span className="text-sm font-bold text-[#F74518] ">Recherche une alternance de concepteur et développeur d'application</span>
+                        <p className="text-sm text-white">"Test, fail, learn and repeat !"</p>
                     </div>
 
                     {/* LIST OF LINKS */}
