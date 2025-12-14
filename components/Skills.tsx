@@ -63,11 +63,11 @@ export default function Skills() {
     ];
 
     const softSkills : SoftSkillsConfig[] = [
-        { label: "Esprit d'équipe", icon: <RiTeamFill />  },
-        { label: "Goût de l'apprentissage", icon: <FaGraduationCap /> },
-        { label: "Curiosité", icon: <BsFillPatchQuestionFill /> },
+        { label: "Esprit d'équipe", icon: <RiTeamFill className="text-[#F74518]" />  },
+        { label: "Goût de l'apprentissage", icon: <FaGraduationCap className="text-[#38BDF8]" /> },
+        { label: "Curiosité", icon: <BsFillPatchQuestionFill className="text-[#6EBD4D]" /> },
         { label: "Rigueur", icon: <FaClipboardList /> },
-        { label: "Résolution de problème", icon: <FaGear /> },
+        { label: "Résolution de problème", icon: <FaGear className="text-[#F2493B]" /> },
     ]
 
     return (
@@ -109,17 +109,31 @@ export default function Skills() {
                                      
                                 ))}
                             </div>
-
                         </article>
                     ))}
 
                 </div>
-                <div>
+                <div className="flex flex-col gap-6 py-8">
                     <h2 className="text-xl flex justify-center items-center uppercase p-4 rounded-lg gap-6 font-bold bg-[#F74518]">
                         <FaHandshake className="text-[25px]"  />
                         Soft skills
                         <FaHandshake className="text-[25px]" />
                     </h2>
+
+                    <div className="grid grid-cols-2 gap-4">
+                        {softSkills.map((skill, i) => (
+                            <article 
+                                key={i}
+                                className="flex font-bold flex-col items-center rounded-xl p-6 gap-4 text-sm text-black bg-[#E2E8F0]"
+                            >
+                                <div className="text-[40px]">
+                                    {skill.icon}
+                                </div>
+                                <p>{skill.label}</p>
+                            </article>
+                        ))}
+                    </div>
+                    
                 </div>
             </section>
         </div>
