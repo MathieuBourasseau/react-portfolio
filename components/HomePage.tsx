@@ -6,11 +6,11 @@ import { FaPlane } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Link from "next/link";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+
 
 type itemsConfig = {
     // CORRECTION TYPE : ReactNode car ce sont des composants <Icon />
-    icon: React.ReactNode; 
+    icon: React.ReactNode;
     label: string;
     url: string;
     options?: string[];
@@ -30,18 +30,18 @@ export default function HomePage() {
     ]
 
     return (
-        <section className="relative w-full flex-1  bg-neutral-950 flex flex-col items-center  antialiased overflow-hidden">
-            
+        <section className="relative w-full flex-1 flex flex-col items-center  antialiased overflow-hidden">
+
             <div className="relative z-10 flex flex-col gap-4 py-[5%] px-[10%] md:gap-8 lg:py-8 lg:items-center w-full max-w-7xl">
 
                 {/* HEADER */}
                 <h1 className="text-lg font-bold text-white md:text-2xl lg:text-center lg:text-3xl lg:mb-4">
                     Bienvenue sur le portfolio d'un développeur <span className="text-[#F74518]">passionné</span> !
                 </h1>
-                
+
                 {/* MAIN CONTENT */}
                 <div className="flex flex-col text-justify gap-8 lg:flex-row lg:gap-12 lg:border lg:border-[#2C3E50] lg:rounded-xl lg:p-8 lg:justify-between lg:items-center bg-neutral-900/50 backdrop-blur-sm">
-                    
+
                     {/* LEFT SIDE CONTENT */}
                     <div className="flex flex-col gap-4 text-sm w-full md:text-base lg:text-lg lg:max-w-1/2 text-neutral-300">
                         <p>Je m’appelle Mathieu Bourasseau.</p>
@@ -108,10 +108,7 @@ export default function HomePage() {
                         </ul>
                     </div>
                 </div>
-            
             </div>
-            <BackgroundBeams />
-
         </section>
     )
 }
