@@ -1,5 +1,11 @@
 import Image from "next/image";
 import { IoMdFlame } from "react-icons/io";
+import { FaHandshake } from "react-icons/fa";
+import { RiTeamFill } from "react-icons/ri";
+import { FaGraduationCap } from "react-icons/fa";
+import { BsFillPatchQuestionFill } from "react-icons/bs";
+import { FaClipboardList } from "react-icons/fa";
+import { FaGear } from "react-icons/fa6";
 import React from 'react'
 
 type ItemsConfig = {
@@ -37,7 +43,7 @@ export default function Skills() {
             category: "Back-end & Base de données",
             items: [
                 { label: "Node js", src: "/skills/nodejs.svg", alt: "logo node" },
-                { label: "Express js", src: "/skills/express.png", alt: "logo express" },
+                { label: "Express js", src: "/skills/Xpressjs.png", alt: "logo express" },
                 { label: "PostgreSQL", src: "/skills/postgresql.svg", alt: "logo postgres" },
                 { label: "Next js", src: "/skills/nextjs.svg", alt: "logo nextjs" },
             ]
@@ -51,17 +57,25 @@ export default function Skills() {
         }
     ];
 
+    const softSkills = [
+        { label: "Esprit d'équipe", icon: <RiTeamFill />  },
+        { label: "Goût de l'apprentissage", icon: <FaGraduationCap /> },
+        { label: "Curiosité", icon: <BsFillPatchQuestionFill /> },
+        { label: "Rigueur", icon: <FaClipboardList /> },
+        { label: "Résolution de problème", icon: <FaGear /> },
+    ]
+
     return (
         <div className="text-center flex flex-col gap-6 py-[5%] px-[10%]">
             <h1 className="text-2xl text-white font-bold">Mes compétences</h1>
 
             {/* HARD SKILLS */}
 
-            <section className="text-white">
-                <div className="flex flex-col gap-6">
-                    <h2 className="text-xl flex justify-center items-center p-4 rounded-lg gap-6 font-bold bg-[#F74518]">
+            <section className="text-white flex flex-col gap-6">
+                <div className="flex flex-col gap-6 py-8">
+                    <h2 className="text-xl flex justify-center items-center uppercase p-4 rounded-lg gap-6 font-bold bg-[#F74518]">
                         <IoMdFlame className="text-[25px]"  />
-                        HARD SKILLS
+                        Hard skills
                         <IoMdFlame className="text-[25px]" />
                     </h2>
 
@@ -96,7 +110,11 @@ export default function Skills() {
 
                 </div>
                 <div>
-
+                    <h2 className="text-xl flex justify-center items-center uppercase p-4 rounded-lg gap-6 font-bold bg-[#F74518]">
+                        <FaHandshake className="text-[25px]"  />
+                        Soft skills
+                        <FaHandshake className="text-[25px]" />
+                    </h2>
                 </div>
             </section>
         </div>
