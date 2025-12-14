@@ -11,7 +11,7 @@ export default function Home() {
 
     return (
         <>
-            <Navigation />
+            <Navigation onActivePage={setActivePage} activePage={activePage} />
             <main className="flex flex-col flex-1">
                 <HomePage />
             </main>
