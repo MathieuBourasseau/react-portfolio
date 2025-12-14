@@ -9,7 +9,6 @@ import Link from "next/link";
 
 
 type itemsConfig = {
-    // CORRECTION TYPE : ReactNode car ce sont des composants <Icon />
     icon: React.ReactNode;
     label: string;
     url: string;
