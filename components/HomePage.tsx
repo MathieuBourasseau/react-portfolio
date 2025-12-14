@@ -32,7 +32,7 @@ export default function HomePage() {
     return (
         <section className="relative w-full flex-1  bg-neutral-950 flex flex-col items-center  antialiased overflow-hidden">
             
-            <div className="relative z-10 flex flex-col gap-4 py-[5%] px-[10%] md:gap-12 lg:py-8 lg:items-center w-full max-w-7xl">
+            <div className="relative z-10 flex flex-col gap-4 py-[5%] px-[10%] md:gap-8 lg:py-8 lg:items-center w-full max-w-7xl">
 
                 {/* HEADER */}
                 <h1 className="text-lg font-bold text-white md:text-2xl lg:text-center lg:text-3xl lg:mb-4">
@@ -40,7 +40,7 @@ export default function HomePage() {
                 </h1>
                 
                 {/* MAIN CONTENT */}
-                <div className="flex flex-col text-justify gap-8 lg:flex-row lg:gap-12 lg:border lg:border-neutral-800 lg:rounded-xl lg:p-8 lg:justify-between lg:items-center bg-neutral-900/50 backdrop-blur-sm">
+                <div className="flex flex-col text-justify gap-8 lg:flex-row lg:gap-12 lg:border lg:border-[#2C3E50] lg:rounded-xl lg:p-8 lg:justify-between lg:items-center bg-neutral-900/50 backdrop-blur-sm">
                     
                     {/* LEFT SIDE CONTENT */}
                     <div className="flex flex-col gap-4 text-sm w-full md:text-base lg:text-lg lg:max-w-1/2 text-neutral-300">
@@ -55,7 +55,7 @@ export default function HomePage() {
                     </div>
 
                     {/* RIGHT SIDE CONTENT */}
-                    <div className="flex flex-col items-center gap-4 rounded-xl py-4 px-5 bg-[url(/header/background.jpg)] max-w-[480px] md:max-w-[550px] shadow-2xl shadow-neutral-900">
+                    <div className="flex flex-col items-center gap-4 rounded-xl py-4 px-5 bg-[#2C3E50] max-w-[480px] md:max-w-[550px]">
                         <Image
                             src={`/intro/logo-avatar-mathieu.png`}
                             width={60}
@@ -75,7 +75,7 @@ export default function HomePage() {
                             {cardLinks.map((link, index) => (
                                 <li className="flex w-full justify-center" key={index}>
                                     {link.options ? (
-                                        <div className="w-full relative group flex items-center justify-center rounded-lg bg-white py-2 text-[#003C57] hover:bg-[#f74518] transition-colors duration-300">
+                                        <div className="w-full relative group flex items-center justify-center rounded-lg bg-white py-2 text-[#333333] hover:bg-[#f74518] transition-colors duration-300">
                                             <select
                                                 defaultValue=""
                                                 className="absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none inset-0 opacity-0 z-10"
@@ -95,7 +95,7 @@ export default function HomePage() {
                                     ) : (
                                         <Link
                                             href={link.url}
-                                            className="w-full flex justify-center items-center rounded-lg bg-white text-base py-2 text-[#003C57] hover:bg-[#f74518] hover:text-white transition-all duration-300"
+                                            className="w-full flex justify-center items-center rounded-lg bg-white text-base py-2 text-[#333333] hover:bg-[#f74518] hover:text-white transition-all duration-300"
                                         >
                                             <div className="flex items-center justify-center gap-2 bg-transparent">
                                                 <p className="uppercase font-bold bg-transparent">{link.label}</p>
