@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <>
             <Navigation />
-            <main className="flex-1">
+            <main className="flex flex-col flex-1">
                 <HomePage />
             </main>
         </>

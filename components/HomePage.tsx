@@ -6,9 +6,11 @@ import { FaPlane } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Link from "next/link";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 type itemsConfig = {
-    icon: string;
+    // CORRECTION TYPE : ReactNode car ce sont des composants <Icon />
+    icon: React.ReactNode; 
     label: string;
     url: string;
     options?: string[];
@@ -21,102 +23,95 @@ type cardConfig = {
 export default function HomePage() {
 
     const cardLinks = [
-        {
-            icon: <FaComputer />,
-            label: "projets",
-            url: "#"
-        },
-        {
-            icon: <MdWork />,
-            label: "compétences",
-            url: "#"
-        },
-        {
-            icon: <FaPlane />,
-            label: "parcours",
-            url: "#",
-            options: ["professionnel", "académique"]
-        },
-        {
-            icon: <IoIosMail />,
-            label: "contact",
-            url: "#"
-        },
+        { icon: <FaComputer />, label: "projets", url: "#" },
+        { icon: <MdWork />, label: "compétences", url: "#" },
+        { icon: <FaPlane />, label: "parcours", url: "#", options: ["professionnel", "académique"] },
+        { icon: <IoIosMail />, label: "contact", url: "#" },
     ]
 
     return (
-        <section className="flex flex-col gap-4 py-[5%] px-[10%] md:gap-12">
+        <section className="relative w-full flex-1  bg-neutral-950 flex flex-col items-center  antialiased overflow-hidden">
+            
+            <div className="relative z-10 flex flex-col gap-4 py-[5%] px-[10%] md:gap-12 lg:py-8 lg:items-center w-full max-w-7xl">
 
-            {/* LEFT SIDE CONTENT */}
-
-            <h1 className="text-lg font-bold text-[#003C57] md:text-2xl md:text-center lg:text-3xl lg:mb-8">Bienvenue sur le portfolio d'un développeur passionné ! </h1>
-            <div className="flex flex-col text-justify gap-8 md:flex-row md:justify-center md:gap-12 lg:max-w-2/3 lg:mx-auto ">
-                <div className="flex flex-col gap-4 text-sm w-full md:text-base lg:text-lg">
-                    <p>Je m’appelle Mathieu Bourasseau.</p>
-                    <p>
-                        Je suis actuellement en formation de concepteur et développeur d'application pour devenir développeur full stack et en recherche {""}
-                        <span className="font-bold text-[#F74518]">d'une alternance pour l'année 2026.</span>
-                    </p>
-                    <p>Ce site web a pour objectif de vous présenter mon parcours, mes compétences, ainsi que les projets que j’ai pu réalisés.</p>
-                    <p>En espérant pouvoir se rencontrer prochainement, je vous souhaite une très bonne découverte de mon portfolio.</p>
-                </div>
-
-                {/* RIGHT SIDE CONTENT */}
-
-                <div className="flex flex-col items-center gap-4 rounded-xl py-4 px-5 bg-[url(/header/background.jpg)] max-w-[450px]">
-                    <Image
-                        src={`/intro/logo-avatar-mathieu.png`}
-                        width={60}
-                        height={60}
-                        alt="Avatar de Mathieu Bourasseau"
-                    />
-
-                    <div className="flex flex-col gap-2 text-center text-white text-sm md:text-base lg:text-lg">
-                        <p className="font-bold ">Mathieu Bourasseau</p>
-                        <span className=" font-bold text-[#F74518] ">Recherche une alternance de concepteur et développeur d'application</span>
-                        <p>"Test, fail, learn and repeat !"</p>
+                {/* HEADER */}
+                <h1 className="text-lg font-bold text-white md:text-2xl lg:text-center lg:text-3xl lg:mb-4">
+                    Bienvenue sur le portfolio d'un développeur <span className="text-[#F74518]">passionné</span> !
+                </h1>
+                
+                {/* MAIN CONTENT */}
+                <div className="flex flex-col text-justify gap-8 lg:flex-row lg:gap-12 lg:border lg:border-neutral-800 lg:rounded-xl lg:p-8 lg:justify-between lg:items-center bg-neutral-900/50 backdrop-blur-sm">
+                    
+                    {/* LEFT SIDE CONTENT */}
+                    <div className="flex flex-col gap-4 text-sm w-full md:text-base lg:text-lg lg:max-w-1/2 text-neutral-300">
+                        <p>Je m’appelle Mathieu Bourasseau.</p>
+                        <p>
+                            Je suis actuellement en formation de concepteur et développeur d'application pour devenir développeur full stack et en recherche {""}
+                            <span className="font-bold text-[#F74518]">d'une alternance pour l'année 2026. 🔍</span>
+                        </p>
+                        <p>Ce site web a pour objectif de vous présenter mon parcours, mes compétences, ainsi que les projets que j’ai pu réalisés.</p>
+                        <p>Passionné par le développement j'adore régulièrement apprendre de nouvelles manières de coder et de développer. 💻</p>
+                        <p>En espérant pouvoir se rencontrer prochainement, je vous souhaite une très bonne découverte de mon portfolio. 👋</p>
                     </div>
 
-                    {/* LIST OF LINKS */}
+                    {/* RIGHT SIDE CONTENT */}
+                    <div className="flex flex-col items-center gap-4 rounded-xl py-4 px-5 bg-[url(/header/background.jpg)] max-w-[480px] md:max-w-[550px] shadow-2xl shadow-neutral-900">
+                        <Image
+                            src={`/intro/logo-avatar-mathieu.png`}
+                            width={60}
+                            height={60}
+                            alt="Avatar de Mathieu Bourasseau"
+                            className="bg-white rounded-full p-1"
+                        />
 
-                        <ul className="w-full flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 text-center text-white text-sm md:text-base lg:text-lg">
+                            <p className="font-bold ">Mathieu Bourasseau</p>
+                            <span className=" font-bold text-[#F74518] ">Recherche une alternance de concepteur et développeur d'application</span>
+                            <p>"Test, fail, learn and repeat !"</p>
+                        </div>
 
+                        {/* LIST OF LINKS */}
+                        <ul className="w-full flex flex-col gap-2 max-w-[350px] mx-auto md:max-w-[400px]">
                             {cardLinks.map((link, index) => (
                                 <li className="flex w-full justify-center" key={index}>
                                     {link.options ? (
-                                        <div className="w-full relative flex items-center justify-center rounded-lg bg-white py-2 text-[#003C57] hover:text-white hover:bg-[#f74518] transition-transform duration-300">
+                                        <div className="w-full relative group flex items-center justify-center rounded-lg bg-white py-2 text-[#003C57] hover:bg-[#f74518] transition-colors duration-300">
                                             <select
                                                 defaultValue=""
-                                                className="absolute text-base uppercase appearance-none  w-full bg-transparent text-center cursor-pointer focus:outline-none inset-0 opacity-0 z-10"
+                                                className="absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none inset-0 opacity-0 z-10"
                                             >
                                                 <option value="" disabled hidden>{link.label}</option>
                                                 {link.options.map((option, i) => (
-                                                    <option key={i} value={option} className="text-black bg-white ">
+                                                    <option key={i} value={option} className="text-black bg-white">
                                                         {option}
                                                     </option>
                                                 ))}
                                             </select>
-                                            <div className="flex items-center justify-center gap-2 pointer-events-none">
-                                                <span className="text-base uppercase  font-bold">{link.label}</span>
-                                                <IoMdArrowDropdown className="text-[32px]" />
+                                            <div className="flex items-center justify-center gap-2 pointer-events-none bg-transparent">
+                                                <span className="text-base uppercase font-bold bg-transparent group-hover:text-white transition-colors duration-300">{link.label}</span>
+                                                <IoMdArrowDropdown className="text-[32px] bg-transparent group-hover:text-white transition-colors duration-300" />
                                             </div>
                                         </div>
                                     ) : (
                                         <Link
                                             href={link.url}
-                                            className="w-full flex justify-center items-center text-[#003C57] rounded-lg bg-white text-base py-2 hover:bg-[#f74518] transition-transform duration-300 hover:text-white"
+                                            className="w-full flex justify-center items-center rounded-lg bg-white text-base py-2 text-[#003C57] hover:bg-[#f74518] hover:text-white transition-all duration-300"
                                         >
-                                            <div className="flex items-center justify-center gap-2 ">
-                                                <p className="uppercase font-bold">{link.label}</p>
-                                                <span className="text-[20px]">{link.icon}</span>
+                                            <div className="flex items-center justify-center gap-2 bg-transparent">
+                                                <p className="uppercase font-bold bg-transparent">{link.label}</p>
+                                                <span className="text-[20px] bg-transparent">{link.icon}</span>
                                             </div>
                                         </Link>
                                     )}
                                 </li>
                             ))}
                         </ul>
+                    </div>
                 </div>
+            
             </div>
+            <BackgroundBeams />
+
         </section>
     )
 }
