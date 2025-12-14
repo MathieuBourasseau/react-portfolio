@@ -54,7 +54,7 @@ export default function HomePage() {
                     </div>
 
                     {/* RIGHT SIDE CONTENT */}
-                    <div className="flex flex-col items-center gap-4 rounded-xl py-4 px-5 bg-[#2C3E50] max-w-[480px] md:max-w-[550px]">
+                    <div className="flex flex-col items-center gap-4 rounded-xl py-4 px-5 bg-[#E2E8F0] max-w-[480px] md:max-w-[550px]">
                         <Image
                             src={`/intro/logo-avatar-mathieu.png`}
                             width={60}
@@ -63,7 +63,7 @@ export default function HomePage() {
                             className="bg-white rounded-full p-1"
                         />
 
-                        <div className="flex flex-col gap-2 text-center text-white text-sm md:text-base lg:text-lg">
+                        <div className="flex flex-col gap-2 text-center black text-sm md:text-base lg:text-lg">
                             <p className="font-bold ">Mathieu Bourasseau</p>
                             <span className=" font-bold text-[#F74518] ">Recherche une alternance de concepteur et développeur d'application</span>
                             <p>"Test, fail, learn and repeat !"</p>
@@ -74,7 +74,7 @@ export default function HomePage() {
                             {cardLinks.map((link, index) => (
                                 <li className="flex w-full justify-center" key={index}>
                                     {link.options ? (
-                                        <div className="w-full relative group flex items-center justify-center rounded-lg bg-white py-2 text-[#333333] hover:bg-[#f74518] transition-colors duration-300">
+                                        <div className="w-full relative group flex items-center justify-center rounded-lg bg-black py-2 text-white hover:bg-[#f74518] transition-colors duration-300">
                                             <select
                                                 defaultValue=""
                                                 className="absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none inset-0 opacity-0 z-10"
@@ -94,7 +94,7 @@ export default function HomePage() {
                                     ) : (
                                         <Link
                                             href={link.url}
-                                            className="w-full flex justify-center items-center rounded-lg bg-white text-base py-2 text-[#333333] hover:bg-[#f74518] hover:text-white transition-all duration-300"
+                                            className="w-full flex justify-center items-center rounded-lg bg-black text-base py-2 text-white hover:bg-[#f74518] hover:text-white transition-all duration-300"
                                         >
                                             <div className="flex items-center justify-center gap-2 bg-transparent">
                                                 <p className="uppercase font-bold bg-transparent">{link.label}</p>
