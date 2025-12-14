@@ -84,7 +84,7 @@ export default function HomePage() {
                             {cardLinks.map((link, index) => (
                                 <li className="flex w-full justify-center" key={index}>
                                     {link.options ? (
-                                        <div className="w-full relative flex items-center justify-center rounded-lg bg-white py-2 hover:bg-[#f74518] transition-transform duration-300">
+                                        <div className="w-full relative flex items-center justify-center rounded-lg bg-white py-2 text-[#003C57] hover:text-white hover:bg-[#f74518] transition-transform duration-300">
                                             <select
                                                 defaultValue=""
                                                 className="absolute text-base uppercase appearance-none  w-full bg-transparent text-center cursor-pointer focus:outline-none inset-0 opacity-0 z-10"
@@ -96,15 +96,15 @@ export default function HomePage() {
                                                     </option>
                                                 ))}
                                             </select>
-                                            <div className="flex items-center justify-center bg-white gap-2 pointer-events-none">
-                                                <span className="text-base uppercase text-[#003C57] font-bold">{link.label}</span>
-                                                <IoMdArrowDropdown className="text-[32px] text-[#003C57]" />
+                                            <div className="flex items-center justify-center gap-2 pointer-events-none">
+                                                <span className="text-base uppercase  font-bold">{link.label}</span>
+                                                <IoMdArrowDropdown className="text-[32px]" />
                                             </div>
                                         </div>
                                     ) : (
                                         <Link
                                             href={link.url}
-                                            className="w-full flex justify-center items-center text-[#003C57] rounded-lg bg-white text-base py-2 hover:bg-[#f74518] transition-transform duration-300  hover:text-white"
+                                            className="w-full flex justify-center items-center text-[#003C57] rounded-lg bg-white text-base py-2 hover:bg-[#f74518] transition-transform duration-300 hover:text-white"
                                         >
                                             <div className="flex items-center justify-center gap-2 ">
                                                 <p className="uppercase font-bold">{link.label}</p>
