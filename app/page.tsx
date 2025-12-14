@@ -13,7 +13,7 @@ export default function Home() {
         <>
             <Navigation onActivePage={setActivePage} activePage={activePage} />
             <main className="flex flex-col flex-1">
-                <HomePage />
+                {activePage === 'home' && <HomePage />}
             </main>
         </>
     );
