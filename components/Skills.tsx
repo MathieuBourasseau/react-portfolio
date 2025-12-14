@@ -39,6 +39,7 @@ export default function Skills() {
                 { label: "Node js", src: "/skills/nodejs.svg", alt: "logo node" },
                 { label: "Express js", src: "/skills/express.png", alt: "logo express" },
                 { label: "PostgreSQL", src: "/skills/postgresql.svg", alt: "logo postgres" },
+                { label: "Next js", src: "/skills/nextjs.svg", alt: "logo nextjs" },
             ]
         },
         {
@@ -54,7 +55,7 @@ export default function Skills() {
         <div className="text-center flex flex-col gap-6 py-[5%] px-[10%]">
             <h1 className="text-2xl text-white font-bold">Mes compétences</h1>
 
-            {/* FRONT SECTION */}
+            {/* HARD SKILLS */}
 
             <section className="text-white">
                 <div className="flex flex-col gap-6">
