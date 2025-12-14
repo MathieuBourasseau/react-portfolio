@@ -58,7 +58,7 @@ export default function Navigation() {
 
     ]
     return (
-        <header className="relative bg-[url(/header/background.jpg)] p-6">
+        <header className="relative bg-black p-6 border-b-2 border-[#F74518]">
 
             <nav className="text-white flex items-center justify-between">
 
