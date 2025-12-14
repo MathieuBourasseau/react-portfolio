@@ -45,7 +45,7 @@ export default function Skills() {
             category: "CMS",
             items: [
                 { label: "Drupal", src: "/skills/drupal.svg", alt: "logo drupal" },
-                { label: "Wordpress", src: "wordpress.svg", alt: "logo wordpress" },
+                { label: "Wordpress", src: "/skills/wordpress.svg", alt: "logo wordpress" },
             ]
         }
     ];
