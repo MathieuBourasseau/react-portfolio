@@ -63,7 +63,7 @@ export default function HomePage() {
 
                 {/* RIGHT SIDE CONTENT */}
 
-                <div className=" flex flex-col items-center gap-4 rounded-xl py-4 px-5 bg-[url(/header/background.jpg)]">
+                <div className=" flex flex-col items-center gap-4 rounded-xl py-4 px-5 bg-[url(/header/background.jpg)] max-w-[450px]">
                     <Image
                         src={`/intro/logo-avatar-mathieu.png`}
                         width={60}
