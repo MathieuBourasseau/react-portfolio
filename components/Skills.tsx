@@ -72,13 +72,16 @@ export default function Skills() {
 
     return (
         <div className="text-center flex flex-col gap-6 py-[5%] px-[10%]">
-            <h1 className="text-2xl text-white font-bold">Mes compétences</h1>
+            <h1 className="text-2xl text-white font-bold lg:text-3xl">Mes compétences</h1>
 
-            {/* HARD SKILLS */}
+            {/* MAIN CONTENT */}
 
-            <section className="text-white flex flex-col gap-6">
-                <div className="flex flex-col gap-6 py-8">
-                    <h2 className="text-xl flex justify-center items-center uppercase p-4 rounded-lg gap-6 font-bold bg-[#F74518]">
+            <section className="relative lg:z-20 text-white flex flex-col gap-6 max-w-[600px] mx-auto lg:rounded-xl lg:max-w-[1200px] lg:flex-row lg:items-start">
+
+                {/* HARD SKILLS */}
+
+                <div className="flex flex-col gap-6 py-8 p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border shadow-[0_0_15px_rgba(44,62,80,0.6)] border-[#2C3E50]  lg:p-8  ">
+                    <h2 className="text-xl flex justify-center items-center uppercase p-4 rounded-lg gap-6 font-bold bg-[#F74518] lg:mx-auto">
                         <IoMdFlame className="text-[25px]"  />
                         Hard skills
                         <IoMdFlame className="text-[25px]" />
@@ -87,10 +90,10 @@ export default function Skills() {
                     {skills.map((skill, i) => (
                         <article
                             key={i}
-                            className="flex flex-col gap-4"
+                            className="flex flex-col gap-4 lg:py-4"
                         >
                             <h3 className="text-lg font-bold text-text-center ">{skill.category}</h3>
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
                                 {skill.items.map((icon, i) => (
                                     <div 
                                         key={i} 
@@ -113,14 +116,17 @@ export default function Skills() {
                     ))}
 
                 </div>
-                <div className="flex flex-col gap-6 py-8">
-                    <h2 className="text-xl flex justify-center items-center uppercase p-4 rounded-lg gap-6 font-bold bg-[#F74518]">
+
+                {/* SOFT SKILLS */}
+
+                <div className="flex flex-col  gap-6 py-8 p-4 bg-neutral-900/50 backdrop-blur-sm border rounded-xl shadow-[0_0_15px_rgba(44,62,80,0.6)] border-[#2C3E50] lg:p-8">
+                    <h2 className="text-xl flex justify-center items-center uppercase p-4 rounded-lg gap-6 font-bold bg-[#F74518] lg:mx-auto lg:mb-4">
                         <FaHandshake className="text-[25px]"  />
                         Soft skills
                         <FaHandshake className="text-[25px]" />
                     </h2>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-4 lg:grid-cols-2">
                         {softSkills.map((skill, i) => (
                             <article 
                                 key={i}
