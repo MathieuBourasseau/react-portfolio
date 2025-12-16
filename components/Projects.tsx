@@ -1,6 +1,6 @@
 import React from 'react'
 
-type ProjectsCongif = {
+type ProjectsConfig= {
   title: string;
   type: string;
   link: string;
@@ -8,7 +8,7 @@ type ProjectsCongif = {
 
 export default function Projects() {
 
-  const projects : ProjectsCongif = [
+  const projects : ProjectsConfig = [
     {
       title: "Heros League",
       type: "Front-end",
