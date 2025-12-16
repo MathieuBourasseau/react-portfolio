@@ -13,37 +13,37 @@ export default function Projects() {
         {
             title: "Heros League",
             type: "Front-end",
-            img:"/projects/heros.jpg",
+            img: "/projects/heros.jpg",
             link: ""
         },
         {
             title: "Gaming Campus",
             type: "Front-end",
-            img:"/projects/gaming-campus.jpg",
+            img: "/projects/gaming-campus.jpg",
             link: ""
         },
         {
             title: "Booking app",
             type: "Full stack - SSR",
-            img:"/projects/landscape.jpg",
+            img: "/projects/landscape.jpg",
             link: ""
         },
         {
             title: "Carambar",
             type: "Full stack - API REST",
-            img:"/projects/bonbons.jpg",
+            img: "/projects/bonbons.jpg",
             link: ""
         },
         {
             title: "Coffee-shop",
             type: "Full stack - SSR",
-            img:"",
+            img: "",
             link: ""
         },
         {
             title: "Chat LLM",
             type: "Full stack - SSR",
-            img:"/projects/ia.jpg",
+            img: "/projects/ia.jpg",
             link: ""
         },
 
@@ -60,10 +60,10 @@ export default function Projects() {
                 {/* EACH PROJECT */}
 
                 {projects.map((project, i) => (
-                    <article 
+                    <article
                         key={i}
-                        className="flex flex-col text-sm text-white bg-[#E2E8F0] h-[200px] bg-cover bg-center bg-no-repeat transition-all duration-300 ease-in-out hover:scale-105 "
-                        style={{ backgroundImage: `url(${project.img})`}}
+                        className="flex flex-col text-sm text-white bg-[#E2E8F0] cursor-pointer ring-0 h-[200px] rounded-lg bg-cover bg-center bg-no-repeat transition-all duration-300 ease-in-out hover:scale-105 hover:ring-2 hover:ring-[#2C3E50] hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]"
+                        style={{ backgroundImage: `url(${project.img})` }}
                     >
                         <h2 className="text-black">{project.title}</h2>
                         <span className="text-[#F74518]">{project.type}</span>
