@@ -62,7 +62,8 @@ export default function Projects() {
                 {projects.map((project, i) => (
                     <article 
                         key={i}
-                        className="flex flex-col text-sm text-white bg-[#E2E8F0] bg-[url('//hero-pattern.svg')]"
+                        className="flex flex-col text-sm text-white bg-[#E2E8F0]"
+                        style={{ backgroundImage: `url(${project.img})`}}
                     >
                         <h2 className="text-black">{project.title}</h2>
                         <span className="text-[#F74518]">{project.type}</span>
