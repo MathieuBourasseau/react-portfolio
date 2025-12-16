@@ -84,9 +84,9 @@ export default function Navigation({ activePage, onActivePage }) {
 
                 <div
                     className={
-                        `flex flex-col items-center w-full absolute left-0  top-full bg-black justify-between text-sm font-bold uppercase bg-[url(/header/background.jpg)] transition-all duration-500 ease-in-out 
+                        `flex flex-col items-center w-full absolute left-0  top-full bg-[#f74518] justify-between text-sm font-bold uppercase  transition-all duration-500 ease-in-out 
                         ${isOpen
-                            ? "top-full opacity-90 translate-y-0 "
+                            ? "top-full opacity-95 translate-y-0 "
                             : "top-full opacity-0 translate-y-[-40px]"
                         }
 
@@ -96,7 +96,7 @@ export default function Navigation({ activePage, onActivePage }) {
                     {navLinks.map((link, index) => (
                         <div className="flex w-full justify-center" key={index}>
                             {link.options ? (
-                                <div className="w-full relative flex items-center justify-center border-b-2 py-2 hover:bg-[#f74518] hover:scale-115 transition-transform duration-300">
+                                <div className="w-full relative flex items-center justify-center border-b-2 border-white py-2 hover:bg-black hover:scale-115 transition-transform duration-300">
                                     <select
                                         defaultValue=""
                                         className="absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none z-10 inset-0 opacity-0 z-10"
@@ -117,7 +117,7 @@ export default function Navigation({ activePage, onActivePage }) {
                                 <button
                                     key={index}
                                     onClick={() => onActivePage(link.link)}
-                                    className="cursor-pointer w-full flex justify-center items-center border-b-2 text-base py-2 hover:bg-[#f74518] hover:scale-115 transition-transform duration-300"
+                                    className="cursor-pointer w-full flex justify-center uppercase items-center border-b-2 border-white text-base py-2 hover:bg-black hover:scale-115 transition-transform duration-300"
                                 >
                                     <div className="flex items-center justify-center gap-2">
                                         <p>{link.label}</p>
