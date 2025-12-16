@@ -23,16 +23,16 @@ export default function Projects() {
             link: "https://gaming-campus-eight.vercel.app/"
         },
         {
-            title: "Booking app",
-            type: "Full stack - SSR",
-            img: "/projects/landscape.jpg",
-            link: "#"
-        },
-        {
             title: "Carambar",
             type: "Full stack - API REST",
             img: "/projects/bonbons.jpg",
-            link: "#"
+            link: "https://carambar-front-psi.vercel.app/"
+        },
+        {
+            title: "Booking app",
+            type: "Full stack - SSR",
+            img: "/projects/landscape.jpg",
+            link: "https://booking-app-production-f97c.up.railway.app/"
         },
         {
             title: "Coffee-shop",
