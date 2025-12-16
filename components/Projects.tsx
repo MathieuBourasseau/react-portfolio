@@ -1,9 +1,14 @@
 import React from 'react'
 
+type ProjectsCongif = {
+  title: string;
+  type: string;
+  link: string;
+}
 
 export default function Projects() {
 
-  const projects = [
+  const projects : ProjectsCongif = [
     {
       title: "Heros League",
       type: "Front-end",
@@ -35,7 +40,8 @@ export default function Projects() {
       link: ""
     },
     
-  ],
+  ]
+
   return (
     <section className="relative z-10">
         <h1 className="text-white">Mes projets</h1>
