@@ -13,25 +13,25 @@ export default function Projects() {
         {
             title: "Heros League",
             type: "Front-end",
-            img:"heros.jpg",
+            img:"/projects/heros.jpg",
             link: ""
         },
         {
             title: "Gaming Campus",
             type: "Front-end",
-            img:"gaming-campus.jpg",
+            img:"/projects/gaming-campus.jpg",
             link: ""
         },
         {
             title: "Booking app",
             type: "Full stack - SSR",
-            img:"landscape.jpg",
+            img:"/projects/landscape.jpg",
             link: ""
         },
         {
             title: "Carambar",
             type: "Full stack - API REST",
-            img:"bonbons.jpg",
+            img:"/projects/bonbons.jpg",
             link: ""
         },
         {
@@ -43,7 +43,7 @@ export default function Projects() {
         {
             title: "Chat LLM",
             type: "Full stack - SSR",
-            img:"ia.jpg",
+            img:"/projects/ia.jpg",
             link: ""
         },
 
@@ -55,17 +55,17 @@ export default function Projects() {
 
             {/* PROJECTS PART */}
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 py-8 px-[5%]">
 
                 {/* EACH PROJECT */}
 
                 {projects.map((project, i) => (
                     <article 
                         key={i}
-                        className="flex flex-col text-sm text-white bg-[#E2E8F0]"
+                        className="flex flex-col text-sm text-white bg-[#E2E8F0] bg-[url('//hero-pattern.svg')]"
                     >
-                        <h2>{project.title}</h2>
-                        <span>{project.type}</span>
+                        <h2 className="text-black">{project.title}</h2>
+                        <span className="text-[#F74518]">{project.type}</span>
 
                     </article>
                 ))}
