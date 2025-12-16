@@ -86,8 +86,8 @@ export default function Navigation({ activePage, onActivePage }) {
                     className={
                         `flex flex-col items-center w-full absolute left-0  top-full bg-[#f74518] justify-between text-sm font-bold uppercase  transition-all duration-500 ease-in-out 
                         ${isOpen
-                            ? "top-full opacity-95 translate-y-0 "
-                            : "top-full opacity-0 translate-y-[-40px]"
+                            ? "top-full opacity-95 translate-y-0 pointer-events-auto "
+                            : "top-full opacity-0 translate-y-[-40px] pointer-events-none"
                         }
 
                         lg:hidden
