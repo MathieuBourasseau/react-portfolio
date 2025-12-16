@@ -55,14 +55,14 @@ export default function Projects() {
 
             {/* PROJECTS PART */}
 
-            <div>
+            <div className="flex flex-col gap-6">
 
                 {/* EACH PROJECT */}
 
                 {projects.map((project, i) => (
                     <article 
                         key={i}
-                        className="text-sm text-white"
+                        className="flex flex-col text-sm text-white bg-[#E2E8F0]"
                     >
                         <h2>{project.title}</h2>
                         <span>{project.type}</span>
