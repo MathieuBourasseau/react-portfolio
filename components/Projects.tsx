@@ -20,7 +20,7 @@ export default function Projects() {
             title: "Gaming Campus",
             type: "Front-end",
             img: "/projects/gaming-campus.jpg",
-            link: "#"
+            link: "https://gaming-campus-eight.vercel.app/"
         },
         {
             title: "Booking app",
