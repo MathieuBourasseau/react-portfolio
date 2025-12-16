@@ -62,7 +62,7 @@ export default function Projects() {
                 {projects.map((project, i) => (
                     <article 
                         key={i}
-                        className="flex flex-col text-sm text-white bg-[#E2E8F0]"
+                        className="flex flex-col text-sm text-white bg-[#E2E8F0] h-[200px] bg-cover bg-center bg-no-repeat transition-all duration-300 ease-in-out hover:scale-105 "
                         style={{ backgroundImage: `url(${project.img})`}}
                     >
                         <h2 className="text-black">{project.title}</h2>
