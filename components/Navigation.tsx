@@ -175,7 +175,8 @@ export default function Navigation({ activePage, onActivePage }) {
                 <RxCross2
                     onClick={handleBurgerNav}
                     className={
-                        isOpen ? "transition-transform duration-270 hover:scale-115 cursor-pointer text-[30px] lg:hidden"
+                        isOpen 
+                            ? "transition-transform duration-270 hover:scale-115 cursor-pointer text-[30px] lg:hidden"
                             : "hidden"}
                 />
             </nav>

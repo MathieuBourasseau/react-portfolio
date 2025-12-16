@@ -14,37 +14,37 @@ export default function Projects() {
             title: "Heros League",
             type: "Front-end",
             img: "/projects/heros.jpg",
-            link: ""
+            link: "https://projet-heros.vercel.app/"
         },
         {
             title: "Gaming Campus",
             type: "Front-end",
             img: "/projects/gaming-campus.jpg",
-            link: ""
+            link: "#"
         },
         {
             title: "Booking app",
             type: "Full stack - SSR",
             img: "/projects/landscape.jpg",
-            link: ""
+            link: "#"
         },
         {
             title: "Carambar",
             type: "Full stack - API REST",
             img: "/projects/bonbons.jpg",
-            link: ""
+            link: "#"
         },
         {
             title: "Coffee-shop",
             type: "Full stack - SSR",
             img: "",
-            link: ""
+            link: "#"
         },
         {
             title: "Chat LLM",
             type: "Full stack - SSR",
             img: "/projects/ia.jpg",
-            link: ""
+            link: "#"
         },
 
     ]
@@ -60,8 +60,10 @@ export default function Projects() {
                 {/* EACH PROJECT */}
 
                 {projects.map((project, i) => (
-                    <article
+                    <a
                         key={i}
+                        href={project.link}
+                        target="_blank"
                         className="
                             relative group/card flex flex-col items-center justify-center overflow-hidden text-sm text-white cursor-pointer  h-[200px] rounded-lg  transition-all duration-300 ease-in-out ring-0  hover:ring-2 hover:ring-[#2C3E50] ring-inset   hover:scale-105  hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]
                         "
@@ -81,7 +83,7 @@ export default function Projects() {
                             <span className="text-[#F74518]">{project.type}</span>
                         </div>
 
-                    </article>
+                    </a>
                 ))}
             </div>
         </section>
