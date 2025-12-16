@@ -55,14 +55,14 @@ export default function Projects() {
 
             {/* PROJECTS PART */}
 
-            <div className="flex flex-col gap-6 py-8 px-[5%]">
+            <div className="group flex flex-col gap-6 py-8 px-[5%]">
 
                 {/* EACH PROJECT */}
 
                 {projects.map((project, i) => (
                     <article
                         key={i}
-                        className="flex flex-col text-sm text-white bg-[#E2E8F0] cursor-pointer ring-0 h-[200px] rounded-lg bg-cover bg-center bg-no-repeat transition-all duration-300 ease-in-out hover:scale-105 hover:ring-2 hover:ring-[#2C3E50] hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]"
+                        className="flex flex-col text-sm text-white bg-[#E2E8F0] cursor-pointer ring-0 h-[200px] rounded-lg bg-cover bg-center bg-no-repeat brightness-75 transition-all duration-300 ease-in-out group-hover:blur-[2px] hover:!blur-none hover:brightness-110 hover:scale-105 hover:ring-2 hover:ring-[#2C3E50] hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]"
                         style={{ backgroundImage: `url(${project.img})` }}
                     >
                         <h2 className="text-black">{project.title}</h2>
