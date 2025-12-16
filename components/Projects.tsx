@@ -13,25 +13,25 @@ export default function Projects() {
         {
             title: "Heros League",
             type: "Front-end",
-            img:"",
+            img:"heros.jpg",
             link: ""
         },
         {
             title: "Gaming Campus",
             type: "Front-end",
-            img:"",
+            img:"gaming-campus.jpg",
             link: ""
         },
         {
             title: "Booking app",
             type: "Full stack - SSR",
-            img:"",
+            img:"landscape.jpg",
             link: ""
         },
         {
             title: "Carambar",
             type: "Full stack - API REST",
-            img:"",
+            img:"bonbons.jpg",
             link: ""
         },
         {
@@ -43,7 +43,7 @@ export default function Projects() {
         {
             title: "Chat LLM",
             type: "Full stack - SSR",
-            img:"",
+            img:"ia.jpg",
             link: ""
         },
 
