@@ -58,7 +58,7 @@ export default function Navigation({ activePage, onActivePage }) {
 
     ]
     return (
-        <header className="relative z-20 bg-black p-6 border-b-2 border-[#F74518]">
+        <header className="relative z-20 bg-black p-6 border-b-2 border-[#F74518] shadow-[0_0_10px_#F74518,0_0_20px_rgba(247,69,24,0.5),0_0_40px_rgba(247,69,24,0.3)]">
 
             <nav className="text-white flex items-center justify-between">
 
