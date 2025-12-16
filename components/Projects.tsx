@@ -37,7 +37,7 @@ export default function Projects() {
         {
             title: "Coffee-shop",
             type: "Full stack - SSR",
-            img: "",
+            img: "/projects/coffee.jpg",
             link: "#"
         },
         {
