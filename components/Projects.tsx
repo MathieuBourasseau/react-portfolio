@@ -41,6 +41,22 @@ export default function Projects() {
             available: true,
         },
         {
+            title: "Stage Younivibe",
+            type: "Front-end",
+            img: "/projects/logo-younivibe.png",
+            link: "#",
+            items: [
+                { icon: "/skills/react.svg", tech: "react js" },
+                { icon: "/skills/tailwind.svg", tech: "tailwind" },
+                { icon: "/skills/css.svg", tech: "css" },
+                { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
+                { icon: "/skills/nextjs.svg", tech: "next js", invert: true },
+                { icon: "/skills/typescript.svg", tech: "typescript" },
+            ],
+            available: true,
+
+        },
+        {
             title: "Carambar",
             type: "Full stack - API REST",
             img: "/projects/bonbons.jpg",
@@ -63,22 +79,6 @@ export default function Projects() {
                 { icon: "/skills/tailwind.svg", tech: "tailwind" },
                 { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
                 { icon: "/skills/express-js.png", tech: "express", invert: true },
-            ],
-            available: true,
-
-        },
-        {
-            title: "Stage Younivibe",
-            type: "Front-end",
-            img: "/projects/logo-younivibe.png",
-            link: "#",
-            items: [
-                { icon: "/skills/react.svg", tech: "react js" },
-                { icon: "/skills/tailwind.svg", tech: "tailwind" },
-                { icon: "/skills/css.svg", tech: "css" },
-                { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
-                { icon: "/skills/nextjs.svg", tech: "next js", invert: true },
-                { icon: "/skills/typescript.svg", tech: "typescript" },
             ],
             available: true,
 
