@@ -13,6 +13,7 @@ type ProjectsConfig = {
 type TechConfig = {
     icon: string;
     tech: string;
+    invert?: boolean;
 }
 export default function Projects() {
 
@@ -47,8 +48,8 @@ export default function Projects() {
             items: [
                 { icon: "/skills/html.svg", tech: "html" },
                 { icon: "/skills/css.svg", tech: "css" },
-                { icon: "/skills/nodejs.svg", tech: "node js" },
-                { icon: "/skills/express-js.png", tech: "express" },
+                { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
+                { icon: "/skills/express-js.png", tech: "express", invert: true },
             ],
             available: true,
         },
@@ -60,8 +61,8 @@ export default function Projects() {
             items: [
                 { icon: "/skills/html.svg", tech: "ejs" },
                 { icon: "/skills/tailwind.svg", tech: "tailwind" },
-                { icon: "/skills/nodejs.svg", tech: "node js" },
-                { icon: "/skills/express-js.png", tech: "express" },
+                { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
+                { icon: "/skills/express-js.png", tech: "express", invert: true },
             ],
             available: true,
 
@@ -75,8 +76,8 @@ export default function Projects() {
                 { icon: "/skills/react.svg", tech: "react js" },
                 { icon: "/skills/tailwind.svg", tech: "tailwind" },
                 { icon: "/skills/css.svg", tech: "css" },
-                { icon: "/skills/nodejs.svg", tech: "node js" },
-                { icon: "/skills/express-js.png", tech: "next js" },
+                { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
+                { icon: "/skills/nextjs.svg", tech: "next js", invert: true },
                 { icon: "/skills/typescript.svg", tech: "typescript" },
             ],
             available: true,
@@ -139,21 +140,32 @@ export default function Projects() {
                                     {/* TEXTS */}
 
                                 </div>
-                                <div className="relative z-10 text-lg font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                                <div className="relative z-10 text-lg flex flex-col gap-4 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                                     <div>
                                         <h2 className="text-white">{project.title}</h2>
                                         <span className="text-[#F74518]">{project.type}</span>
                                     </div>
-                                    <div>
+                                    <div className="flex flex-wrap gap-2 items-center justify-center">
+
+                                        {/* TECH USED  */}
+
                                         {project.items.map((tech, i) => (
-                                            <div key={i}>
-                                                <Image
-                                                    src={tech.icon}
-                                                    width={20}
-                                                    height={20}
-                                                    alt={tech.tech}
-                                                />
-                                                <span>{tech.tech}</span>
+                                            <div
+                                                key={i}
+                                                className="flex items-center gap-1.5 border border-white/10 py-1 px-2.5 rounded-full bg-black/40 backdrop-blur-sm text-white"
+                                            >
+                                                <div className="h-[18px]">
+                                                    <Image
+                                                        src={tech.icon}
+                                                        width={18}
+                                                        height={18}
+                                                        alt={tech.tech}
+                                                        className={`h-full brightness-110 ${tech.invert ? 'invert brightness-150' : ''}`}
+                                                    />
+                                                </div>
+                                                <span className="text-[10px] font-medium uppercase tracking-wider">
+                                                    {tech.tech}
+                                                </span>
                                             </div>
                                         ))}
                                     </div>
@@ -186,7 +198,7 @@ export default function Projects() {
                                 </div>
 
                             </div>
-                        )     
+                        )
                 ))}
             </div>
         </section>
