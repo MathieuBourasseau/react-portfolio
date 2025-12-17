@@ -70,7 +70,7 @@ export default function Projects() {
         {
             title: "Stage Younivibe",
             type: "Front-end",
-            img: "/projects/landscape.jpg",
+            img: "/projects/logo-younivibe.png",
             link: "#",
             items: [
                 { icon: "/skills/react.svg", tech: "react js" },
