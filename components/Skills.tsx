@@ -48,7 +48,7 @@ export default function Skills() {
             category: "Back-end & Base de données",
             items: [
                 { label: "Node js", src: "/skills/nodejs.svg", alt: "logo node" },
-                { label: "Express js", src: "/skills/Xpressjs.png", alt: "logo express" },
+                { label: "Express js", src: "/skills/express-js.png", alt: "logo express" },
                 { label: "PostgreSQL", src: "/skills/postgresql.svg", alt: "logo postgres" },
                 { label: "Next js", src: "/skills/nextjs.svg", alt: "logo nextjs" },
             ]
