@@ -114,7 +114,7 @@ export default function Projects() {
 
             {/* PROJECTS PART */}
 
-            <div className="group grid grid-cols-1 gap-6 py-8 px-[5%]">
+            <div className="group grid grid-cols-1 place-items-center gap-6 py-8 px-[5%] md:grid-cols-2 md:mx-auto md:max-w-[900px] lg:max-w-[1200px] lg:grid-cols-3 ">
 
                 {/* EACH PROJECT */}
 
@@ -127,7 +127,7 @@ export default function Projects() {
                                 href={project.link}
                                 target="_blank"
                                 className="
-                            relative group/card flex flex-col items-center justify-center overflow-hidden text-sm text-white cursor-pointer  h-[200px] rounded-lg  transition-all duration-300 ease-in-out ring-0  hover:ring-2 hover:ring-[#2C3E50] ring-inset   hover:scale-105  hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]
+                            relative group/card flex flex-col items-center justify-center overflow-hidden text-sm text-white cursor-pointer  h-[200px] rounded-lg  transition-all duration-300 ease-in-out ring-0 w-full max-w-[450px] md:max-w-[350px] lg:max-w-[400px] hover:ring-2 hover:ring-[#2C3E50] ring-inset   hover:scale-105  hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]
                         "
                             >
                                 {/* BACKGROUND OF EACH PROJECT */}
