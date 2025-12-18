@@ -1,12 +1,12 @@
 'use client'
 
-import Image from "next/image";
-import Navigation from "@/components/Navigation";
-import HomePage from "@/components/HomePage";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import Navigation from "@/app/components/Navigation";
+import HomePage from "@/app/components/HomePage";
+import Projects from "@/app/components/Projects";
+import Skills from "@/app/components/Skills";
+import Career from "@/app/components/Career";
 import { useState } from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import { BackgroundBeams } from "@/app/components/ui/background-beams";
 
 export default function Home() {
 
