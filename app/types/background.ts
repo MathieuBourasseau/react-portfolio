@@ -1,1 +1,1 @@
-export type Background = 'ACADEMIC' | 'PROFESIONAL';
+export type Background = 'ACADEMIC' | 'PROFESSIONAL';
