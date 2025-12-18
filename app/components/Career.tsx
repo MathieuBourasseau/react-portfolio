@@ -1,4 +1,6 @@
 import { Background } from "../types/background"
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 interface ProfessionalItem {
     title: string;
@@ -177,14 +179,17 @@ export default function Career({ activeBackground }: CareerProps) {
     const currentBackground = background[activeBackground];
 
     return (
-        <section className="flex flex-col gap-6 text-white px-[5%] py-6">
+        <section className="flex flex-col gap-6 px-[5%] py-6">
             <h1 className="text-2xl font-bold">Mon parcours</h1>
 
             {/* EXPERIENCES BLOC OR  ACADEMIC BACKGROUND */}
 
-            <div className="grid grid-col-1 gap-6">
+            <VerticalTimeline className="grid grid-col-1 gap-6">
                 {currentBackground.map((background, index) => (
-                    <article key={index}>
+                    <VerticalTimelineElement 
+                        key={index}
+                        icon={`vercel.svg`}
+                    >
                         {/* BACKGROUND TITLES */}
                         <div>
                             <h2>{background.title}</h2>
@@ -210,9 +215,9 @@ export default function Career({ activeBackground }: CareerProps) {
                         ) : (
                             t
                         )}
-                    </article>
+                    </VerticalTimelineElement>
                 ))}
-            </div>
+            </VerticalTimeline>
         </section>
     )
 }
