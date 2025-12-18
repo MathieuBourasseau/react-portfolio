@@ -44,7 +44,7 @@ export default function Projects() {
             title: "Stage Younivibe",
             type: "Front-end",
             img: "/projects/logo-younivibe.png",
-            link: "#",
+            link: "https://younivibe-stage.vercel.app/",
             items: [
                 { icon: "/skills/react.svg", tech: "react js" },
                 { icon: "/skills/tailwind.svg", tech: "tailwind" },

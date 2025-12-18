@@ -133,7 +133,7 @@ export default function Navigation({ activePage, onActivePage }) {
 
                 <div className="hidden lg:block lg:flex gap-8 items-center justify-between text-sm font-bold uppercase bg- transition-all duration-500 ease-in-out max-w-2/3">
                     {navLinks.map((link, index) => (
-                        <div className="flex">
+                        <div key={index} className="flex">
 
                             {link.options ? (
                                 <div className="relative flex items-center justify-between bg-[#f74518] rounded-full">
