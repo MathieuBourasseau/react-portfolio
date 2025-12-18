@@ -36,7 +36,7 @@ export default function HomePage() {
 
                 {/* HEADER */}
                 <motion.h1
-                    initial={{ opacity: 0, y: -30}}
+                    initial={{ opacity: 0, y: -20}}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut"}} 
                     className="text-lg font-bold text-white md:text-2xl lg:text-center lg:text-3xl lg:mb-4">
@@ -44,7 +44,11 @@ export default function HomePage() {
                 </motion.h1>
 
                 {/* MAIN CONTENT */}
-                <div className="flex flex-col text-justify gap-8 lg:flex-row lg:gap-12 lg:border lg:border-[#2C3E50] lg:rounded-xl lg:p-8 lg:justify-between lg:items-center bg-neutral-900/50 backdrop-blur-sm">
+                <motion.div 
+                    initial={{ opacity: 0, x: -40}}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut"}}
+                    className="flex flex-col text-justify gap-8 lg:flex-row lg:gap-12 lg:border lg:border-[#2C3E50] lg:rounded-xl lg:p-8 lg:justify-between lg:items-center bg-neutral-900/50 backdrop-blur-sm">
 
                     {/* LEFT SIDE CONTENT */}
                     <div className="flex flex-col gap-4 text-sm w-full md:text-base lg:text-lg lg:max-w-1/2 text-neutral-300">
@@ -112,7 +116,7 @@ export default function HomePage() {
                             ))}
                         </ul>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )
