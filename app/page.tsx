@@ -24,7 +24,7 @@ export default function Home() {
                 {activePage === 'home' && <HomePage />}
                 {activePage === 'projects' && <Projects />}
                 {activePage === 'skills' && <Skills /> }
-                {activePage === 'background' && <Career activeBackground={activeBackground} />}
+                {activePage === 'career' && <Career activeBackground={activeBackground} />}
                 <BackgroundBeams />
             </main>
         </>

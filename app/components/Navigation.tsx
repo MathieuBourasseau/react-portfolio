@@ -13,6 +13,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { Background } from "../types/background";
 
 
+
 type NavProps = {
     activePage : string;
     onActivePage: (page: string) => void;
@@ -51,7 +52,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
         },
         {
             label: "parcours",
-            link: "background",
+            link: "career",
             icon: <FaPlane />,
             options: [
                 { value: "PROFESSIONAL", label: "Professionnel" },
@@ -65,9 +66,10 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
         }
 
     ];
-    const handleValue = (event) => {
+    const handleValue = (event, targetPage) => {
         const currentValue = event.target.value as Background;
         onActiveBackground(currentValue);
+        onActivePage(targetPage);
     };
 
     return (
@@ -112,7 +114,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                                 <div className="w-full relative flex items-center justify-center border-b-2 border-white py-2 hover:bg-black hover:scale-115 transition-transform duration-300">
                                     <select
                                         defaultValue=""
-                                        onChange={handleValue}
+                                        onChange={(event) => handleValue(event, link.link)}
                                         className="absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none z-10 inset-0 opacity-0 z-10"
                                     >
                                         <option value="" disabled hidden>{link.label}</option>
@@ -154,7 +156,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                                     <select
                                         defaultValue=""
                                         className="text-base uppercase appearance-none w-full py-3 pl-5 pr-10 cursor-pointer focus:outline-none"
-                                        onChange={handleValue}          
+                                        onChange={(event) => handleValue(event, link.link)}          
                                     >
                                         <option value="" disabled hidden >{link.label}</option>
                                         {link.options.map((option, i) => (

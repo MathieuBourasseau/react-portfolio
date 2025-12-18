@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { experimental_taintObjectReference } from 'react'
 import { Background } from "../types/background"
+import { div, h2 } from "framer-motion/client"
+
 
 type CareerProps = {
     activeBackground: Background
@@ -94,87 +96,93 @@ export default function Career({ activeBackground }: CareerProps) {
             },
         ],
 
-        ACADEMIC : [
+        ACADEMIC: [
             {
-        title :'Ecole de commerce',
-        University: 'Esiame',
-        degree : 'Bachelor 1',
-        year : '2013 - 2014',
-        city : 'Cholet',
-        department : '(49)',
-        description : [
-            'Principes généraux du commerce (management, marketing, offre et demande...)'
+                title: 'Ecole de commerce',
+                University: 'Esiame',
+                degree: 'Bachelor 1',
+                year: '2013 - 2014',
+                city: 'Cholet',
+                department: '(49)',
+                description: [
+                    'Principes généraux du commerce (management, marketing, offre et demande...)'
+                ]
+            },
+
+            {
+                title: 'Langues Etrangères Appliquées : anglais, espagnol, portugais',
+                University: 'Université Catholique de l\'Ouest',
+                degree: 'BAC +3',
+                year: '2014 - 2017',
+                city: 'Angers',
+                department: '(49)',
+                description: [
+                    'Apprentissage et pratique de l\'anglais (niveau B2) : traduction, version...',
+                    'Apprentissage et pratique de l\'espagnol : traduction, version...',
+                    'Apprentissage et pratique du portugais : niveau débutant'
+                ]
+            },
+
+            {
+                title: 'Langues Appliquées, Relations Internationales et Stratégies Politiques',
+                University: 'Université Catholique de l\'Ouest',
+                degree: 'BAC +5',
+                year: '2017 - 2019',
+                city: 'Angers',
+                department: '(49)',
+                description: [
+                    'Apprentissage et pratique de l\'anglais et de l\'espagnol',
+                    'Concevoir des projets communication (relations presse, événementiel, digital, interne, externe...)',
+                    'Développement stratégique au sein d\'entreprises ou d\'organisations internationales.'
+                ]
+            },
+
+            {
+                title: 'Communication numérique et conception multimédia',
+                University: 'Université Catholique de l\'Ouest',
+                degree: 'BAC +5',
+                year: '2019 - 2021',
+                city: 'Angers',
+                department: '(49)',
+                description: [
+                    'Base du développement informatique (HTML, Javascript, CSS, Bootstrap, web design et responsive design)',
+                    'Marketing digital',
+                    'Outils audiovisuels numériques (iMovie, finalcut pro X, photoshop, indesign, illustrator, audacity)',
+                    'CMS (Wordpress)',
+                    'Community Management'
+                ]
+            },
+            {
+                title: 'Développeur web et Web Mobile',
+                University: 'Ecole O\'Clock labellisée grande école du numérique ',
+                degree: 'BAC +2',
+                year: '2025',
+                city: 'en ligne',
+                department: '',
+                description: [
+                    'Apprentissage front-end : HTML, CSS, Javascript, framework Svelte',
+                    'Apprentissage back-end : node js, Express, SQL, Sequelize',
+                    'Conception et intégration d\'interface web responsive',
+                    'Consommation d\'API REST',
+                    'Utilisation de git et github',
+                    'Docker'
+                ]
+            },
         ]
-    },
 
-     {
-        title :'Langues Etrangères Appliquées : anglais, espagnol, portugais',
-        University: 'Université Catholique de l\'Ouest',
-        degree : 'BAC +3',
-        year : '2014 - 2017',
-        city : 'Angers',
-        department : '(49)',
-        description : [
-            'Apprentissage et pratique de l\'anglais (niveau B2) : traduction, version...',
-            'Apprentissage et pratique de l\'espagnol : traduction, version...',
-            'Apprentissage et pratique du portugais : niveau débutant'
-        ]
-    },
+    }
 
-     {
-        title :'Langues Appliquées, Relations Internationales et Stratégies Politiques',
-        University: 'Université Catholique de l\'Ouest',
-        degree : 'BAC +5',
-        year : '2017 - 2019',
-        city : 'Angers',
-        department : '(49)',
-        description : [
-            'Apprentissage et pratique de l\'anglais et de l\'espagnol',
-            'Concevoir des projets communication (relations presse, événementiel, digital, interne, externe...)',
-            'Développement stratégique au sein d\'entreprises ou d\'organisations internationales.'
-        ]
-    },
+    const currentBackground = background[activeBackground];
 
-     {
-        title :'Communication numérique et conception multimédia',
-        University: 'Université Catholique de l\'Ouest',
-        degree : 'BAC +5',
-        year : '2019 - 2021',
-        city : 'Angers',
-        department : '(49)',
-        description : [
-            'Base du développement informatique (HTML, Javascript, CSS, Bootstrap, web design et responsive design)',
-            'Marketing digital',
-            'Outils audiovisuels numériques (iMovie, finalcut pro X, photoshop, indesign, illustrator, audacity)',
-            'CMS (Wordpress)',
-            'Community Management'
-        ]
-    },
-    {
-        title :'Développeur web et Web Mobile',
-        University: 'Ecole O\'Clock labellisée grande école du numérique ',
-        degree : 'BAC +2',
-        year : '2025',
-        city : 'en ligne',
-        department : '',
-        description : [
-            'Apprentissage front-end : HTML, CSS, Javascript, framework Svelte',
-            'Apprentissage back-end : node js, Express, SQL, Sequelize',
-            'Conception et intégration d\'interface web responsive',
-            'Consommation d\'API REST',
-            'Utilisation de git et github',
-            'Docker'
-        ]
-    },
-        ]
+    return (
+        <section>
+            <h1>Mon parcours</h1>
 
-}
-
-
-
-return (
-    <section>
-        <h1>Mon parcours</h1>
-    </section>
-)
+            {currentBackground.map((experience, index) => (
+                <div key={index}>
+                    <h2>{experience.title}</h2>
+                </div>
+            ))}       
+        </section>
+    )
 }
