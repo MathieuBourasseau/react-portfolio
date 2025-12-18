@@ -1,7 +1,27 @@
-import React, { experimental_taintObjectReference } from 'react'
 import { Background } from "../types/background"
-import { div, h2 } from "framer-motion/client"
 
+interface ProfessionalItem {
+    title: string;
+    company: string; 
+    department: string;
+    contract?: string;
+    period: string;
+    duration: string;
+    missions: {
+        categorie: string;
+        details: string[];
+    }[];
+}
+
+interface AcademicItem {
+    title: string;
+    University: string;
+    degree: string;
+    year: string;
+    city: string;
+    department: string;
+    description: string[];
+}
 
 type CareerProps = {
     activeBackground: Background
@@ -9,7 +29,7 @@ type CareerProps = {
 
 export default function Career({ activeBackground }: CareerProps) {
 
-    const background = {
+    const background : Record<Background, (ProfessionalItem | AcademicItem)[]> = {
 
         PROFESSIONAL: [
             {
@@ -17,7 +37,7 @@ export default function Career({ activeBackground }: CareerProps) {
                 company: 'Valor3e',
                 city: 'La Séguinière',
                 department: '(49)',
-                Contract: 'CDD',
+                contract: 'CDD',
                 period: '2021 – 2024',
                 duration: '2 ans et 5 mois',
                 missions: [
@@ -177,11 +197,19 @@ export default function Career({ activeBackground }: CareerProps) {
     return (
         <section className="text-white">
             <h1>Mon parcours</h1>
+            
+            {/* EXPERIENCES BLOC OR  ACADEMIC BACKGROUND */}
 
-            {currentBackground.map((experience, index) => (
-                <div key={index}>
-                    <h2>{experience.title}</h2>
-                </div>
+            {currentBackground.map((background, index) => (
+                <article>
+                    <h2>{background.title}</h2>
+
+                    {'company' in background ? (
+
+                    ): (
+
+                    )}
+                </article>
             ))}       
         </section>
     )
