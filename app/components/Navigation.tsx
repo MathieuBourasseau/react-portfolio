@@ -54,8 +54,8 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
             link: "background",
             icon: <FaPlane />,
             options: [
-                { label: "professionnel" },
-                { label: "académique" },
+                { value: "PROFESSIONAL", label: "Professionnel" },
+                { value: "ACADEMIC", label: "Académique" },
             ]
         },
         {
@@ -64,7 +64,16 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
             icon: <IoIosMail />
         }
 
-    ]
+    ];
+    const handleValue = (event) => {
+
+        const currentValue = event.target.value as Background;
+        onActiveBackground(currentValue);
+
+        console.log(`Le parcours est actuellement : ${currentValue}`)
+
+    };
+
     return (
         <header className="sticky top-0 z-20 bg-black p-6 border-b-2 border-[#F74518] shadow-[0_0_10px_#F74518,0_0_20px_rgba(247,69,24,0.5),0_0_40px_rgba(247,69,24,0.3)]">
 
@@ -107,11 +116,12 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                                 <div className="w-full relative flex items-center justify-center border-b-2 border-white py-2 hover:bg-black hover:scale-115 transition-transform duration-300">
                                     <select
                                         defaultValue=""
+                                        onChange={handleValue}
                                         className="absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none z-10 inset-0 opacity-0 z-10"
                                     >
                                         <option value="" disabled hidden>{link.label}</option>
                                         {link.options.map((option, i) => (
-                                            <option key={i} value={option.label} className="bg-[#f74518]">
+                                            <option key={i} value={option.value} className="bg-[#f74518]">
                                                 {option.label}
                                             </option>
                                         ))}
@@ -148,10 +158,11 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                                     <select
                                         defaultValue=""
                                         className="text-base uppercase appearance-none w-full py-3 pl-5 pr-10 cursor-pointer focus:outline-none"
+                                        onChange={handleValue}          
                                     >
                                         <option value="" disabled hidden >{link.label}</option>
                                         {link.options.map((option, i) => (
-                                            <option value={option.label} className="bg-[#f74518]" >{option.label}</option>
+                                            <option value={option.value} className="bg-[#f74518]" >{option.label}</option>
                                         ))}
                                     </select>
                                     <IoMdArrowDropdown className="absolute right-0 text-[32px] pointer-events-none" />
