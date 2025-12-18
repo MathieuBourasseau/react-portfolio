@@ -7,6 +7,7 @@ import { BsFillPatchQuestionFill } from "react-icons/bs";
 import { FaClipboardList } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
 import React from 'react'
+import { motion } from "framer-motion";
 
 type ItemsConfig = {
     label: string;
@@ -72,7 +73,14 @@ export default function Skills() {
 
     return (
         <div className="text-center flex flex-col gap-6 py-[5%] px-4 lg:px-10 xl:px-[10%]">
-            <h1 className="text-2xl text-white font-bold lg:text-3xl">Mes compétences</h1>
+            <motion.h1 
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-2xl text-white font-bold lg:text-3xl mb-4"
+            >
+                Mes compétences
+            </motion.h1>
 
             {/* MAIN CONTENT */}
 

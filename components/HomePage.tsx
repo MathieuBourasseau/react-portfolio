@@ -5,6 +5,7 @@ import { IoIosMail } from "react-icons/io";
 import { FaPlane } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 
@@ -29,14 +30,18 @@ export default function HomePage() {
     ]
 
     return (
-        <section className="relative w-full flex-1 flex flex-col items-center  antialiased overflow-hidden">
+        <section className="relative w-full flex-1 gap-6 flex flex-col items-center  antialiased overflow-hidden">
 
             <div className="relative z-10 flex flex-col gap-4 py-[5%] px-[10%] md:gap-8 lg:py-8 lg:items-center w-full max-w-7xl">
 
                 {/* HEADER */}
-                <h1 className="text-lg font-bold text-white md:text-2xl lg:text-center lg:text-3xl lg:mb-4">
-                    Bienvenue sur le portfolio d'un développeur <span className="text-[#F74518]">passionné</span> !
-                </h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: -30}}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut"}} 
+                    className="text-lg font-bold text-white md:text-2xl lg:text-center lg:text-3xl lg:mb-4">
+                        Bienvenue sur le portfolio d'un développeur <span className="text-[#F74518]">passionné</span> !
+                </motion.h1>
 
                 {/* MAIN CONTENT */}
                 <div className="flex flex-col text-justify gap-8 lg:flex-row lg:gap-12 lg:border lg:border-[#2C3E50] lg:rounded-xl lg:p-8 lg:justify-between lg:items-center bg-neutral-900/50 backdrop-blur-sm">
