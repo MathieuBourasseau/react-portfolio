@@ -47,7 +47,7 @@ export default function HomePage() {
                 <motion.div 
                     initial={{ opacity: 0, x: -40}}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut"}}
+                    transition={{ duration: 0.5, ease: "easeOut", delay: 0.4}}
                     className="flex flex-col text-justify gap-8 lg:flex-row lg:gap-12 lg:border lg:border-[#2C3E50] lg:rounded-xl lg:p-8 lg:justify-between lg:items-center bg-neutral-900/50 backdrop-blur-sm">
 
                     {/* LEFT SIDE CONTENT */}
