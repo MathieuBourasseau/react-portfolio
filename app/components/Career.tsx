@@ -175,7 +175,7 @@ export default function Career({ activeBackground }: CareerProps) {
     const currentBackground = background[activeBackground];
 
     return (
-        <section>
+        <section className="text-white">
             <h1>Mon parcours</h1>
 
             {currentBackground.map((experience, index) => (
