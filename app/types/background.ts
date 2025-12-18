@@ -1,0 +1,1 @@
+export type Background = 'ACADEMIC' | 'PROFESIONAL';
