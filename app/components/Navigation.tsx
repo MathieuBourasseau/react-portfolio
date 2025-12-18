@@ -66,12 +66,8 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
 
     ];
     const handleValue = (event) => {
-
         const currentValue = event.target.value as Background;
         onActiveBackground(currentValue);
-
-        console.log(`Le parcours est actuellement : ${currentValue}`)
-
     };
 
     return (
