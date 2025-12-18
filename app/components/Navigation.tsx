@@ -70,6 +70,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
         const currentValue = event.target.value as Background;
         onActiveBackground(currentValue);
         onActivePage(targetPage);
+        setIsOpen(!isOpen)
     };
 
     return (
