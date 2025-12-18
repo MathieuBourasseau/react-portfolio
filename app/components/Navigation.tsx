@@ -10,7 +10,15 @@ import { IoIosMail } from "react-icons/io";
 import { FaPlane } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { Background } from "../types/background";
 
+
+type NavProps = {
+    activePage : string;
+    onActivePage: (page: string) => void;
+    activeBackground: Background
+    onActiveBackground: (background: Background) => void;
+}
 
 interface blocLogo {
     icon: string;
