@@ -27,7 +27,7 @@ type SoftSkillsConfig = {
 
 export default function Skills() {
 
-    const skills : HardSkillsConfig[] = [
+    const skills: HardSkillsConfig[] = [
         {
             category: "Langages",
             items: [
@@ -63,8 +63,8 @@ export default function Skills() {
         }
     ];
 
-    const softSkills : SoftSkillsConfig[] = [
-        { label: "Esprit d'équipe", icon: <RiTeamFill className="text-[#F74518]" />  },
+    const softSkills: SoftSkillsConfig[] = [
+        { label: "Esprit d'équipe", icon: <RiTeamFill className="text-[#F74518]" /> },
         { label: "Goût de l'apprentissage", icon: <FaGraduationCap className="text-[#38BDF8]" /> },
         { label: "Curiosité", icon: <BsFillPatchQuestionFill className="text-[#6EBD4D]" /> },
         { label: "Rigueur", icon: <FaClipboardList /> },
@@ -73,10 +73,10 @@ export default function Skills() {
 
     return (
         <div className="text-center flex flex-col gap-6 py-[5%] px-4 lg:px-10 xl:px-[10%]">
-            <motion.h1 
-                initial={{ opacity: 0, y: -50 }}
+            <motion.h1
+                initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className="text-2xl text-white font-bold lg:text-3xl mb-4"
             >
                 Mes compétences
@@ -88,9 +88,13 @@ export default function Skills() {
 
                 {/* HARD SKILLS */}
 
-                <div className="w-full lg:w-2/3 flex flex-col gap-6 py-8 p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border shadow-[0_0_15px_rgba(44,62,80,0.6)] border-[#2C3E50] lg:p-8">
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                    className="w-full lg:w-2/3 flex flex-col gap-6 py-8 p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border shadow-[0_0_15px_rgba(44,62,80,0.6)] border-[#2C3E50] lg:p-8">
                     <h2 className="text-xl flex justify-center items-center uppercase p-4 rounded-lg gap-6 font-bold bg-[#F74518] lg:mx-auto">
-                        <IoMdFlame className="text-[25px]"  />
+                        <IoMdFlame className="text-[25px]" />
                         Hard skills
                         <IoMdFlame className="text-[25px]" />
                     </h2>
@@ -103,8 +107,8 @@ export default function Skills() {
                             <h3 className="text-lg font-bold text-text-center ">{skill.category}</h3>
                             <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4">
                                 {skill.items.map((icon, i) => (
-                                    <div 
-                                        key={i} 
+                                    <div
+                                        key={i}
                                         className="flex flex-col items-center rounded-xl p-6 gap-4 text-sm text-black bg-[#E2E8F0]">
                                         <div className="h-[40px]">
                                             <Image
@@ -113,30 +117,34 @@ export default function Skills() {
                                                 height={25}
                                                 alt={icon.alt}
                                                 className="h-full w-auto object-contain"
-                                             />
+                                            />
                                         </div>
-                                         <p className="font-bold">{icon.label}</p>
+                                        <p className="font-bold">{icon.label}</p>
                                     </div>
-                                     
+
                                 ))}
                             </div>
                         </article>
                     ))}
 
-                </div>
+                </motion.div>
 
                 {/* SOFT SKILLS */}
 
-                <div className="w-full lg:w-1/3 flex flex-col gap-6 py-8 p-4 bg-neutral-900/50 backdrop-blur-sm border rounded-xl shadow-[0_0_15px_rgba(44,62,80,0.6)] border-[#2C3E50] lg:p-8">
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                    className="w-full lg:w-1/3 flex flex-col gap-6 py-8 p-4 bg-neutral-900/50 backdrop-blur-sm border rounded-xl shadow-[0_0_15px_rgba(44,62,80,0.6)] border-[#2C3E50] lg:p-8">
                     <h2 className="text-xl flex justify-center items-center uppercase p-4 rounded-lg gap-6 font-bold bg-[#F74518] lg:mx-auto lg:mb-4">
-                        <FaHandshake className="text-[25px]"  />
+                        <FaHandshake className="text-[25px]" />
                         Soft skills
                         <FaHandshake className="text-[25px]" />
                     </h2>
 
                     <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 xl:grid-cols-2">
                         {softSkills.map((skill, i) => (
-                            <article 
+                            <article
                                 key={i}
                                 className="flex font-bold flex-col items-center rounded-xl p-6 gap-4 text-sm text-black bg-[#E2E8F0]"
                             >
@@ -147,8 +155,8 @@ export default function Skills() {
                             </article>
                         ))}
                     </div>
-                    
-                </div>
+
+                </motion.div>
             </section>
         </div>
     )
