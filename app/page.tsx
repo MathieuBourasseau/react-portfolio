@@ -28,7 +28,7 @@ export default function Home() {
 
     return (
         <>
-            <Navigation onActivePage={setActivePage} activePage={activePage} />
+            <Navigation onActivePage={setActivePage} activePage={activePage} activeBackground={activeBackground} onActiveBackground={setActiveBackground} />
             <main className="relative bg-neutral-950 z-10 flex flex-col flex-1">
                 {activePage === 'home' && <HomePage />}
                 {activePage === 'projects' && <Projects />}

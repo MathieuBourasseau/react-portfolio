@@ -17,7 +17,7 @@ interface blocLogo {
     title: string;
 }
 
-export default function Navigation({ activePage, onActivePage }) {
+export default function Navigation({ activePage, onActivePage, activeBackground, onActiveBackground }) {
 
     const [isOpen, setIsOpen] = useState(false);
 
