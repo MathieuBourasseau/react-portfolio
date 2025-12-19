@@ -112,11 +112,16 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                     {navLinks.map((link, index) => (
                         <div className="flex w-full justify-center" key={index}>
                             {link.options ? (
-                                <div className="w-full relative flex items-center justify-center border-b-2 border-white py-2 hover:bg-black hover:scale-115 transition-transform duration-300">
+                               <div className={`w-full relative flex items-center justify-center border-b-2 py-2 hover:bg-black hover:scale-115 transition-transform duration-300
+                                    ${activePage === link.link 
+                                        ? 'bg-black border-[#F74518]' // Si ACTIF : Fond Noir + Bordure Orange
+                                        : 'border-white'               // Si INACTIF : Bordure Blanche
+                                    }
+                                `}>
                                     <select
-                                        defaultValue={activeBackground}
+                                        defaultValue=""
                                         onChange={(event) => handleValue(event, link.link)}
-                                        className="absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none z-10 inset-0 opacity-0 z-10"
+                                        className={`absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none z-10 inset-0 opacity-0 z-10`}
                                     >
                                         <option value="" disabled hidden>{link.label}</option>
                                         {link.options.map((option, i) => (
@@ -170,7 +175,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                                 <button
                                     key={index}
                                     onClick={() => onActivePage(link.link)}
-                                    className={`w-full cursor-pointer flex justify-center uppercase items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300 ${activePage === link.link ? 'border-b-3 border-primary-orange' : ''}`}
+                                    className={`w-full cursor-pointer flex justify-center uppercase items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300 ${activePage === link.link ? 'border-b- border-primary-orange' : ''}`}
                                 >
                                     <div className="flex items-center justify-center gap-2">
                                         <p>{link.label}</p>
