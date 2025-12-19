@@ -1,6 +1,7 @@
 import { Background } from "../types/background";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { motion } from "framer-motion"
 
 interface TimelineContent {
     category?: string;
@@ -191,9 +192,20 @@ export default function Career({ activeBackground }: CareerProps) {
 
     return (
         <section className="relative z-20 flex flex-col gap-6 px-[5%] py-6">
-            <h1 className="text-2xl font-bold text-white text-center lg:text-3xl">Mon parcours</h1>
+            <motion.h1 
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="text-2xl text-white font-bold lg:text-3xl mb-4 text-center"
 
-            <VerticalTimeline className="grid grid-col-1 gap-6">
+            >
+                    Mon parcours
+            </motion.h1>
+
+            <VerticalTimeline 
+                className="grid grid-col-1 gap-6"
+                lineColor="var(--color-primary-orange)"
+            >
                 {currentBackground.map((item, index) => (
                     <VerticalTimelineElement
                         key={index}
