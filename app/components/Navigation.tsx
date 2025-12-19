@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { FaComputer } from "react-icons/fa6";
@@ -64,7 +64,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
         }
 
     ];
-    const handleValue = (event, targetPage) => {
+    const handleValue = (event: React.ChangeEvent<HTMLSelectElement>, targetPage : string) => {
         const currentValue = event.target.value as Background;
         onActiveBackground(currentValue);
         onActivePage(targetPage);
