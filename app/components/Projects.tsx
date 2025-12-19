@@ -126,11 +126,13 @@ export default function Projects() {
                             relative group/card flex flex-col items-center justify-center overflow-hidden text-sm text-white cursor-pointer  h-[200px] rounded-lg  transition-all duration-300 ease-in-out ring-0 w-full max-w-[450px] md:max-w-[350px] lg:max-w-[400px] hover:ring-2 hover:ring-[#2C3E50] ring-inset   hover:scale-105  hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]
                         "
                             >
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-60 transition-all duration-300 group-hover/card:brightness-110"
-                                    style={{ backgroundImage: `url(${project.img})` }}
+                                <Image
+                                    src={project.img}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    fill
+                                    className="absolute inset-0 object-cover object-center brightness-60 transition-all duration-300 group-hover/card:brightness-110"
                                 >
-                                </div>
+                                </Image>
                                 <div className="relative z-10 text-lg flex flex-col gap-4 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                                     <div>
                                         <h2 className="text-white">{project.title}</h2>
@@ -168,11 +170,14 @@ export default function Projects() {
                             relative group/card flex flex-col items-center justify-center overflow-hidden text-sm text-white h-[200px] rounded-lg  transition-all duration-300 ease-in-out ring-0 w-full max-w-[450px] md:max-w-[350px] lg:max-w-[400px]  hover:ring-2 hover:ring-[#2C3E50] ring-inset   hover:scale-105  hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]
                         "
                             >
-                                <div
+                                <Image
                                     className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-60"
-                                    style={{ backgroundImage: `url(${project.img})` }}
+                                    src={project.img}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    fill
+                                    className="absolute inset-0 object-cover object-center brightness-60"
                                 >
-                                </div>
+                                </Image>
                                 <div className="relative z-10 text-lg font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                                     <div>
                                         <h2 className="text-white">{project.title}</h2>

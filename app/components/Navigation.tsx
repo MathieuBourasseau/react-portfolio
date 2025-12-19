@@ -166,7 +166,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                                     >
                                         <option value="" disabled hidden >{link.label}</option>
                                         {link.options.map((option, i) => (
-                                            <option value={option.value} className="bg-[#f74518]" >{option.label}</option>
+                                            <option key={i} value={option.value} className="bg-[#f74518]" >{option.label}</option>
                                         ))}
                                     </select>
                                     <IoMdArrowDropdown className="absolute right-0 text-[32px] pointer-events-none" />
