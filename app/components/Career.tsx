@@ -2,26 +2,19 @@ import { Background } from "../types/background"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-interface ProfessionalItem {
-    title: string;
-    company: string;
-    contract?: string;
-    year: string;
-    city: string;
-    duration: string;
-    missions: {
-        categorie: string;
-        details: string[];
-    }[];
+interface TimelineContent {
+    category?: string;
+    details: string[];
 }
 
-interface AcademicItem {
+interface TimelineItem {
     title: string;
-    University: string;
-    degree: string;
-    year: string;
-    city: string;
-    description: string[];
+    organization: string;
+    logo: string;
+    location: string;
+    period: string;
+    contract: string;
+    content: TimelineContent[]
 }
 
 type CareerProps = {
@@ -40,6 +33,7 @@ export default function Career({ activeBackground }: CareerProps) {
                 contract: 'CDD',
                 year: '2 mois',
                 duration: '2 ans et 5 mois',
+                logo: "/projects/logo-younivibe.png",
                 missions: [
                     {
                         categorie: 'Intégration de maquettes',
@@ -59,6 +53,7 @@ export default function Career({ activeBackground }: CareerProps) {
                 contract: 'CDD',
                 year: '2021 – 2024',
                 duration: '2 ans et 5 mois',
+                logo: "/projects/logo-younivibe.png",
                 missions: [
                     {
                         categorie: 'Gestion de projet Web',
@@ -84,6 +79,7 @@ export default function Career({ activeBackground }: CareerProps) {
                 city: 'Cholet (49)',
                 contract: 'CDI',
                 year: '2024 – 2025',
+                logo: "/projects/logo-younivibe.png",
                 duration: '8 mois',
                 missions: [
                     {
@@ -179,8 +175,8 @@ export default function Career({ activeBackground }: CareerProps) {
     const currentBackground = background[activeBackground];
 
     return (
-        <section className="flex flex-col gap-6 px-[5%] py-6">
-            <h1 className="text-2xl font-bold">Mon parcours</h1>
+        <section className="relative z-20 flex flex-col gap-6 px-[5%] py-6">
+            <h1 className="text-2xl font-bold text-white">Mon parcours</h1>
 
             {/* EXPERIENCES BLOC OR  ACADEMIC BACKGROUND */}
 
@@ -188,20 +184,20 @@ export default function Career({ activeBackground }: CareerProps) {
                 {currentBackground.map((background, index) => (
                     <VerticalTimelineElement 
                         key={index}
-                        icon={`vercel.svg`}
+                        icon={background.}
                     >
                         {/* BACKGROUND TITLES */}
-                        <div>
+                        <div className="text-sm">
                             <h2>{background.title}</h2>
                             <p>{background.city}</p>
                             <p>{background.year}</p>
                         </div>
                         {'company' in background ? (
-                            <div>
+                            <div className="text-sm">
                                 <p>Entreprise : {background.company}</p>
                                 {/* MISSIONS */}
                 
-                                <div>
+                                <div className="text-sm">
                                     {background.missions.map((mission, index) => (
                                         <div key={index}>
                                             <span>{mission.categorie}</span>
