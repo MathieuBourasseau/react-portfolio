@@ -1,71 +1,104 @@
 import React from 'react'
 import { motion } from "framer-motion"
-import { IoMdSend } from "react-icons/io";
+import { IoMdSend, IoMdMail } from "react-icons/io"; 
 
 export default function Contact() {
+
+    const fieldStyle = `
+        w-full 
+        bg-black/20                 
+        text-white 
+        rounded-xl 
+        p-4 
+        border border-white/10      
+        outline-none                
+        placeholder:text-primary-grey
+        transition-all              
+        duration-300                
+        ease-in-out
+        focus:bg-black/40           
+        focus:border-primary-grey
+        focus:ring-4                
+        focus:ring-primary-grey/20 
+    `;
+
     return (
-        <section className=" relative z-20 text-center flex flex-col gap-6 py-[5%] lg:py-8 px-4 lg:px-10 xl:px-[10%]">
+        <section className="relative z-20 text-center flex flex-col gap-6 py-[5%] lg:py-8 px-4 lg:px-10 xl:px-[10%]">
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="text-2xl text-white font-bold lg:text-3xl mb-4"
             >
                 Contact
             </motion.h1>
         
-            {/* FORM */}
+            {/* FORM CONTAINER */}
             <form 
-                action="" 
-                className=" gap-6 py-8 p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border shadow-[0_0_15px_rgba(44,62,80,0.6)] border-[#2C3E50] flex flex-col justify-center items-center">
-                <div>
-                    <p className="text-white">image</p>
+                className="gap-6 py-8 p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border shadow-[0_0_15px_rgba(44,62,80,0.6)] border-[#2C3E50] flex flex-col justify-center items-center w-full max-w-2xl mx-auto"
+            >
+                {/* ICONE EN HAUT */}
+                <div className="bg-gradient-to-br from-primary-orange/20 to-transparent p-4 rounded-full border border-white/5">
+                    <IoMdMail className="text-3xl text-primary-orange" />
                 </div>
 
                 {/* FIELDSET */}
-
-                <fieldset className="flex flex-col gap-6 w-[90%]">
-                   
-                   {/* NAME AND FIRST NAME */}
-                   <div className="flex flex-col gap-4">
-                        <div className="flex flex-col gap-2 items-start">
-                            <label htmlFor="firstname" className="text-white">Prénom :</label>
-                            <input type="text" id="firstname" className="w-full bg-primary-grey rounded-lg p-4" placeholder="prénom" />
+                <fieldset className="flex flex-col gap-6 w-[90%] text-left">
+                    
+                    {/* NAME AND FIRST NAME */}
+                    <div className="flex flex-col md:flex-row gap-4">
+                        <div className="flex flex-col gap-2 items-start w-full">
+                            <label htmlFor="firstname" className="text-white ml-1 font-medium text-sm">Prénom</label>
+                            <input 
+                                type="text" 
+                                id="firstname" 
+                                className={fieldStyle}
+                                placeholder="Pierre"
+                            />
                         </div>
-                        <div className="flex flex-col gap-2 items-start">
-                            <label htmlFor="name" className="text-white">Nom :</label>
-                            <input type="text" id="name" className="w-full bg-primary-grey rounded-lg p-4" placeholder="nom" />
+                        <div className="flex flex-col gap-2 items-start w-full">
+                            <label htmlFor="name" className="text-white ml-1 font-medium text-sm">Nom</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                className={fieldStyle}
+                                placeholder="Dupont" 
+                            />
                         </div>
-                   </div>
+                    </div>
 
-                   {/* EMAIL */}
-                   <div className="flex flex-col gap-2 items-start">
-                        <label htmlFor="mail" className="text-white">Email :</label>
-                        <input type="email" id="mail" className="w-full bg-primary-grey rounded-lg p-4" placeholder="jaimelecode@mail.com" />
-                   </div>
+                    {/* EMAIL */}
+                    <div className="flex flex-col gap-2 items-start">
+                        <label htmlFor="mail" className="text-white ml-1 font-medium text-sm">Email</label>
+                        <input 
+                            type="email" 
+                            id="mail" 
+                            className={fieldStyle} 
+                            placeholder="contact@email.com" 
+                        />
+                    </div>
 
-                   {/* MESSAGE */}
-                   <div className="flex flex-col gap-2 items-start">
-                         <label htmlFor="message" className="text-white">Votre message : </label>
-                         <textarea 
+                    {/* MESSAGE */}
+                    <div className="flex flex-col gap-2 items-start">
+                          <label htmlFor="message" className="text-white ml-1 font-medium text-sm">Votre message</label>
+                          <textarea 
                             id="message" 
-                            className="w-full min-h-[130px] bg-primary-grey rounded-lg p-4"
+                            className={`${fieldStyle} min-h-[150px] resize-none`}
                             placeholder="Votre portfolio m'a tapé dans l'oeil... "
-                        >
+                        />
+                    </div>
 
-                        </textarea>
-                   </div>
-
-                   {/* BUTTON */}
-                   <div>
+                    {/* BUTTON */}
+                    <div className="mt-2">
                         <button 
-                            className="text-white bg-primary-orange py-4 px-6 rounded-lg">
-                            <div className="flex items-center gap-4 font-bold">
+                            className="cursor-pointer w-full md:w-auto text-white bg-primary-orange py-4 px-8 rounded-lg hover:brightness-110 active:scale-95 transition-all duration-200"
+                        >
+                            <div className="flex items-center justify-center gap-4 font-bold">
                                 <p>Envoyer</p>
                                 <IoMdSend />
                             </div>
                         </button>
-                   </div>
+                    </div>
                 </fieldset>
             </form>
         </section>
