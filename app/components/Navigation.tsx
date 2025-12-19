@@ -175,7 +175,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                                 <button
                                     key={index}
                                     onClick={() => onActivePage(link.link)}
-                                    className={`w-full cursor-pointer flex justify-center uppercase items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300 ${activePage === link.link ? 'border-b- border-primary-orange' : ''}`}
+                                    className={`w-full cursor-pointer flex justify-center uppercase items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300 ${activePage === link.link ? 'border-b-4 border-primary-orange' : ''}`}
                                 >
                                     <div className="flex items-center justify-center gap-2">
                                         <p>{link.label}</p>
