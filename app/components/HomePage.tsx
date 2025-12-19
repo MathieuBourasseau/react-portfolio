@@ -20,13 +20,17 @@ type cardConfig = {
     list: itemsConfig[];
 }
 
-export default function HomePage() {
+type HomeProps = {
+    activePage: string;
+}
+
+export default function HomePage({ activePage } : HomeProps) {
 
     const cardLinks = [
-        { icon: <FaComputer />, label: "projets", url: "#" },
-        { icon: <MdWork />, label: "compétences", url: "#" },
-        { icon: <FaPlane />, label: "parcours", url: "#", options: ["professionnel", "académique"] },
-        { icon: <IoIosMail />, label: "contact", url: "#" },
+        { icon: <FaComputer />, label: "projets", url: "projects" },
+        { icon: <MdWork />, label: "compétences", url: "skills" },
+        { icon: <FaPlane />, label: "parcours", url: "career", options: ["professionnel", "académique"] },
+        { icon: <IoIosMail />, label: "contact", url: "contact" },
     ]
 
     return (
