@@ -134,7 +134,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                                 <button
                                     key={index}
                                     onClick={() => onActivePage(link.link)}
-                                    className="cursor-pointer w-full flex justify-center uppercase items-center border-b-2 border-white text-base py-2 hover:bg-black hover:scale-115 transition-transform duration-300"
+                                    className={`cursor-pointer w-full flex justify-center uppercase items-center border-b-2 border-white text-base py-2 hover:bg-black hover:scale-115 transition-transform duration-300 ${activePage === link.link ? 'bg-black' : ''} `}
                                 >
                                     <div className="flex items-center justify-center gap-2">
                                         <p>{link.label}</p>
@@ -170,8 +170,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                                 <button
                                     key={index}
                                     onClick={() => onActivePage(link.link)}
-                                    className={`w-full cursor-pointer flex justify-center uppercase items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300
-                                        ${activePage === link.link ? 'border-b-3 border-primary-orange' : ''}`}
+                                    className={`w-full cursor-pointer flex justify-center uppercase items-center text-base py-2 hover:text-[#f74518] transition-transform duration-300 ${activePage === link.link ? 'border-b-3 border-primary-orange' : ''}`}
                                 >
                                     <div className="flex items-center justify-center gap-2">
                                         <p>{link.label}</p>
