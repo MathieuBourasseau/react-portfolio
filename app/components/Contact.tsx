@@ -118,7 +118,7 @@ export default function Contact() {
                     <div className="flex flex-col gap-2 items-start">
                           <label htmlFor="message" className="text-white ml-1 font-medium text-sm">Votre message</label>
                           <textarea 
-                            className={`${fieldStyle} min-h-[150px] ${errors.message? 'border-red-500' : ''}`}
+                            className={`${fieldStyle} min-h-[150px] resize-none ${errors.message? 'border-red-500' : ''}`}
                             placeholder="Votre portfolio m'a tapé dans l'oeil... "
                             {...register("message", { required: "Ce champs est requis."})}
                         />
