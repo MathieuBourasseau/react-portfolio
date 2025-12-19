@@ -21,10 +21,10 @@ type cardConfig = {
 }
 
 type HomeProps = {
-    activePage: string;
+    onActivePage:(page: string) => void;
 }
 
-export default function HomePage({ activePage } : HomeProps) {
+export default function HomePage({ onActivePage } : HomeProps) {
 
     const cardLinks = [
         { icon: <FaComputer />, label: "projets", url: "projects" },
@@ -106,15 +106,16 @@ export default function HomePage({ activePage } : HomeProps) {
                                             </div>
                                         </div>
                                     ) : (
-                                        <Link
-                                            href={link.url}
+                                        <button
+                                            key={index}
+                                            onClick={() => onActivePage(link.url)}
                                             className="w-full flex justify-center items-center rounded-lg bg-black text-base py-2 text-blue-slate-900 hover:bg-[#f74518] hover:text-white transition-all duration-300"
                                         >
                                             <div className="flex items-center justify-center gap-2 bg-transparent">
                                                 <p className="uppercase font-bold bg-transparent">{link.label}</p>
                                                 <span className="text-[20px] bg-transparent">{link.icon}</span>
                                             </div>
-                                        </Link>
+                                        </button>
                                     )}
                                 </li>
                             ))}

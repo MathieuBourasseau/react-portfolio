@@ -27,7 +27,7 @@ export default function Home() {
                 onActiveBackground={setActiveBackground} 
             />
             <main className="relative bg-neutral-950 z-10 flex flex-col flex-1">
-                {activePage === 'home' && <HomePage activePage={activePage} />}
+                {activePage === 'home' && <HomePage onActivePage={setActivePage} />}
                 {activePage === 'projects' && <Projects />}
                 {activePage === 'skills' && <Skills /> }
                 {activePage === 'career' && <Career activeBackground={activeBackground} />}
