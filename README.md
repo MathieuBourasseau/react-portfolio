@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👨‍💻 Portfolio - Mathieu Bourasseau
 
-## Getting Started
+![Project Status](https://img.shields.io/badge/Status-En_Développement-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-First, run the development server:
+> **Note aux recruteurs :** Ce portfolio a été conçu et développé entièrement par mes soins pour présenter mes compétences dans le cadre de ma recherche d'**alternance en développement web**.
+
+## 🔗 Démo en ligne
+👉 **[Voir le portfolio en ligne](LIEN_VERCEL_ICI)** (ex: https://mon-portfolio.vercel.app)
+
+---
+
+## 📝 À propos
+Ce projet est une Single Page Application (SPA) moderne servant de vitrine à mon profil professionnel. Il regroupe mes réalisations, mon parcours académique et professionnel, ainsi que mes compétences techniques.
+
+L'objectif technique était de créer une interface **fluide**, **typée** et **performante**, en utilisant les dernières normes de l'écosystème React.
+
+### 🌟 Fonctionnalités clés
+* **Navigation Fluide :** Transition entre les sections (Projets, Compétences, Parcours, Contact).
+* **Formulaire de Contact fonctionnel :** Intégration avec EmailJS et validation via React Hook Form.
+* **Design Responsive :** Interface adaptée aux mobiles, tablettes et desktops.
+* **Animations :** Utilisation de Framer Motion pour des micro-interactions soignées.
+* **Optimisation des images :** Utilisation du composant `next/image` pour les performances.
+
+---
+
+## 🛠 Stack Technique
+
+Ce projet a été construit avec une architecture moderne axée sur la maintenabilité et la performance.
+
+### Cœur
+* ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) **React.js** : Bibliothèque principale pour l'UI.
+* ![Next JS](https://img.shields.io/badge/Next-black?style=flat&logo=next.js&logoColor=white) **Next.js** : Utilisé pour l'architecture du projet, le routing et l'optimisation des assets.
+* ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) **TypeScript** : Pour un code robuste et fortement typé (Interfaces, Types personnalisés).
+
+### Style & UI
+* ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) **Tailwind CSS** : Pour un styling utilitaire rapide et responsive.
+* ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white) **Framer Motion** : Pour les animations d'entrée et de transition.
+
+### Outils & Formulaire
+* **React Hook Form** : Gestion performante des formulaires.
+* **EmailJS** : Service d'envoi d'emails côté client (sans backend complexe).
+* **Sonner** : Gestion des notifications (Toasts).
+* **React Icons** : Bibliothèque d'icônes vectorielles.
+
+---
+
+## 📂 Structure du projet
+
+L'architecture suit les bonnes pratiques Next.js / React :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+/src
+  ├── components/    # Composants réutilisables (Navbar, Cards, Form...)
+  ├── types/         # Définitions TypeScript (Interfaces globales)
+  ├── app/           # Pages et Layout (Next.js App Router)
+  ├── public/        # Assets statiques (Images, CV...)
+  └── styles/        # Configuration Tailwind
