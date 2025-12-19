@@ -29,34 +29,37 @@ export default function Contact() {
                    {/* NAME AND FIRST NAME */}
                    <div className="flex flex-col gap-4">
                         <div className="flex flex-col gap-2 items-start">
-                            <label htmlFor="" className="text-white">Prénom :</label>
-                            <input type="text" className="w-full bg-primary-grey rounded-lg py-2 px-2" placeholder="prénom" />
+                            <label htmlFor="firstname" className="text-white">Prénom :</label>
+                            <input type="text" id="firstname" className="w-full bg-primary-grey rounded-lg p-4" placeholder="prénom" />
                         </div>
                         <div className="flex flex-col gap-2 items-start">
-                            <label htmlFor="" className="text-white">Nom :</label>
-                            <input type="text" className="w-full bg-primary-grey rounded-lg py-2 px-2" placeholder="prénom" />
+                            <label htmlFor="name" className="text-white">Nom :</label>
+                            <input type="text" id="name" className="w-full bg-primary-grey rounded-lg p-4" placeholder="nom" />
                         </div>
                    </div>
 
                    {/* EMAIL */}
                    <div className="flex flex-col gap-2 items-start">
-                        <label htmlFor="" className="text-white">Email :</label>
-                        <input type="email" className="w-full bg-primary-grey rounded-lg py-2 px-2" placeholder="jaimelecode@mail.com" />
+                        <label htmlFor="mail" className="text-white">Email :</label>
+                        <input type="email" id="mail" className="w-full bg-primary-grey rounded-lg p-4" placeholder="jaimelecode@mail.com" />
                    </div>
 
                    {/* MESSAGE */}
                    <div className="flex flex-col gap-2 items-start">
-                         <label htmlFor="" className="text-white">Votre message : </label>
+                         <label htmlFor="message" className="text-white">Votre message : </label>
                          <textarea 
-                            name="" 
-                            id="" 
-                            className="w-full min-h-[130px] bg-primary-grey rounded-lg py-2 px-2"></textarea>
+                            id="message" 
+                            className="w-full min-h-[130px] bg-primary-grey rounded-lg p-4"
+                            placeholder="Votre portfolio m'a tapé dans l'oeil... "
+                        >
+
+                        </textarea>
                    </div>
 
                    {/* BUTTON */}
                    <div>
                         <button 
-                            className="text-white bg-primary-orange py-2 px-4 rounded-lg">
+                            className="text-white bg-primary-orange py-4 px-6 rounded-lg">
                             <div className="flex items-center gap-4 font-bold">
                                 <p>Envoyer</p>
                                 <IoMdSend />
