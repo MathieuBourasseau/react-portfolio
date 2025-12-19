@@ -43,7 +43,7 @@ export default function Contact() {
 
         try {
             await emailjs.send('service_3919mtf', 'template_39pq7mn', data, 'bPRtugxDWegGjr0Kt');
-            toast.success("Message envoyé !");
+            toast.success("Message envoyé");
             reset();
         } catch (error) {
             toast.error("Erreur lors de l'envoi.");
