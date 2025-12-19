@@ -70,7 +70,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
         const currentValue = event.target.value as Background;
         onActiveBackground(currentValue);
         onActivePage(targetPage);
-        setIsOpen(!isOpen)
+        setIsOpen(false)
     };
 
     return (
@@ -114,12 +114,12 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                             {link.options ? (
                                <div className={`w-full relative flex items-center justify-center border-b-2 py-2 hover:bg-black hover:scale-115 transition-transform duration-300
                                     ${activePage === link.link 
-                                        ? 'bg-black border-[#F74518]' // Si ACTIF : Fond Noir + Bordure Orange
-                                        : 'border-white'               // Si INACTIF : Bordure Blanche
+                                        ? 'bg-black border-[#F74518]'
+                                        : 'border-white'               
                                     }
                                 `}>
                                     <select
-                                        defaultValue=""
+                                        value={activePage === link.link ? activeBackground : ""}
                                         onChange={(event) => handleValue(event, link.link)}
                                         className={`absolute text-base uppercase appearance-none w-full bg-transparent text-center cursor-pointer focus:outline-none z-10 inset-0 opacity-0 z-10`}
                                     >
@@ -160,7 +160,7 @@ export default function Navigation({ activePage, onActivePage, activeBackground,
                             {link.options ? (
                                 <div className="relative flex items-center justify-between bg-[#f74518] rounded-full">
                                     <select
-                                        defaultValue=""
+                                        value={activePage === link.link ? activeBackground : ""}
                                         className="text-base uppercase appearance-none w-full py-3 pl-5 pr-10 cursor-pointer focus:outline-none"
                                         onChange={(event) => handleValue(event, link.link)}          
                                     >
