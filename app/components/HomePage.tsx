@@ -6,32 +6,46 @@ import { FaPlane } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { motion } from "framer-motion";
+import { Background } from "../types/background";
 
-// Correction du type : options est un tableau de strings simple dans ton objet cardLinks
+type OptionType = {
+    label: string;
+    value: string;
+}
+
 type itemsConfig = {
     icon: React.ReactNode;
     label: string;
     url: string;
-    options?: string[];
+    options?: OptionType[]; 
 }
 
 type HomeProps = {
     onActivePage: (page: string) => void;
-    // Si tu as besoin de changer le background ici aussi, il faudrait ajouter la prop onActiveBackground
+    onActiveBackground: (background: Background) => void; 
 }
 
-export default function HomePage({ onActivePage }: HomeProps) {
+export default function HomePage({ onActivePage, onActiveBackground }: HomeProps) {
 
     const cardLinks: itemsConfig[] = [
         { icon: <FaComputer />, label: "projets", url: "projects" },
         { icon: <MdWork />, label: "compétences", url: "skills" },
-        { icon: <FaPlane />, label: "parcours", url: "career", options: ["professionnel", "académique"] },
+        { 
+            icon: <FaPlane />, 
+            label: "parcours", 
+            url: "career", 
+            options: [ 
+                { label: "professionnel", value: "PROFESSIONAL" }, 
+                { label: "académique", value: "ACADEMIC" } 
+            ]
+        },
         { icon: <IoIosMail />, label: "contact", url: "contact" },
     ]
 
-    // Fonction pour gérer le changement du select
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>, url: string) => {
-        onActivePage(url);
+        const selectedValue = e.target.value as Background;
+        onActiveBackground(selectedValue);
+        onActivePage(url); 
     };
 
     return (
@@ -40,7 +54,6 @@ export default function HomePage({ onActivePage }: HomeProps) {
             <div className="relative z-10 flex flex-col gap-4 py-[5%] px-[10%] md:gap-8 lg:py-8 lg:items-center w-full max-w-7xl">
 
                 {/* HEADER */}
-
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -50,7 +63,6 @@ export default function HomePage({ onActivePage }: HomeProps) {
                 </motion.h1>
 
                 {/* MAIN CONTENT */}
-
                 <motion.div
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -58,7 +70,6 @@ export default function HomePage({ onActivePage }: HomeProps) {
                     className="flex flex-col text-justify gap-8 lg:flex-row lg:gap-12 lg:border lg:border-[#2C3E50] lg:rounded-xl lg:p-8 lg:justify-between lg:items-center bg-neutral-900/50 backdrop-blur-sm">
 
                     {/* LEFT SIDE CONTENT */}
-
                     <div className="flex flex-col gap-4 text-sm w-full md:text-base lg:text-lg lg:max-w-1/2 text-neutral-300">
                         <p>Je m’appelle Mathieu Bourasseau.</p>
                         <p>
@@ -71,7 +82,6 @@ export default function HomePage({ onActivePage }: HomeProps) {
                     </div>
 
                     {/* RIGHT SIDE CONTENT */}
-
                     <div className="flex flex-col items-center gap-4 rounded-xl py-4 px-5 bg-[#E2E8F0] max-w-[480px] md:max-w-[550px]">
                         <Image
                             src={`/intro/logo-avatar-mathieu.png`}
@@ -89,7 +99,6 @@ export default function HomePage({ onActivePage }: HomeProps) {
 
 
                         {/* LIST OF LINKS */}
-
                         <ul className="w-full flex flex-col gap-2 max-w-[350px] mx-auto md:max-w-[400px] text-[#E2E8F0] ">
                             {cardLinks.map((link, index) => (
                                 <li className="flex w-full justify-center" key={index}>
@@ -101,24 +110,19 @@ export default function HomePage({ onActivePage }: HomeProps) {
                                                 defaultValue=""
                                                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10 appearance-none"
                                             >
-        
                                                 <option value="" disabled hidden>{link.label}</option>
-                                        
                                                 {link.options.map((option, i) => (
-                                                    <option key={i} value={option} className="uppercase text-center text-white bg-primary-orange">
-                                                        {option}
+                                                    <option key={i} value={option.value} className="text-center uppercase text-white bg-primary-orange text-white">
+                                                        {option.label}
                                                     </option>
                                                 ))}
                                             </select>
-
-                                            {/* Design Visuel (Ce que l'utilisateur voit) */}
                                             <div className="flex items-center justify-center gap-2 pointer-events-none bg-transparent">
                                                 <p className="uppercase font-bold text-white bg-transparent">{link.label}</p>
                                                 <IoMdArrowDropdown className="text-[20px] text-white bg-transparent transition-colors duration-300" />
                                             </div>
                                         </div>
                                     ) : (
-                                        // Bloc SANS Select (Bouton classique)
                                         <button
                                             key={index}
                                             onClick={() => onActivePage(link.url)}
