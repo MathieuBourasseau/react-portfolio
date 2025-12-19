@@ -12,8 +12,6 @@ import { MdWork } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Background } from "../types/background";
 
-
-
 type NavProps = {
     activePage : string;
     onActivePage: (page: string) => void;
@@ -26,7 +24,7 @@ interface blocLogo {
     title: string;
 }
 
-export default function Navigation({ activePage, onActivePage, activeBackground, onActiveBackground }) {
+export default function Navigation({ activePage, onActivePage, activeBackground, onActiveBackground } : NavProps) {
 
     const [isOpen, setIsOpen] = useState(false);
 
