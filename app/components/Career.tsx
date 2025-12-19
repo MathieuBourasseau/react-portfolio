@@ -51,7 +51,7 @@ export default function Career({ activeBackground }: CareerProps) {
                 location: 'Cholet (49)',
                 contract: 'CDI',
                 period: '2024 – 2025',
-                logo: "/projects/logo-younivibe.png",
+                logo: "/career/logo-kelio.png",
                 content: [
                     {
                         category: 'SEO & Intégration',
@@ -76,7 +76,7 @@ export default function Career({ activeBackground }: CareerProps) {
                 location: 'La Séguinière (49)',
                 contract: 'CDD',
                 period: '2021 – 2024',
-                logo: "/projects/logo-younivibe.png",
+                logo: "/career/logo-valor3e.png",
                 content: [
                     {
                         category: 'Gestion de projet Web',
@@ -191,7 +191,7 @@ export default function Career({ activeBackground }: CareerProps) {
 
     return (
         <section className="relative z-20 flex flex-col gap-6 px-[5%] py-6">
-            <h1 className="text-2xl font-bold text-white">Mon parcours</h1>
+            <h1 className="text-2xl font-bold text-white text-center lg:text-3xl">Mon parcours</h1>
 
             <VerticalTimeline className="grid grid-col-1 gap-6">
                 {currentBackground.map((item, index) => (
@@ -203,7 +203,7 @@ export default function Career({ activeBackground }: CareerProps) {
                             <img
                                 src={item.logo}
                                 alt={item.organization}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain object-center"
                             />
                         }
                     >
