@@ -95,7 +95,7 @@ export default function HomePage({ onActivePage } : HomeProps) {
                                             >
                                                 <option value="" disabled hidden>{link.label}</option>
                                                 {link.options.map((option, i) => (
-                                                    <option key={i} value={option} className="text-black bg-white">
+                                                    <option key={i} value={option} className="text-white bg-primary-orange">
                                                         {option}
                                                     </option>
                                                 ))}
@@ -109,7 +109,7 @@ export default function HomePage({ onActivePage } : HomeProps) {
                                         <button
                                             key={index}
                                             onClick={() => onActivePage(link.url)}
-                                            className="w-full flex justify-center items-center rounded-lg bg-black text-base py-2 text-blue-slate-900 hover:bg-[#f74518] hover:text-white transition-all duration-300"
+                                            className="cursor-pointer w-full flex justify-center items-center rounded-lg bg-black text-base py-2 text-blue-slate-900 hover:bg-[#f74518] hover:text-white transition-all duration-300"
                                         >
                                             <div className="flex items-center justify-center gap-2 bg-transparent">
                                                 <p className="uppercase font-bold bg-transparent">{link.label}</p>
