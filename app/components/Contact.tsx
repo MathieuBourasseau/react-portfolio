@@ -10,8 +10,6 @@ type Inputs = {
     message: string;
 }
 
-const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
-
 export default function Contact() {
 
     const fieldStyle = `
@@ -32,6 +30,9 @@ export default function Contact() {
         focus:ring-primary-grey/20 
     `;
 
+
+    // Create an empty object with some functions inside it
+    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
 
 
     return (
@@ -63,19 +64,21 @@ export default function Contact() {
                             <label htmlFor="firstname" className="text-white ml-1 font-medium text-sm">Prénom</label>
                             <input 
                                 type="text" 
-                                id="firstname" 
-                                className={fieldStyle}
+                                className={`${fieldStyle} ${errors.firstname ? 'border-red-500' : ''}`}
                                 placeholder="Pierre"
+                                {...register("firstname", { required: "Ce champs est requis."})}
                             />
+                            {errors.firstname && <span className="text-red-500 text-sm">{errors.firstname.message}</span>}
                         </div>
                         <div className="flex flex-col gap-2 items-start w-full">
-                            <label htmlFor="name" className="text-white ml-1 font-medium text-sm">Nom</label>
+                            <label htmlFor="lastname" className="text-white ml-1 font-medium text-sm">Nom</label>
                             <input 
                                 type="text" 
-                                id="name" 
-                                className={fieldStyle}
+                                className={`${fieldStyle} ${errors.lastname? 'border-red-500' : ''}`}
                                 placeholder="Dupont" 
+                                {...register("lastname", { required: "Ce champs est requis."})}
                             />
+                            {errors.lastname && <span className="text-red-500 text-sm">{errors.lastname.message}</span>}
                         </div>
                     </div>
 
@@ -84,20 +87,22 @@ export default function Contact() {
                         <label htmlFor="mail" className="text-white ml-1 font-medium text-sm">Email</label>
                         <input 
                             type="email" 
-                            id="mail" 
-                            className={fieldStyle} 
+                            className={`${fieldStyle} ${errors.lastname? 'border-red-500' : ''}`} 
                             placeholder="contact@email.com" 
+                            {...register("email", { required: "Ce champs est requis."})}
                         />
+                        {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
                     </div>
 
                     {/* MESSAGE */}
                     <div className="flex flex-col gap-2 items-start">
                           <label htmlFor="message" className="text-white ml-1 font-medium text-sm">Votre message</label>
                           <textarea 
-                            id="message" 
-                            className={`${fieldStyle} min-h-[150px] resize-none`}
+                            className={`${fieldStyle} ${errors.lastname? 'border-red-500' : ''}`}
                             placeholder="Votre portfolio m'a tapé dans l'oeil... "
+                            {...register("message", { required: "Ce champs est requis."})}
                         />
+                        {errors.message && <span className="text-red-500 text-sm">{errors.message.message}</span>}
                     </div>
 
                     {/* BUTTON */}
