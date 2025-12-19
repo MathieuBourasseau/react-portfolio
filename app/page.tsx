@@ -8,6 +8,7 @@ import Career from "@/app/components/Career";
 import { Background } from "./types/background";
 import { useState } from "react";
 import { BackgroundBeams } from "@/app/components/ui/background-beams";
+import Contact from "./components/Contact";
 
 export default function Home() {
 
@@ -25,6 +26,7 @@ export default function Home() {
                 {activePage === 'projects' && <Projects />}
                 {activePage === 'skills' && <Skills /> }
                 {activePage === 'career' && <Career activeBackground={activeBackground} />}
+                {activePage === 'contact' && <Contact />}
                 <BackgroundBeams />
             </main>
         </>
