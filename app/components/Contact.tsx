@@ -19,7 +19,7 @@ export default function Contact() {
         bg-black/20                 
         text-white 
         rounded-xl 
-        p-4 
+        p-3
         border border-white/10      
         outline-none                
         placeholder:text-primary-grey
@@ -53,7 +53,7 @@ export default function Contact() {
     }
 
     return (
-        <section className="relative z-20 text-center flex flex-col gap-6 py-[5%] lg:py-8 px-4 lg:px-10 xl:px-[10%]">
+        <section className="relative z-20 text-center flex flex-col gap-4 py-[5%] lg:py-8 px-4 lg:px-10 xl:px-[10%]">
 
             <Toaster position="top-center" richColors />
             <motion.h1
@@ -70,10 +70,6 @@ export default function Contact() {
                 className="gap-6 py-8 p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border shadow-[0_0_15px_rgba(44,62,80,0.6)] border-[#2C3E50] flex flex-col justify-center items-center w-full max-w-2xl mx-auto"
                 onSubmit={handleSubmit(onSubmit)}
             >
-                {/* ICONE EN HAUT */}
-                <div className="bg-gradient-to-br from-primary-orange/20 to-transparent p-4 rounded-full border border-white/5">
-                    <IoMdMail className="text-3xl text-primary-orange" />
-                </div>
 
                 {/* FIELDSET */}
                 <fieldset className="flex flex-col gap-6 w-[90%] text-left">
@@ -118,7 +114,7 @@ export default function Contact() {
                     <div className="flex flex-col gap-2 items-start">
                           <label htmlFor="message" className="text-white ml-1 font-medium text-sm">Votre message</label>
                           <textarea 
-                            className={`${fieldStyle} min-h-[150px] resize-none ${errors.message? 'border-red-500' : ''}`}
+                            className={`${fieldStyle} min-h-[130px] resize-none ${errors.message? 'border-red-500' : ''}`}
                             placeholder="Votre portfolio m'a tapé dans l'oeil... "
                             {...register("message", { required: "Ce champs est requis."})}
                         />

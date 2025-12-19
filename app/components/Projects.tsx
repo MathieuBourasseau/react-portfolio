@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from 'react'
+import { motion } from "framer-motion"
 
 type ProjectsConfig = {
     title: string;
@@ -110,10 +111,19 @@ export default function Projects() {
 
     return (
         <section className="relative z-10 py-6 flex flex-col text-center">
-            <h1 className="text-2xl text-white font-bold lg:text-3xl">Mes projets</h1>
+            <motion.h1 
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="text-2xl text-white font-bold lg:text-3xl mb-4"
+            >Mes projets</motion.h1>
 
-            <div className="group grid grid-cols-1 place-items-center gap-6 py-8 px-[5%] md:grid-cols-2 md:mx-auto md:max-w-[900px] lg:max-w-[1200px] lg:grid-cols-3 ">
-
+            <motion.div 
+                className="group grid grid-cols-1 place-items-center gap-6 py-8 px-[5%] md:grid-cols-2 md:mx-auto md:max-w-[900px] lg:max-w-[1200px] lg:grid-cols-3"
+                initial={{ opacity: 0, x: -40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}>
+                
                 {projects.map((project, i) => (
 
                     project.available
@@ -190,7 +200,7 @@ export default function Projects() {
                             </div>
                         )
                 ))}
-            </div>
+            </motion.div>
         </section>
     )
 }
