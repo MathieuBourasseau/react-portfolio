@@ -99,48 +99,21 @@ export default function Career({ activeBackground }: CareerProps) {
 
         ACADEMIC: [
             {
-                title: 'Ecole de commerce',
-                organization: 'Esiame',
-                contract: 'Bachelor 1',
-                period: '2013 - 2014',
-                location: 'Cholet (49)',
-                logo: "/projects/logo-younivibe.png",
-                content: [
-                    {
-                        details: ['Principes généraux du commerce (management, marketing, offre et demande...)']
-                    }
-                ]
-            },
-            {
-                title: 'Langues Etrangères Appliquées',
-                organization: 'Université Catholique de l\'Ouest',
-                contract: 'BAC +3',
-                period: '2014 - 2017',
-                location: 'Angers (49)',
-                logo: "/projects/logo-younivibe.png",
+                title: 'Développeur web et Web Mobile',
+                organization: 'Ecole O\'Clock',
+                contract: 'BAC +2',
+                period: '2025',
+                location: 'En full remote',
+                logo: "/career/logo-oclock.png",
                 content: [
                     {
                         details: [
-                            'Apprentissage et pratique de l\'anglais (niveau B2) : traduction, version...',
-                            'Apprentissage et pratique de l\'espagnol : traduction, version...',
-                            'Apprentissage et pratique du portugais : niveau débutant'
-                        ]
-                    }
-                ]
-            },
-            {
-                title: 'Relations Internationales & Stratégies',
-                organization: 'Université Catholique de l\'Ouest',
-                contract: 'BAC +5',
-                period: '2017 - 2019',
-                location: 'Angers (49)',
-                logo: "/projects/logo-younivibe.png",
-                content: [
-                    {
-                        details: [
-                            'Apprentissage et pratique de l\'anglais et de l\'espagnol',
-                            'Concevoir des projets communication (relations presse, événementiel, digital, interne, externe...)',
-                            'Développement stratégique au sein d\'entreprises ou d\'organisations internationales.'
+                            'Apprentissage front-end : HTML, CSS, Javascript, framework Svelte',
+                            'Apprentissage back-end : node js, Express, SQL, Sequelize',
+                            'Conception et intégration d\'interface web responsive',
+                            'Consommation d\'API REST',
+                            'Utilisation de git et github',
+                            'Docker'
                         ]
                     }
                 ]
@@ -151,7 +124,7 @@ export default function Career({ activeBackground }: CareerProps) {
                 contract: 'BAC +5',
                 period: '2019 - 2021',
                 location: 'Angers (49)',
-                logo: "/projects/logo-younivibe.png",
+                logo: "/career/logo-uco2.png",
                 content: [
                     {
                         details: [
@@ -165,22 +138,49 @@ export default function Career({ activeBackground }: CareerProps) {
                 ]
             },
             {
-                title: 'Développeur web et Web Mobile',
-                organization: 'Ecole O\'Clock',
-                contract: 'BAC +2',
-                period: '2025',
-                location: 'En full remote',
-                logo: "/projects/logo-younivibe.png",
+                title: 'Relations Internationales & Stratégies',
+                organization: 'Université Catholique de l\'Ouest',
+                contract: 'BAC +5',
+                period: '2017 - 2019',
+                location: 'Angers (49)',
+                logo: "/career/logo-uco2.png",
                 content: [
                     {
                         details: [
-                            'Apprentissage front-end : HTML, CSS, Javascript, framework Svelte',
-                            'Apprentissage back-end : node js, Express, SQL, Sequelize',
-                            'Conception et intégration d\'interface web responsive',
-                            'Consommation d\'API REST',
-                            'Utilisation de git et github',
-                            'Docker'
+                            'Apprentissage et pratique de l\'anglais et de l\'espagnol',
+                            'Concevoir des projets communication (relations presse, événementiel, digital, interne, externe...)',
+                            'Développement stratégique au sein d\'entreprises ou d\'organisations internationales.'
                         ]
+                    }
+                ]
+            },
+            {
+                title: 'Langues Etrangères Appliquées',
+                organization: 'Université Catholique de l\'Ouest',
+                contract: 'BAC +3',
+                period: '2014 - 2017',
+                location: 'Angers (49)',
+                logo: "/career/logo-uco2.png",
+                content: [
+                    {
+                        details: [
+                            'Apprentissage et pratique de l\'anglais (niveau B2) : traduction, version...',
+                            'Apprentissage et pratique de l\'espagnol : traduction, version...',
+                            'Apprentissage et pratique du portugais : niveau débutant'
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Ecole de commerce',
+                organization: 'Esiame',
+                contract: 'Bachelor 1',
+                period: '2013 - 2014',
+                location: 'Cholet (49)',
+                logo: "/career/logo-esiame.png",
+                content: [
+                    {
+                        details: ['Principes généraux du commerce (management, marketing, offre et demande...)']
                     }
                 ]
             },
