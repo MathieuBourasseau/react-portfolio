@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import { IoMdSend, IoMdMail } from "react-icons/io"; 
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 type Inputs = {
     firstname: string;
@@ -8,6 +9,8 @@ type Inputs = {
     email: string;
     message: string;
 }
+
+const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
 
 export default function Contact() {
 
@@ -28,6 +31,8 @@ export default function Contact() {
         focus:ring-4                
         focus:ring-primary-grey/20 
     `;
+
+
 
     return (
         <section className="relative z-20 text-center flex flex-col gap-6 py-[5%] lg:py-8 px-4 lg:px-10 xl:px-[10%]">
