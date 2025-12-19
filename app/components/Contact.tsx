@@ -2,6 +2,13 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { IoMdSend, IoMdMail } from "react-icons/io"; 
 
+type Inputs = {
+    firstname: string;
+    lastname:string;
+    email: string;
+    message: string;
+}
+
 export default function Contact() {
 
     const fieldStyle = `
