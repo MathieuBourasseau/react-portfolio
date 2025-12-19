@@ -138,6 +138,7 @@ export default function Projects() {
                             >
                                 <Image
                                     src={project.img}
+                                    alt={project.title}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     fill
                                     className="absolute inset-0 object-cover object-center brightness-60 transition-all duration-300 group-hover/card:brightness-110"
@@ -185,7 +186,7 @@ export default function Projects() {
                                     src={project.img}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     fill
-                                    className="absolute inset-0 object-cover object-center brightness-60"
+                                    alt={project.title}
                                 >
                                 </Image>
                                 <div className="relative z-10 text-lg font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
