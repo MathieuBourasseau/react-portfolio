@@ -4,12 +4,14 @@ import { IoIosMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
-const socialsIcons = [
-    { label: "Github", icon: <FaGithub />, url: "https://github.com/MathieuBourasseau" },
-    { label: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/mathieu-bourasseau/" },
-]
 
 export default function Footer() {
+
+    const socialsIcons = [
+        { label: "Github", icon: <FaGithub />, url: "https://github.com/MathieuBourasseau" },
+        { label: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/mathieu-bourasseau/" },
+    ]
+
     return (
         <footer className="w-full z-20 bg-black p-6 border-t-2 border-[#F74518] shadow-[0_0_10px_#F74518,0_0_20px_rgba(247,69,24,0.5),0_0_40px_rgba(247,69,24,0.3)] text-white">
             <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between lg:max-w-[1000px] lg:mx-auto lg:w-full">
