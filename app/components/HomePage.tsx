@@ -76,7 +76,7 @@ export default function HomePage({ onActivePage, onActiveBackground }: HomeProps
                             Je suis actuellement en formation de concepteur et développeur d'application pour devenir développeur full stack et en recherche {""}
                             <span className="font-bold text-[#F74518]">d'une alternance pour l'année 2026. 🔍</span>
                         </p>
-                        <p>Ce site web a pour objectif de vous présenter mon parcours, mes compétences, ainsi que les projets que j’ai pu réalisés.</p>
+                        <p>Ce site web a pour objectif de vous présenter mon parcours, mes compétences, ainsi que les projets que j’ai pu réaliser.</p>
                         <p>Passionné par le développement j'adore régulièrement apprendre de nouvelles manières de coder et de développer. 💻</p>
                         <p>En espérant pouvoir se rencontrer prochainement, je vous souhaite une très bonne découverte de mon portfolio. 👋</p>
                     </div>
