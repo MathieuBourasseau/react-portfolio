@@ -31,7 +31,7 @@ export default function Home() {
                 {activePage === 'projects' && <Projects />}
                 {activePage === 'skills' && <Skills /> }
                 {activePage === 'career' && <Career activeBackground={activeBackground} />}
-                {activePage === 'contact' && <Contact />}
+                {activePage === 'contact' && <Contact/>}
                 <BackgroundBeams />
             </main>
         </>

@@ -7,7 +7,6 @@ import Link from "next/link";
 const socialsIcons = [
     { label: "Github", icon: <FaGithub />, url: "https://github.com/MathieuBourasseau" },
     { label: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/mathieu-bourasseau/" },
-    { label: "Contact", icon: <IoIosMail />, url: "#" }
 ]
 
 export default function Footer() {
