@@ -1,53 +1,11 @@
 import Image from "next/image";
+import React from 'react';
 import { motion } from "framer-motion";
-
-
+import { IoMdFlame } from "react-icons/io";
+import { FaHandshake } from "react-icons/fa";
+import { skills, softSkills } from "./contentSkills";
 
 export default function Skills() {
-
-    const skills: HardSkillsConfig[] = [
-        {
-            category: "Langages",
-            items: [
-                { label: "Javascript", src: "/skills/javascript.svg", alt: "logo javascript" },
-                { label: "Typescript", src: "/skills/typescript.svg", alt: "logo typescript" },
-                { label: "HTML", src: "/skills/html.svg", alt: "logo html" },
-                { label: "CSS", src: "/skills/css.svg", alt: "logo css" },
-            ]
-        },
-        {
-            category: "Front-end",
-            items: [
-                { label: "React js", src: "/skills/react.svg", alt: "logo react" },
-                { label: "Svelte", src: "/skills/svelte.svg", alt: "logo svelte" },
-                { label: "Tailwind", src: "/skills/tailwind.svg", alt: "logo tailwind" },
-            ]
-        },
-        {
-            category: "Back-end & Base de données",
-            items: [
-                { label: "Node js", src: "/skills/nodejs.svg", alt: "logo node" },
-                { label: "Express js", src: "/skills/express-js.png", alt: "logo express" },
-                { label: "PostgreSQL", src: "/skills/postgresql.svg", alt: "logo postgres" },
-                { label: "Next js", src: "/skills/nextjs.svg", alt: "logo nextjs" },
-            ]
-        },
-        {
-            category: "CMS",
-            items: [
-                { label: "Drupal", src: "/skills/drupal.svg", alt: "logo drupal" },
-                { label: "Wordpress", src: "/skills/wordpress.svg", alt: "logo wordpress" },
-            ]
-        }
-    ];
-
-    const softSkills: SoftSkillsConfig[] = [
-        { label: "Esprit d'équipe", icon: <RiTeamFill className="text-[#F74518]" /> },
-        { label: "Goût de l'apprentissage", icon: <FaGraduationCap className="text-[#38BDF8]" /> },
-        { label: "Curiosité", icon: <BsFillPatchQuestionFill className="text-[#6EBD4D]" /> },
-        { label: "Rigueur", icon: <FaClipboardList /> },
-        { label: "Résolution de problème", icon: <FaGear className="text-[#F2493B]" /> },
-    ]
 
     return (
         <div className="text-center flex flex-col gap-6 py-[5%] lg:py-8 px-4 lg:px-10 xl:px-[10%]">
@@ -82,22 +40,22 @@ export default function Skills() {
                             key={i}
                             className="flex flex-col gap-4 lg:py-4"
                         >
-                            <h3 className="text-lg font-bold text-text-center ">{skill.category}</h3>
+                            <h3 className="text-lg font-bold text-center">{skill.category}</h3>
                             <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4">
-                                {skill.items.map((icon, i) => (
+                                {skill.items.map((item, j) => (
                                     <div
-                                        key={i}
+                                        key={j}
                                         className="flex flex-col items-center rounded-xl p-6 gap-4 text-sm text-black bg-[#E2E8F0]">
                                         <div className="h-[40px]">
                                             <Image
-                                                src={icon.src}
+                                                src={item.src}
                                                 width={30}
                                                 height={25}
-                                                alt={icon.alt}
+                                                alt={item.alt}
                                                 className="h-full w-auto object-contain"
                                             />
                                         </div>
-                                        <p className="font-bold">{icon.label}</p>
+                                        <p className="font-bold">{item.label}</p>
                                     </div>
 
                                 ))}
@@ -127,7 +85,7 @@ export default function Skills() {
                                 className="flex font-bold flex-col items-center rounded-xl p-6 gap-4 text-sm text-black bg-[#E2E8F0]"
                             >
                                 <div className="text-[40px]">
-                                    {skill.icon}
+                                    <skill.icon style={{ color: skill.color }} />
                                 </div>
                                 <p>{skill.label}</p>
                             </article>
