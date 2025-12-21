@@ -13,7 +13,9 @@ type TechConfig = {
     invert?: boolean;
 }
 
-const projects: ProjectsConfig[] = [
+// Content for Projects.tsx
+
+export const projects: ProjectsConfig[] = [
         {
             title: "Heros League",
             type: "Front-end",
