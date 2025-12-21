@@ -2,7 +2,7 @@
 
 import Navigation from "@/app/components/Navigation";
 import HomePage from "@/app/components/HomePage";
-import Projects from "@/app/components/Projects";
+import Projects from "@/app/components/pages/projects/Projects";
 import Skills from "@/app/components/Skills";
 import Career from "@/app/components/Career";
 import { Background } from "./types/background";

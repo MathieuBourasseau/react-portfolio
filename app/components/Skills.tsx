@@ -9,21 +9,7 @@ import { FaGear } from "react-icons/fa6";
 import React from 'react'
 import { motion } from "framer-motion";
 
-type ItemsConfig = {
-    label: string;
-    src: string;
-    alt: string;
-}
 
-type HardSkillsConfig = {
-    category: string;
-    items: ItemsConfig[];
-}
-
-type SoftSkillsConfig = {
-    label: string;
-    icon: React.ReactNode;
-}
 
 export default function Skills() {
 
