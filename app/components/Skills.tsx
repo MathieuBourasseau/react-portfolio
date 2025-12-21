@@ -1,22 +1,7 @@
 import Image from "next/image";
-
 import { motion } from "framer-motion";
 
-type ItemsConfig = {
-    label: string;
-    src: string;
-    alt: string;
-}
 
-type HardSkillsConfig = {
-    category: string;
-    items: ItemsConfig[];
-}
-
-type SoftSkillsConfig = {
-    label: string;
-    icon: React.ReactNode;
-}
 
 export default function Skills() {
 
