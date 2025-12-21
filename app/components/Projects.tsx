@@ -2,20 +2,7 @@ import Image from "next/image";
 import React from 'react'
 import { motion } from "framer-motion"
 
-type ProjectsConfig = {
-    title: string;
-    type: string;
-    link: string;
-    img: string;
-    items: TechConfig[],
-    available: boolean;
-}
 
-type TechConfig = {
-    icon: string;
-    tech: string;
-    invert?: boolean;
-}
 export default function Projects() {
 
     const projects: ProjectsConfig[] = [
