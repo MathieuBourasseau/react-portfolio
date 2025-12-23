@@ -6,6 +6,7 @@ import { FaHandshake } from "react-icons/fa";
 import { skills, softSkills } from "./contentSkills";
 import MainTitle from "../../reusable ui/MainTitle";
 import HardSkills from "../../reusable ui/HardSkills";
+import SoftSkills from "../../reusable ui/SoftSkills";
 
 export default function Skills() {
 
@@ -54,19 +55,7 @@ export default function Skills() {
                         <FaHandshake className="text-[25px]" />
                     </h2>
 
-                    <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 xl:grid-cols-2">
-                        {softSkills.map((skill, i) => (
-                            <article
-                                key={i}
-                                className="flex font-bold flex-col items-center rounded-xl p-6 gap-4 text-sm text-black bg-[#E2E8F0]"
-                            >
-                                <div className="text-[40px]">
-                                    <skill.icon style={{ color: skill.color }} />
-                                </div>
-                                <p>{skill.label}</p>
-                            </article>
-                        ))}
-                    </div>
+                    <SoftSkills softSkills={softSkills} />
 
                 </motion.div>
             </section>
