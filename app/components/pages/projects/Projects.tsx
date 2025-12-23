@@ -2,18 +2,15 @@ import Image from "next/image";
 import React from 'react'
 import { motion } from "framer-motion"
 import { projects } from "./contentProject";
+import MainTitle from "../../reusable ui/MainTitle";
 
 
 export default function Projects() {
 
     return (
         <section className="relative z-10 py-6 flex flex-col text-center">
-            <motion.h1 
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="text-2xl text-white font-bold lg:text-3xl mb-4"
-            >Mes projets</motion.h1>
+
+            <MainTitle title="Mes projets"/>
 
             <motion.div 
                 className="group grid grid-cols-1 place-items-center gap-6 py-8 px-[5%] md:grid-cols-2 md:mx-auto md:max-w-[900px] lg:max-w-[1200px] lg:grid-cols-3"

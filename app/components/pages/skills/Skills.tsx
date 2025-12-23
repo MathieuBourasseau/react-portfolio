@@ -4,19 +4,14 @@ import { motion } from "framer-motion";
 import { IoMdFlame } from "react-icons/io";
 import { FaHandshake } from "react-icons/fa";
 import { skills, softSkills } from "./contentSkills";
+import MainTitle from "../../reusable ui/MainTitle";
 
 export default function Skills() {
 
     return (
         <div className="text-center flex flex-col gap-6 py-[5%] lg:py-8 px-4 lg:px-10 xl:px-[10%]">
-            <motion.h1
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="text-2xl text-white font-bold lg:text-3xl mb-4"
-            >
-                Mes compétences
-            </motion.h1>
+
+            <MainTitle title="Mes compétences"/>
 
             {/* MAIN CONTENT */}
 
