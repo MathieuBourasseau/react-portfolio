@@ -12,7 +12,7 @@ type HomeProps = {
 }
 
 export default function HomePage({ onActivePage, onActiveBackground }: HomeProps) {
-
+  
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>, url: string) => {
         const selectedValue = e.target.value as Background;
         onActiveBackground(selectedValue);

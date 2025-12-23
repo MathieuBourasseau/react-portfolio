@@ -3,6 +3,7 @@ import { IoIosMail } from "react-icons/io";
 import { FaPlane } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { IconType } from "react-icons";
+import { Background } from "@/app/types/background";
 
 // Types 
 
@@ -34,3 +35,5 @@ export const cardLinks: itemsConfig[] = [
         },
         { icon: IoIosMail, label: "contact", url: "contact" },
     ]
+
+
