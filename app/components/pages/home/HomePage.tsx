@@ -4,7 +4,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { motion } from "framer-motion";
 import { Background } from "../../../types/background";
 import { cardLinks } from "./contentHomePage";
-import MainTitle from "../../ui/MainTitle";
+import MainTitle from "../../reusable ui/MainTitle";
 
 
 type HomeProps = {

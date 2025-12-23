@@ -7,7 +7,7 @@ import Skills from "@/app/components/pages/skills/Skills";
 import Career from "@/app/components/pages/career/Career";
 import { Background } from "./types/background";
 import { useState } from "react";
-import { BackgroundBeams } from "@/app/components/ui/background-beams";
+import { BackgroundBeams } from "@/app/components/reusable ui/background-beams";
 import Contact from "./components/Contact";
 
 export default function Home() {

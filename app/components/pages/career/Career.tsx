@@ -3,6 +3,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { motion } from "framer-motion"
 import { background } from "./contentCareer";
+import MainTitle from "../../reusable ui/MainTitle";
 
 type CareerProps = {
     activeBackground: Background;
@@ -14,16 +15,8 @@ export default function Career({ activeBackground }: CareerProps) {
 
     return (
         <section className="relative z-20 flex flex-col gap-6 px-[5%] py-6">
-            
-            <motion.h1 
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="text-2xl text-white font-bold lg:text-3xl mb-4 text-center"
 
-            >
-                    Mon parcours
-            </motion.h1>
+            <MainTitle title="Mon parcours" />
 
             <VerticalTimeline 
                 className="grid grid-col-1 gap-6"

@@ -21,6 +21,5 @@ export default function MainTitle({ title, coloredText }: MainTitleProps) {
                     </>
                 ) }
         </motion.h1>
-
     )
 }
