@@ -5,6 +5,7 @@ import { IoMdFlame } from "react-icons/io";
 import { FaHandshake } from "react-icons/fa";
 import { skills, softSkills } from "./contentSkills";
 import MainTitle from "../../reusable ui/MainTitle";
+import HardSkills from "../../reusable ui/HardSkills";
 
 export default function Skills() {
 
@@ -31,31 +32,11 @@ export default function Skills() {
                     </h2>
 
                     {skills.map((skill, i) => (
-                        <article
+                        <HardSkills
                             key={i}
-                            className="flex flex-col gap-4 lg:py-4"
-                        >
-                            <h3 className="text-lg font-bold text-center">{skill.category}</h3>
-                            <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4">
-                                {skill.items.map((item, j) => (
-                                    <div
-                                        key={j}
-                                        className="flex flex-col items-center rounded-xl p-6 gap-4 text-sm text-black bg-[#E2E8F0]">
-                                        <div className="h-[40px]">
-                                            <Image
-                                                src={item.src}
-                                                width={30}
-                                                height={25}
-                                                alt={item.alt}
-                                                className="h-full w-auto object-contain"
-                                            />
-                                        </div>
-                                        <p className="font-bold">{item.label}</p>
-                                    </div>
-
-                                ))}
-                            </div>
-                        </article>
+                            category={skill.category}
+                            items={skill.items}
+                        />
                     ))}
 
                 </motion.div>
