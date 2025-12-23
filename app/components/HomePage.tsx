@@ -8,17 +8,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { motion } from "framer-motion";
 import { Background } from "../types/background";
 
-type OptionType = {
-    label: string;
-    value: string;
-}
 
-type itemsConfig = {
-    icon: React.ReactNode;
-    label: string;
-    url: string;
-    options?: OptionType[]; 
-}
 
 type HomeProps = {
     onActivePage: (page: string) => void;
