@@ -1,22 +1,8 @@
-import { Background } from "../types/background";
+import { Background } from "../../../types/background";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { motion } from "framer-motion"
 
-interface TimelineContent {
-    category?: string;
-    details: string[];
-}
-
-interface TimelineItem {
-    title: string;
-    organization: string; 
-    logo: string;
-    location: string;    
-    period: string;       
-    contract: string;    
-    content: TimelineContent[]; // 
-}
 
 type CareerProps = {
     activeBackground: Background;

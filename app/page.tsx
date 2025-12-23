@@ -4,7 +4,7 @@ import Navigation from "@/app/components/Navigation";
 import HomePage from "@/app/components/pages/home/HomePage";
 import Projects from "@/app/components/pages/projects/Projects";
 import Skills from "@/app/components/pages/skills/Skills";
-import Career from "@/app/components/Career";
+import Career from "@/app/components/pages/career/Career";
 import { Background } from "./types/background";
 import { useState } from "react";
 import { BackgroundBeams } from "@/app/components/ui/background-beams";
