@@ -1,7 +1,7 @@
 'use client'
 
 import Navigation from "@/app/components/Navigation";
-import HomePage from "@/app/components/HomePage";
+import HomePage from "@/app/components/pages/home/HomePage";
 import Projects from "@/app/components/pages/projects/Projects";
 import Skills from "@/app/components/pages/skills/Skills";
 import Career from "@/app/components/Career";

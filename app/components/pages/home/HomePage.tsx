@@ -1,10 +1,9 @@
 import Image from "next/image"
 import React from 'react'
-
 import { IoMdArrowDropdown } from "react-icons/io";
 import { motion } from "framer-motion";
-import { Background } from "../types/background";
-
+import { Background } from "../../../types/background";
+import { cardLinks } from "./contentHomePage";
 
 
 type HomeProps = {

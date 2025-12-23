@@ -18,7 +18,9 @@ type itemsConfig = {
     options?: OptionType[]; 
 }
 
- const cardLinks: itemsConfig[] = [
+// Links in the right card 
+
+export const cardLinks: itemsConfig[] = [
         { icon: FaComputer, label: "projets", url: "projects" },
         { icon: MdWork, label: "compétences", url: "skills" },
         { 
