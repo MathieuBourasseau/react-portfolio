@@ -19,7 +19,7 @@ interface TimelineItem {
 
 // Dynamic content displayed according to the background option selected
 
-const background: Record<Background, TimelineItem[]> = {
+export const background: Record<Background, TimelineItem[]> = {
 
         PROFESSIONAL: [
             {
