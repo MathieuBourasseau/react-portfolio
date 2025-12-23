@@ -4,6 +4,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { motion } from "framer-motion";
 import { Background } from "../../../types/background";
 import { cardLinks } from "./contentHomePage";
+import MainTitle from "../../ui/MainTitle";
 
 
 type HomeProps = {
@@ -25,13 +26,7 @@ export default function HomePage({ onActivePage, onActiveBackground }: HomeProps
             <div className="relative z-10 flex flex-col gap-4 py-[5%] px-[10%] md:gap-8 lg:py-8 lg:items-center w-full max-w-7xl">
 
                 {/* HEADER */}
-                <motion.h1
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="text-lg font-bold text-white md:text-2xl lg:text-center lg:text-3xl lg:mb-4">
-                    Bienvenue sur le portfolio d'un développeur <span className="text-[#F74518]">passionné</span> !
-                </motion.h1>
+               <MainTitle title="Bienvenue sur le portfolio d'un développeur" coloredText="passionné" />
 
                 {/* MAIN CONTENT */}
                 <motion.div

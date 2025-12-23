@@ -3,7 +3,7 @@ import React from 'react'
 
 type MainTitleProps = {
     title: string;
-    coloredText: string;
+    coloredText?: string;
 }
 
 export default function MainTitle({ title, coloredText }: MainTitleProps) {
@@ -13,9 +13,12 @@ export default function MainTitle({ title, coloredText }: MainTitleProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="text-lg font-bold text-white md:text-2xl lg:text-center lg:text-3xl lg:mb-4">
-                {title}
+                {title}{' '}
                 {coloredText && (
+                    <>
                     <span className="text-[#F74518]">{coloredText}</span>
+                    <span> !</span>
+                    </>
                 ) }
         </motion.h1>
 
