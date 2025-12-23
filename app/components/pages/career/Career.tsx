@@ -14,6 +14,7 @@ export default function Career({ activeBackground }: CareerProps) {
 
     return (
         <section className="relative z-20 flex flex-col gap-6 px-[5%] py-6">
+            
             <motion.h1 
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
