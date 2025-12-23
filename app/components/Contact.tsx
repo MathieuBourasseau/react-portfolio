@@ -4,6 +4,7 @@ import { IoMdSend, IoMdMail } from "react-icons/io";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'sonner';
+import MainTitle from "./reusable ui/MainTitle";
 
 type Inputs = {
     firstname: string;
@@ -56,14 +57,7 @@ export default function Contact() {
         <section className="relative z-20 text-center flex flex-col gap-4 py-[5%] lg:py-8 px-4 lg:px-10 xl:px-[10%]">
 
             <Toaster position="top-center" richColors />
-            <motion.h1
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="text-2xl text-white font-bold lg:text-3xl mb-4"
-            >
-                Contact
-            </motion.h1>
+            <MainTitle title="Contact"/>
         
             {/* FORM CONTAINER */}
             <form 
