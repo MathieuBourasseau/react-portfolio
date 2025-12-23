@@ -101,7 +101,7 @@ export default function HomePage({ onActivePage, onActiveBackground }: HomeProps
                                         >
                                             <div className="flex items-center justify-center gap-2 bg-transparent text-white">
                                                 <p className="uppercase font-bold bg-transparent">{link.label}</p>
-                                                <span className="text-[20px] bg-transparent">{link.icon}</span>
+                                                <span className="text-[20px] bg-transparent"><link.icon/></span>
                                             </div>
                                         </button>
                                     )}
