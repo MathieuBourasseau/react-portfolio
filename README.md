@@ -6,7 +6,7 @@
 > **Note aux recruteurs :** Ce portfolio a été conçu et développé entièrement par mes soins pour présenter mes compétences dans le cadre de ma recherche d'**alternance en développement web**.
 
 ## 🔗 Démo en ligne
-👉 **[Voir le portfolio en ligne](LIEN_VERCEL_ICI)** (ex: https://mon-portfolio.vercel.app)
+👉 **[Voir le portfolio en ligne](https://react-portfolio-five-iota-58.vercel.app/)**
 
 ---
 
