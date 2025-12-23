@@ -26,7 +26,7 @@ export const background: Record<Background, TimelineItem[]> = {
                 title: 'Stagiaire développeur web',
                 organization: 'Younivibe',
                 location: 'Paris (75) à distance',
-                contract: 'CDD',
+                contract: 'Stage',
                 period: '2 mois (2025)', // 
                 logo: "/projects/logo-younivibe.png",
                 content: [
