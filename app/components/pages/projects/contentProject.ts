@@ -82,17 +82,6 @@ export const projects: ProjectsConfig[] = [
 
         },
         {
-            title: "Coffee-shop",
-            type: "Full stack - SSR",
-            img: "/projects/coffee.jpg",
-            link: "#",
-            items: [
-                { icon: "/skills/html.svg", tech: "html" },
-                { icon: "/skills/css.svg", tech: "css" }
-            ],
-            available: false,
-        },
-        {
             title: "Chat LLM",
             type: "Full stack - SSR",
             img: "/projects/ia.jpg",
@@ -105,5 +94,15 @@ export const projects: ProjectsConfig[] = [
             ],
             available: true,
         },
-
+        {
+            title: "Coffee-shop",
+            type: "Full stack - SSR",
+            img: "/projects/coffee.jpg",
+            link: "#",
+            items: [
+                { icon: "/skills/html.svg", tech: "html" },
+                { icon: "/skills/css.svg", tech: "css" }
+            ],
+            available: false,
+        },
     ]
