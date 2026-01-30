@@ -83,7 +83,7 @@ export const projects: ProjectsConfig[] = [
         },
         {
             title: "Chat LLM",
-            type: "Full stack - SSR",
+            type: "Full stack - API Rest",
             img: "/projects/ia.jpg",
             link: "https://chat-llm-j46y.vercel.app/login",
             items: [
@@ -96,7 +96,7 @@ export const projects: ProjectsConfig[] = [
         },
         {
             title: "Coffee-shop",
-            type: "API Rest",
+            type: "Full stack - API Rest",
             img: "/projects/coffee.jpg",
             link: "#",
             items: [
