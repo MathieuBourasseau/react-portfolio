@@ -96,7 +96,7 @@ export const projects: ProjectsConfig[] = [
         },
         {
             title: "Coffee-shop",
-            type: "Full stack - SSR",
+            type: "API Rest",
             img: "/projects/coffee.jpg",
             link: "#",
             items: [
