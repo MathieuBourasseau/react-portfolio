@@ -96,12 +96,12 @@ export const projects: ProjectsConfig[] = [
             title: "Chat LLM",
             type: "Full stack - SSR",
             img: "/projects/ia.jpg",
-            link: "#",
+            link: "https://chat-llm-j46y.vercel.app/login",
             items: [
                 { icon: "/skills/html.svg", tech: "html" },
                 { icon: "/skills/css.svg", tech: "css" }
             ],
-            available: false,
+            available: true,
         },
 
     ]
