@@ -87,7 +87,7 @@ export const projects: ProjectsConfig[] = [
             img: "/projects/ia.jpg",
             link: "https://chat-llm-j46y.vercel.app/login",
             items: [
-                { icon: "/skills/react.svg", tech: "react" },
+                { icon: "/skills/react.svg", tech: "react js" },
                 { icon: "/skills/tailwind.svg", tech: "tailwind" },
                 { icon: "/skills/nodejs.svg", tech: "node js" },
                 { icon: "/skills/express-js.png", tech: "express" },
