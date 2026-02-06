@@ -82,8 +82,8 @@ export const projects: ProjectsConfig[] = [
 
         },
         {
-            title: "Chat LLM",
-            type: "Full stack - API Rest",
+            title: "Chat interactif avec api mistral",
+            type: "Full stack - API REST",
             img: "/projects/ia.jpg",
             link: "https://chat-llm-j46y.vercel.app/login",
             items: [
@@ -91,12 +91,13 @@ export const projects: ProjectsConfig[] = [
                 { icon: "/skills/tailwind.svg", tech: "tailwind" },
                 { icon: "/skills/nodejs.svg", tech: "node js" },
                 { icon: "/skills/express-js.png", tech: "express" },
+                { icon: "/skills/mistral-color.svg", tech: "api mistral"}
             ],
             available: true,
         },
         {
             title: "Coffee-shop",
-            type: "Full stack - API Rest",
+            type: "Full stack - API REST",
             img: "/projects/coffee.jpg",
             link: "#",
             items: [
