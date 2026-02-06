@@ -89,8 +89,8 @@ export const projects: ProjectsConfig[] = [
             items: [
                 { icon: "/skills/react.svg", tech: "react js" },
                 { icon: "/skills/tailwind.svg", tech: "tailwind" },
-                { icon: "/skills/nodejs.svg", tech: "node js" },
-                { icon: "/skills/express-js.png", tech: "express" },
+                { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
+                { icon: "/skills/express-js.png", tech: "express", invert: true },
                 { icon: "/skills/mistral-color.svg", tech: "api mistral"}
             ],
             available: true,
