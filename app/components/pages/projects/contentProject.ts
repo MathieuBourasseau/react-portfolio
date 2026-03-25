@@ -33,7 +33,7 @@ export const projects: ProjectsConfig[] = [
     {
         title: "Gamer challenges",
         type: "Full stack - API REST",
-        img: "neon-gaming-background.jpg",
+        img: "/projects/neon-gaming-background.jpg",
         link: "https://gamerchallenges-front-v1.vercel.app/",
         items: [
             { icon: "/skills/react.svg", tech: "react js" },
