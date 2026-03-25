@@ -7,7 +7,6 @@ import Skills from "@/app/components/pages/skills/Skills";
 import Career from "@/app/components/pages/career/Career";
 import { Background } from "./types/background";
 import { useState } from "react";
-import { BackgroundBeams } from "@/app/components/reusable ui/background-beams";
 import Contact from "./components/Contact";
 
 export default function Home() {
@@ -26,13 +25,12 @@ export default function Home() {
                 activeBackground={activeBackground} 
                 onActiveBackground={setActiveBackground} 
             />
-            <main className="relative bg-neutral-950 z-10 flex flex-col flex-1">
+            <main className="relative z-10 flex flex-col flex-1 bg-[#0a0a0a] bg-[radial-gradient(#ffffff22_1px,transparent_1px)] [background-size:16px_16px]">
                 {activePage === 'home' && <HomePage onActivePage={setActivePage} onActiveBackground={setActiveBackground} />}
                 {activePage === 'projects' && <Projects />}
                 {activePage === 'skills' && <Skills /> }
                 {activePage === 'career' && <Career activeBackground={activeBackground} />}
                 {activePage === 'contact' && <Contact/>}
-                <BackgroundBeams />
             </main>
         </>
     );
