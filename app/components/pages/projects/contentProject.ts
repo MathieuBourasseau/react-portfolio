@@ -31,6 +31,20 @@ export const projects: ProjectsConfig[] = [
         available: true,
     },
     {
+        title: "Gamer challenges",
+        type: "Full stack - API REST",
+        img: "neon-gaming-background.jpg",
+        link: "https://gamerchallenges-front-v1.vercel.app/",
+        items: [
+            { icon: "/skills/react.svg", tech: "react js" },
+            { icon: "/skills/tailwind.svg", tech: "tailwind" },
+            { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
+            { icon: "/skills/express-js.png", tech: "express", invert: true },
+            { icon: "/skills/typescript.svg", tech: "typescript" }
+        ],
+        available: true,
+    },
+    {
         title: "Stage Younivibe",
         type: "Front-end",
         img: "/projects/logo-younivibe.png",
