@@ -74,6 +74,19 @@ export const projects: ProjectsConfig[] = [
         available: true,
     },
     {
+        title: "Convertisseur de salaire brut / net",
+        type: "Front-end",
+        img: "/projects/calculatrice.jpg",
+        link: "https://mathieubourasseau.github.io/salarium-brut-net-calculator/",
+        items: [
+            { icon: "/skills/html.svg", tech: "html" },
+            { icon: "/skills/css.svg", tech: "css" },
+            { icon: "/skills/javascript.svg", tech: "javascript"},
+            { icon: "/skills/tailwind.svg", tech: "tailwind"}
+        ],
+        available: true,
+    },
+    {
         title: "Booking app",
         type: "Full stack - SSR",
         img: "/projects/landscape.jpg",
@@ -108,18 +121,5 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/css.svg", tech: "css" }
         ],
         available: true,
-    },
-    {
-        title: "Convertisseur de salaire brut / net",
-        type: "Front-end",
-        img: "/projects/calculatrice.jpg",
-        link: "https://mathieubourasseau.github.io/salarium-brut-net-calculator/",
-        items: [
-            { icon: "/skills/html.svg", tech: "html" },
-            { icon: "/skills/css.svg", tech: "css" },
-            { icon: "/skills/javascript.svg", tech: "javascript"}
-            { icon: "/skills/tailwind.svg", tech: "tailwind"}
-        ],
-        available: false,
     },
 ]
