@@ -118,6 +118,7 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/html.svg", tech: "html" },
             { icon: "/skills/css.svg", tech: "css" },
             { icon: "/skills/javascript.svg", tech: "javascript"}
+            { icon: "/skills/tailwind.svg", tech: "tailwind"}
         ],
         available: false,
     },
