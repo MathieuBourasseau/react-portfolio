@@ -3,7 +3,7 @@ import { motion, Variants } from "framer-motion";
 import { projects } from "./contentProject";
 import MainTitle from "../../reusable ui/MainTitle";
 
-const containerVariants: Variants = {
+const containerVariants : Variants = {
     hidden: { opacity: 0 },
     show: {
         opacity: 1,
@@ -14,10 +14,10 @@ const containerVariants: Variants = {
     }
 };
 
-const itemVariants: Variants = {
+const itemVariants : Variants = {
     hidden: { opacity: 0, y: 20 },
-    show: {
-        opacity: 1,
+    show: { 
+        opacity: 1, 
         y: 0,
         transition: { duration: 0.4, ease: "easeOut" }
     }
@@ -26,9 +26,9 @@ const itemVariants: Variants = {
 export default function Projects() {
     return (
         <section className="relative z-10 py-6 flex flex-col text-center">
-            <MainTitle title="Mes projets" />
+            <MainTitle title="Mes projets"/>
 
-            <motion.div
+            <motion.div 
                 className="group grid grid-cols-1 place-items-center gap-6 py-8 px-[5%] md:grid-cols-2 md:mx-auto md:max-w-[900px] lg:max-w-[1200px] lg:grid-cols-3"
                 variants={containerVariants}
                 initial="hidden"
@@ -63,13 +63,15 @@ export default function Projects() {
                                             key={tech.tech}
                                             className="flex items-center gap-1.5 border border-white/10 py-1 px-2.5 rounded-full bg-black/70 text-white"
                                         >
-                                            <Image
-                                                src={tech.icon}
-                                                width={18}
-                                                height={18}
-                                                alt={tech.tech}
-                                                className={`h-full brightness-110 ${tech.invert ? 'invert brightness-150' : ''}`}
-                                            />
+                                            <div className="h-[18px]">
+                                                <Image
+                                                    src={tech.icon}
+                                                    width={18}
+                                                    height={18}
+                                                    alt={tech.tech}
+                                                    className={`h-full brightness-110 ${tech.invert ? 'invert brightness-150' : ''}`}
+                                                />
+                                            </div>
                                             <span className="text-[10px] font-medium uppercase tracking-wider">
                                                 {tech.tech}
                                             </span>
