@@ -63,13 +63,13 @@ export default function Projects() {
                                             key={tech.tech}
                                             className="flex items-center gap-1.5 border border-white/10 py-1 px-2.5 rounded-full bg-black/70 text-white"
                                         >
-                                            <div className="h-[18px] w-[18px] flex items-center justify-center">
+                                            <div className="h-[18px]">
                                                 <Image
                                                     src={tech.icon}
                                                     width={18}
                                                     height={18}
                                                     alt={tech.tech}
-                                                    className={`h-full w-full object-contain brightness-110 ${tech.invert ? 'invert brightness-150' : ''}`}
+                                                    className={`h-full brightness-110 ${tech.invert ? 'invert brightness-150' : ''}`}
                                                 />
                                             </div>
                                             <span className="text-[10px] font-medium uppercase tracking-wider">
