@@ -19,7 +19,7 @@ export const projects: ProjectsConfig[] = [
      {
         title: "Jeu du mot mystère",
         type: "Full stack - API REST",
-        img: "/projects/ia.jpg",
+        img: "/projects/mysterious-game.jpg",
         link: "https://front-mystery-word.vercel.app/",
         items: [
             { icon: "/skills/react.svg", tech: "react js" },
