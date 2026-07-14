@@ -24,6 +24,7 @@ export const projects: ProjectsConfig[] = [
         items: [
             { icon: "/skills/react.svg", tech: "react js" },
             { icon: "/skills/tailwind.svg", tech: "tailwind" },
+            { icon: "/skills/typescript.svg", tech: "typescript" },
             { icon: "/skills/java.svg", tech: "java" },
             { icon: "/skills/spring-boot.svg", tech: "spring boot" },
         ],
