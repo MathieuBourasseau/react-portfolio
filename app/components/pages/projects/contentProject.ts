@@ -16,6 +16,19 @@ type TechConfig = {
 // Content for Projects.tsx
 
 export const projects: ProjectsConfig[] = [
+     {
+        title: "Jeu du mot mystère",
+        type: "Full stack - API REST",
+        img: "/projects/ia.jpg",
+        link: "https://front-mystery-word.vercel.app/",
+        items: [
+            { icon: "/skills/react.svg", tech: "react js" },
+            { icon: "/skills/tailwind.svg", tech: "tailwind" },
+            { icon: "/skills/java.svg", tech: "java", invert: true },
+            { icon: "/skills/spring-boot.svg", tech: "spring boot", invert: true },
+        ],
+        available: true,
+    },
     {
         title: "Chatbot IA avec api mistral",
         type: "Full stack - API REST",
