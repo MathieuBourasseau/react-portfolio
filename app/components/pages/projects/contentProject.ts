@@ -5,12 +5,18 @@ type ProjectsConfig = {
     img: string;
     items: TechConfig[],
     available: boolean;
+    github?: GithubConfig[];
 }
 
 type TechConfig = {
     icon: string;
     tech: string;
     invert?: boolean;
+}
+
+type GithubConfig = {
+    label: string;
+    link: string;
 }
 
 // Content for Projects.tsx
@@ -29,6 +35,10 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/spring-boot.svg", tech: "spring boot" },
         ],
         available: true,
+        github: [
+            { label: "Repo front", link: "https://github.com/MathieuBourasseau/front-mystery-word" },
+            { label: "Repo back", link: "https://github.com/MathieuBourasseau/backend-mystery-words" },
+        ],
     },
     {
         title: "Chatbot IA avec api mistral",
@@ -43,6 +53,10 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/mistral-color.svg", tech: "api mistral" }
         ],
         available: true,
+        github: [
+            { label: "Repo front", link: "https://github.com/MathieuBourasseau/Dynamic-Chat-Mistral-Api-Front" },
+            { label: "Repo back", link: "https://github.com/MathieuBourasseau/Dynamic-Chat-Mistral-Api-Back" },
+        ],
     },
     {
         title: "Gamer challenges",
@@ -57,6 +71,10 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/typescript.svg", tech: "typescript" }
         ],
         available: true,
+        github: [
+            { label: "Repo front", link: "https://github.com/MathieuBourasseau/gamerchallenges-front-v1" },
+            { label: "Repo back", link: "https://github.com/MathieuBourasseau/gamerchallenges-back-v1" },
+        ],
     },
     {
         title: "Stage Younivibe",
@@ -72,6 +90,9 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/typescript.svg", tech: "typescript" },
         ],
         available: true,
+        github: [
+            { label: "Repo", link: "https://github.com/MathieuBourasseau/younivibe-stage" },
+        ],
 
     },
     {
@@ -86,6 +107,10 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/express-js.png", tech: "express", invert: true },
         ],
         available: true,
+        github: [
+            { label: "Repo front", link: "https://github.com/MathieuBourasseau/carambar-front" },
+            { label: "Repo back", link: "https://github.com/MathieuBourasseau/carambar-api" },
+        ],
     },
     {
         title: "Convertisseur de salaire brut / net",
@@ -99,6 +124,9 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/tailwind.svg", tech: "tailwind"}
         ],
         available: true,
+        github: [
+            { label: "Repo", link: "https://github.com/MathieuBourasseau/salarium-brut-net-calculator" },
+        ],
     },
     {
         title: "Booking app",
@@ -112,6 +140,9 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/express-js.png", tech: "express", invert: true },
         ],
         available: true,
+        github: [
+            { label: "Repo", link: "https://github.com/MathieuBourasseau/booking-app" },
+        ],
 
     },
     {
@@ -124,6 +155,9 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/css.svg", tech: "css" }
         ],
         available: true,
+        github: [
+            { label: "Repo", link: "https://github.com/MathieuBourasseau/projet-heros" },
+        ],
     },
     {
         title: "Gaming Campus",
@@ -135,5 +169,8 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/css.svg", tech: "css" }
         ],
         available: true,
+        github: [
+            { label: "Repo", link: "https://github.com/MathieuBourasseau/gaming-campus" },
+        ],
     },
 ]
