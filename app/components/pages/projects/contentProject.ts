@@ -23,6 +23,18 @@ type GithubConfig = {
 
 export const projects: ProjectsConfig[] = [
      {
+        title: "Backend CRUD Spring Boot",
+        type: "Back-end - API REST",
+        img: "/projects/CRUD.jpg",
+        link: "https://github.com/MathieuBourasseau/backend-springboot-crud",
+        items: [
+            { icon: "/skills/java.svg", tech: "java" },
+            { icon: "/skills/spring-boot.svg", tech: "spring boot" },
+            { icon: "/skills/postgresql.svg", tech: "postgresql" },
+        ],
+        available: true,
+    },
+    {
         title: "Jeu du mot mystère",
         type: "Full stack - API REST",
         img: "/projects/mysterious-game.jpg",
