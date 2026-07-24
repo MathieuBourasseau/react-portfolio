@@ -33,6 +33,9 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/postgresql.svg", tech: "postgresql" },
         ],
         available: true,
+        github: [
+            { label: "Repo back", link: "https://github.com/MathieuBourasseau/backend-springboot-crud" },
+        ],
     },
     {
         title: "Jeu du mot mystère",
