@@ -86,7 +86,8 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/tailwind.svg", tech: "tailwind" },
             { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
             { icon: "/skills/express-js.png", tech: "express", invert: true },
-            { icon: "/skills/mistral-color.svg", tech: "api mistral" }
+            { icon: "/skills/mistral-color.svg", tech: "api mistral" },
+            { icon: "/skills/postgresql.svg", tech: "postgresql" }
         ],
         available: true,
         github: [
@@ -104,7 +105,8 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/tailwind.svg", tech: "tailwind" },
             { icon: "/skills/nodejs.svg", tech: "node js", invert: true },
             { icon: "/skills/express-js.png", tech: "express", invert: true },
-            { icon: "/skills/typescript.svg", tech: "typescript" }
+            { icon: "/skills/typescript.svg", tech: "typescript" },
+            { icon: "/skills/postgresql.svg", tech: "postgresql" }
         ],
         available: true,
         github: [
