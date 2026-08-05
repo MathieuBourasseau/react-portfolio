@@ -85,9 +85,14 @@ export default function Projects() {
                                 </div>
                             </a>
 
-                            {project.github && project.github.length > 0 && (
-                                <div className="flex justify-center gap-4 mt-2">
-                                    {project.github.map((gh) => (
+                            {(project.github?.length || project.inProgress) && (
+                                <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
+                                    {project.inProgress && (
+                                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#F74518]">
+                                            🚧 En développement
+                                        </span>
+                                    )}
+                                    {project.github?.map((gh) => (
                                         <a
                                             key={gh.link}
                                             href={gh.link}
@@ -106,24 +111,43 @@ export default function Projects() {
                         <motion.div
                             variants={itemVariants}
                             key={project.title}
-                            className="relative group/card flex flex-col items-center justify-center overflow-hidden text-sm text-white h-[200px] rounded-lg transition-transform transition-shadow duration-300 ease-in-out ring-0 w-full max-w-[450px] md:max-w-[350px] lg:max-w-[400px] hover:ring-2 hover:ring-[#2C3E50] ring-inset hover:scale-105 hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]"
+                            className="relative w-full max-w-[450px] md:max-w-[350px] lg:max-w-[400px]"
                         >
-                            <Image
-                                className="absolute inset-0 object-cover object-center brightness-60"
-                                src={project.img}
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                fill
-                                priority={i < 4}
-                                alt={project.title}
-                            />
-                            <div className="relative z-10 text-lg font-bold [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
-                                <div>
-                                    <h2 className="text-white">{project.title}</h2>
-                                    <span className="text-[#F74518]">{project.type}</span>
-                                    <br />
-                                    <span className="text-base">En cours de développement 💻</span>
+                            <div className="relative group/card flex flex-col items-center justify-center overflow-hidden text-sm text-white h-[200px] rounded-lg transition-transform transition-shadow duration-300 ease-in-out ring-0 w-full hover:ring-2 hover:ring-[#2C3E50] ring-inset hover:scale-105 hover:shadow-[0_0_10px_#2C3E50,0_0_20px_rgba(44,62,80,0.5),0_0_40px_rgba(44,62,80,0.3)]">
+                                <Image
+                                    className="absolute inset-0 object-cover object-center brightness-60"
+                                    src={project.img}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    fill
+                                    priority={i < 4}
+                                    alt={project.title}
+                                />
+                                <div className="relative z-10 text-lg font-bold [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
+                                    <div>
+                                        <h2 className="text-white">{project.title}</h2>
+                                        <span className="text-[#F74518]">{project.type}</span>
+                                        <br />
+                                        <span className="text-base">En cours de développement 💻</span>
+                                    </div>
                                 </div>
                             </div>
+
+                            {project.github && project.github.length > 0 && (
+                                <div className="flex justify-center gap-4 mt-2">
+                                    {project.github.map((gh) => (
+                                        <a
+                                            key={gh.link}
+                                            href={gh.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-wider text-white/70 transition-colors duration-200 hover:text-[#F74518]"
+                                        >
+                                            <FaGithub size={12} />
+                                            {gh.label}
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
                         </motion.div>
                     )
                 ))}

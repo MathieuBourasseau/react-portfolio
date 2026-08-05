@@ -6,6 +6,7 @@ type ProjectsConfig = {
     items: TechConfig[],
     available: boolean;
     github?: GithubConfig[];
+    inProgress?: boolean;
 }
 
 type TechConfig = {
@@ -23,6 +24,25 @@ type GithubConfig = {
 
 export const projects: ProjectsConfig[] = [
      {
+        title: "App de suivi de candidatures",
+        type: "Full stack - API REST",
+        img: "/projects/job-tracker.jpg",
+        link: "https://github.com/MathieuBourasseau/backend-job-tracker",
+        items: [
+            { icon: "/skills/react.svg", tech: "react js" },
+            { icon: "/skills/tailwind.svg", tech: "tailwind" },
+            { icon: "/skills/typescript.svg", tech: "typescript" },
+            { icon: "/skills/java.svg", tech: "java" },
+            { icon: "/skills/spring-boot.svg", tech: "spring boot" },
+            { icon: "/skills/postgresql.svg", tech: "postgresql" },
+        ],
+        available: true,
+        inProgress: true,
+        github: [
+            { label: "Repo back", link: "https://github.com/MathieuBourasseau/backend-job-tracker" },
+        ],
+    },
+    {
         title: "Backend CRUD Spring Boot",
         type: "Back-end - API REST",
         img: "/projects/CRUD.jpg",
@@ -48,6 +68,7 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/typescript.svg", tech: "typescript" },
             { icon: "/skills/java.svg", tech: "java" },
             { icon: "/skills/spring-boot.svg", tech: "spring boot" },
+            { icon: "/skills/postgresql.svg", tech: "postgresql" },
         ],
         available: true,
         github: [
