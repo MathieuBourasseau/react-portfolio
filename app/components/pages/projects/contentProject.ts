@@ -27,7 +27,7 @@ export const projects: ProjectsConfig[] = [
         title: "App de suivi de candidatures",
         type: "Full stack - API REST",
         img: "/projects/job-tracker.jpg",
-        link: "https://github.com/MathieuBourasseau/backend-job-tracker",
+        link: "https://job-tracker-front-three.vercel.app/",
         items: [
             { icon: "/skills/react.svg", tech: "react js" },
             { icon: "/skills/tailwind.svg", tech: "tailwind" },
@@ -37,8 +37,8 @@ export const projects: ProjectsConfig[] = [
             { icon: "/skills/postgresql.svg", tech: "postgresql" },
         ],
         available: true,
-        inProgress: true,
         github: [
+            { label: "Repo front", link: "https://github.com/MathieuBourasseau/job-tracker-front" },
             { label: "Repo back", link: "https://github.com/MathieuBourasseau/backend-job-tracker" },
         ],
     },
