@@ -50,6 +50,9 @@ export const skills: HardSkillsConfig[] = [
             { label: "Express js", src: "/skills/express-js.png", alt: "logo express" },
             { label: "PostgreSQL", src: "/skills/postgresql.svg", alt: "logo postgres" },
             { label: "Next js", src: "/skills/nextjs.svg", alt: "logo nextjs" },
+            { label: "Java", src: "/skills/java.svg", alt: "logo java" },
+            { label: "Spring Boot", src: "/skills/spring-boot.svg", alt: "logo spring boot" },
+
         ]
     },
     {
